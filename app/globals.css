@@ -1,26 +1,274 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #151515;
+  --foreground: #ffffff;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: #151515;
+  --color-foreground: #ffffff;
+  --font-sans: var(--font-inria-sans);
+  --font-grotesk: var(--font-space-grotesk);
+  --animate-spin-slow: spin-slow 20s linear infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html,
+body {
+  background: #151515;
+  color: #ffffff;
+  font-family: var(--font-inria-sans), sans-serif;
+  cursor: default;
+}
+
+/* Letter Spacing for headings, paragraphs, and spans */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  letter-spacing: -0.03em;
+}
+
+/* Inria Sans CSS Classes */
+.inria-sans-light {
+  font-family: var(--font-inria-sans), sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.inria-sans-regular {
+  font-family: var(--font-inria-sans), sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inria-sans-bold {
+  font-family: var(--font-inria-sans), sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.inria-sans-light-italic {
+  font-family: var(--font-inria-sans), sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.inria-sans-regular-italic {
+  font-family: var(--font-inria-sans), sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.inria-sans-bold-italic {
+  font-family: var(--font-inria-sans), sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Space Grotesk CSS Classes */
+.space-grotesk {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.space-grotesk-light {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-weight: 300;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.space-grotesk-regular {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.space-grotesk-medium {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-weight: 500;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.space-grotesk-semibold {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-weight: 600;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.space-grotesk-bold {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-weight: 700;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Custom animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up .8s ease-in-out forwards;
+}
+
+/* Introduction Link Hover */
+.intro-link {
+  background-color: transparent !important;
+  transition: background-color 0.3s ease;
+}
+
+.intro-link:hover {
+  background-color: #E53720 !important;
+}
+
+
+/* View Transitions - Tam hedefteki gibi */
+@supports (view-transition-name: none) {
+  /* Custom property tanımı */
+  @property --view-transition-wipe-offset {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0;
+  }
+
+  /* Ana container */
+  ::view-transition {
+    position: absolute;
+    inset: 0;
+  }
+
+  /* GROUP - animasyon süreleri ve stiller */
+  ::view-transition-group(root) {
+    animation-name: -ua-view-transition-group-anim-root;
+    animation-timing-function: ease;
+    animation-duration: 0.4s; /* Toplam süre */
+    animation-fill-mode: both;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    backdrop-filter: none;
+    mix-blend-mode: normal;
+  }
+
+  /* IMAGE PAIR */
+  ::view-transition-image-pair(root) {
+    isolation: isolate;
+    position: absolute;
+    inset: 0;
+    animation-duration: inherit;
+    animation-fill-mode: inherit;
+  }
+
+  /* ESKİ SAYFA (giden) - 0.2 saniyede kaybol */
+  ::view-transition-old(root) {
+    animation: view-transition-exit 0.2s cubic-bezier(0.27, 0, 0.51, 1) both;
+    position: absolute;
+    inset-block-start: 0;
+    inline-size: 100%;
+    block-size: auto;
+    backface-visibility: hidden;
+    mix-blend-mode: normal;
+  }
+
+  /* YENİ SAYFA (gelen) - 0.4 saniyede maskeli gel */
+  ::view-transition-new(root) {
+    animation: view-transition-enter 0.4s cubic-bezier(0.27, 0, 0.51, 1) both;
+    
+    /* Aynı karmaşık mask hesaplaması */
+    mask-image: linear-gradient(
+      180deg,
+      black calc(calc(0% - 100%) + calc(calc(100% + 100%) * var(--view-transition-wipe-offset))),
+      transparent calc(calc(100% + 100%) * var(--view-transition-wipe-offset))
+    );
+    -webkit-mask-image: linear-gradient(
+      180deg,
+      black calc(calc(0% - 100%) + calc(calc(100% + 100%) * var(--view-transition-wipe-offset))),
+      transparent calc(calc(100% + 100%) * var(--view-transition-wipe-offset))
+    );
+    
+    position: absolute;
+    inset-block-start: 0;
+    inline-size: 100%;
+    block-size: auto;
+    backface-visibility: hidden;
+    mix-blend-mode: normal;
+  }
+
+  /* EXIT ANİMASYONU - eski sayfa kayboluyor */
+  @keyframes view-transition-exit {
+    0% {
+      opacity: 1;
+      transform: translate(0) scale(1);
+    }
+    100% {
+      opacity: 0; /* Saydamlaşarak kaybol */
+      transform: translate(0) scale(1);
+    }
+  }
+
+  /* ENTER ANİMASYONU - yeni sayfa maskelenerek geliyor */
+  @keyframes view-transition-enter {
+    0% {
+      opacity: 1;
+      transform: translate(0) scale(1);
+      --view-transition-wipe-offset: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0) scale(1);
+      --view-transition-wipe-offset: 1;
+    }
+  }
+
+  /* Genel ayarlar */
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    backface-visibility: hidden;
+    mix-blend-mode: normal;
+  }
+}
+
+/* Tarayıcı varsayılanlarını korumak için */
+@supports (view-transition-name: none) {
+  /* UA stillerini koru */
+  html::view-transition-old(root) {
+    animation-name: -ua-view-transition-fade-out, -ua-mix-blend-mode-plus-lighter;
+  }
+  
+  html::view-transition-new(root) {
+    animation-name: -ua-view-transition-fade-in, -ua-mix-blend-mode-plus-lighter;
+  }
 }
