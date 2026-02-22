@@ -9,23 +9,23 @@ export default function Gallery() {
   
   const galleryItems = [
     {
-      title: "Test Title 1",
+      title: "TEST TITLE 1",
       image: "/images/services-1.jpg",
     },
     {
-      title: "Test Title 2",
+      title: "TEST TITLE 2",
       image: "/images/services-2.jpg",
     },
     {
-      title: "Test Title 3",
+      title: "TEST TITLE 3",
       image: "/images/services-3.jpg",
     },
     {
-      title: "Test Title 4",
+      title: "TEST TITLE 4",
       image: "/images/services-4.jpg",
     },
     {
-      title: "Test Title 5",
+      title: "TEST TITLE 5",
       image: "/images/services-5.jpg",
     },
   ];

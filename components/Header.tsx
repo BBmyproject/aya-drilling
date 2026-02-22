@@ -50,14 +50,14 @@ export default function Header() {
   const navItems = [
     { name: "About", href: "/about" },
     {
-      name: "Services",
+      name: "SERVICES",
       href: "/services",
       hasDropdown: true,
     },
-    { name: "Quality", href: "/quality" },
-    { name: "Blog", href: "/blog" },
-    { name: "Career", href: "/career" },
-    { name: "Contact", href: "/contact" },
+    { name: "QUALITY", href: "/quality" },
+    { name: "BLOG", href: "/blog" },
+    { name: "CAREER", href: "/career" },
+    { name: "CONTACT", href: "/contact" },
   ];
 
   return (
@@ -212,7 +212,7 @@ export default function Header() {
                               setServicesOpen(false);
                             }}
                           >
-                            Services
+                            SERVICES
                           </Link>
                           <Link
                             href="/services/directed-drilling"
