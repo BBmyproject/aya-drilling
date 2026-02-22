@@ -217,17 +217,15 @@ export default function Footer() {
                 <h3 className="text-white font-bold mb-4 text-xl lg:text-2xl">Contact</h3>
                 <ul className="space-y-2">
                   <li className="text-white/60">
-                    <a href="mailto:info@ayadrilling.com" className="hover:text-white transition-colors">
-                      info@ayadrilling.com
+                    <a href="mailto:info@aya-ds.com" className="hover:text-white transition-colors">
+                      info@aya-ds.com
                     </a>
                   </li>
                   <li className="text-white/60">
-                    <a href="tel:+905551234567" className="hover:text-white transition-colors">
-                      +90 555 123 45 67
-                    </a>
+                    <p className="hover:text-white transition-colors">-</p>
                   </li>
                   <li className="text-white/60">
-                    <p>Istanbul, Turkey</p>
+                    <p>Başkent Organize Sanayi Bölgesi 19. Cd. No:88<br />Malıköy Sincan Ankara</p>
                   </li>
                 </ul>
               </div>

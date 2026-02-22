@@ -107,8 +107,33 @@ export default function About() {
     const isVisible = visibleSections.has(index);
     return `${baseClasses} ${isVisible ? "animate-fade-up opacity-100" : "opacity-0"}`;
   };
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://aya-ds.com";
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${baseUrl}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "About",
+        item: `${baseUrl}/about`,
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden" style={{ maxHeight: "750px" }}>
         {/* Background Image */}
@@ -266,16 +291,16 @@ export default function About() {
             </div>
             {/* Sağ - Content */}
             <div className="flex-1 max-w-[760px]">
-              <div className="space-y-4 text-white">
-                <p className="text-base md:text-lg leading-relaxed">
-                  AYA was established to address the growing need for reliable, technically driven directional drilling services in the regional energy sector.
-                </p>
-                <p className="text-base md:text-lg leading-relaxed">
-                  Since its foundation, the company has successfully supported a wide range of drilling projects across oil, gas, and geothermal applications.
-                </p>
-                <p className="text-base md:text-lg leading-relaxed">
-                  This experience spans different well profiles, formation types, and operational environments, allowing AYA to adapt its services to varying project requirements.
-                </p>
+                <div className="space-y-4 text-white">
+                  <p className="text-base md:text-lg leading-relaxed">
+                    AYA was established to address the growing need for reliable, technically driven directional drilling services in the regional energy sector.
+                  </p>
+                  <p className="text-base md:text-lg leading-relaxed">
+                    Since its foundation, the company has successfully supported a wide range of drilling projects across oil, gas, and geothermal applications.
+                  </p>
+                  <p className="text-base md:text-lg leading-relaxed">
+                    This experience spans different well profiles, formation types, and operational environments, allowing AYA to adapt its services to varying project requirements.
+                  </p>
               </div>
             </div>
           </div>
@@ -393,16 +418,16 @@ export default function About() {
             </div>
             {/* Sağ - Content */}
             <div className="flex-1 max-w-[760px]">
-              <div className="space-y-4 text-white">
-                <p className="text-base md:text-lg leading-relaxed">
-                  AYA&apos;s team consists of experienced drilling engineers, directional drillers, and technical specialists with hands-on field backgrounds.
-                </p>
-                <p className="text-base md:text-lg leading-relaxed">
-                  The management and technical teams work in close coordination to ensure that engineering design, operational execution, and real-time decision-making are aligned throughout the project lifecycle.
-                </p>
-                <p className="text-base md:text-lg leading-relaxed">
-                  This integrated team structure enables AYA to respond effectively to operational challenges and changing field conditions.
-                </p>
+                <div className="space-y-4 text-white">
+                  <p className="text-base md:text-lg leading-relaxed">
+                    AYA&apos;s team consists of experienced drilling engineers, directional drillers, and technical specialists with hands-on field backgrounds.
+                  </p>
+                  <p className="text-base md:text-lg leading-relaxed">
+                    The management and technical teams work in close coordination to ensure that engineering design, operational execution, and real-time decision-making are aligned throughout the project lifecycle.
+                  </p>
+                  <p className="text-base md:text-lg leading-relaxed">
+                    This integrated team structure enables AYA to respond effectively to operational challenges and changing field conditions.
+                  </p>
               </div>
             </div>
           </div>

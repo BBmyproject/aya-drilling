@@ -79,16 +79,22 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
-              <div key={item.name} className="relative">
+              <div
+                key={item.name}
+                className="relative"
+                onMouseEnter={() => item.hasDropdown && setServicesOpen(true)}
+                onMouseLeave={() => item.hasDropdown && setServicesOpen(false)}
+              >
                 {item.hasDropdown ? (
-                  <button
-                    className="flex items-center gap-1 text-white uppercase font-bold transition-colors"
-                    onMouseEnter={() => setServicesOpen(true)}
-                    onMouseLeave={() => setServicesOpen(false)}
-                  >
-                    <span>{item.name}</span>
-                    <ChevronIcon isOpen={servicesOpen} className={servicesOpen ? "rotate-90" : ""} />
-                  </button>
+                  <div className="relative">
+                    <Link
+                      href={item.href}
+                      className="flex items-center gap-1 text-white uppercase font-bold hover:text-[#E53720] transition-colors"
+                    >
+                      <span>{item.name}</span>
+                      <ChevronIcon isOpen={servicesOpen} className={servicesOpen ? "rotate-90" : ""} />
+                    </Link>
+                  </div>
                 ) : (
                   <Link
                     href={item.href}
@@ -99,31 +105,45 @@ export default function Header() {
                 )}
 
                 {/* Dropdown Menu */}
-                {item.hasDropdown && servicesOpen && (
+                {item.hasDropdown && (
                   <div
-                    className="absolute top-full left-0 mt-2 w-48 bg-[#151515] border border-[#2b2b2b] rounded-lg shadow-lg z-50"
-                    onMouseEnter={() => setServicesOpen(true)}
-                    onMouseLeave={() => setServicesOpen(false)}
+                    className={`absolute top-full left-0 pt-2 w-64 z-50 transition-opacity duration-200 ${
+                      servicesOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                    }`}
                   >
+                    <div className="bg-[#151515] border border-[#2b2b2b] rounded-lg shadow-lg">
                     <div className="py-2">
                       <Link
-                        href="/services/drilling"
+                        href="/services/directed-drilling"
                         className="block px-4 py-2 text-white hover:bg-[#2b2b2b] transition-colors"
                       >
-                        Drilling
+                        Directed Drilling
                       </Link>
                       <Link
-                        href="/services/exploration"
+                        href="/services/downhole-motor"
                         className="block px-4 py-2 text-white hover:bg-[#2b2b2b] transition-colors"
                       >
-                        Exploration
+                        Downhole Motor
                       </Link>
                       <Link
-                        href="/services/consulting"
+                        href="/services/measurement-while-drilling"
                         className="block px-4 py-2 text-white hover:bg-[#2b2b2b] transition-colors"
                       >
-                        Consulting
+                        Measurement While Drilling (MWD)
                       </Link>
+                      <Link
+                        href="/services/bottom-hole-assembly"
+                        className="block px-4 py-2 text-white hover:bg-[#2b2b2b] transition-colors"
+                      >
+                        Bottom Hole Assembly (BHA) Design
+                      </Link>
+                      <Link
+                        href="/services/trajectory-planning"
+                        className="block px-4 py-2 text-white hover:bg-[#2b2b2b] transition-colors"
+                      >
+                        Trajectory Planning
+                      </Link>
+                    </div>
                     </div>
                   </div>
                 )}
@@ -176,8 +196,8 @@ export default function Header() {
                   {item.hasDropdown ? (
                     <div>
                       <button
-                        className="flex items-center justify-between w-full text-white text-left py-3 border-b border-[#2b2b2b]"
                         onClick={() => setServicesOpen(!servicesOpen)}
+                        className="flex items-center justify-between w-full text-white text-left py-3 border-b border-[#2b2b2b] hover:text-[#E53720] transition-colors"
                       >
                         <span>{item.name}</span>
                         <ChevronIcon isOpen={servicesOpen} />
@@ -185,25 +205,64 @@ export default function Header() {
                       {servicesOpen && (
                         <div className="pl-4 mt-2 space-y-2">
                           <Link
-                            href="/services/drilling"
+                            href="/services"
                             className="block py-2 text-white hover:text-gray-300 transition-colors"
-                            onClick={() => setMobileMenuOpen(false)}
+                            onClick={() => {
+                              setMobileMenuOpen(false);
+                              setServicesOpen(false);
+                            }}
                           >
-                            Drilling
+                            Services
                           </Link>
                           <Link
-                            href="/services/exploration"
+                            href="/services/directed-drilling"
                             className="block py-2 text-white hover:text-gray-300 transition-colors"
-                            onClick={() => setMobileMenuOpen(false)}
+                            onClick={() => {
+                              setMobileMenuOpen(false);
+                              setServicesOpen(false);
+                            }}
                           >
-                            Exploration
+                            Directed Drilling
                           </Link>
                           <Link
-                            href="/services/consulting"
+                            href="/services/downhole-motor"
                             className="block py-2 text-white hover:text-gray-300 transition-colors"
-                            onClick={() => setMobileMenuOpen(false)}
+                            onClick={() => {
+                              setMobileMenuOpen(false);
+                              setServicesOpen(false);
+                            }}
                           >
-                            Consulting
+                            Downhole Motor
+                          </Link>
+                          <Link
+                            href="/services/measurement-while-drilling"
+                            className="block py-2 text-white hover:text-gray-300 transition-colors"
+                            onClick={() => {
+                              setMobileMenuOpen(false);
+                              setServicesOpen(false);
+                            }}
+                          >
+                            Measurement While Drilling (MWD)
+                          </Link>
+                          <Link
+                            href="/services/bottom-hole-assembly"
+                            className="block py-2 text-white hover:text-gray-300 transition-colors"
+                            onClick={() => {
+                              setMobileMenuOpen(false);
+                              setServicesOpen(false);
+                            }}
+                          >
+                            Bottom Hole Assembly (BHA) Design
+                          </Link>
+                          <Link
+                            href="/services/trajectory-planning"
+                            className="block py-2 text-white hover:text-gray-300 transition-colors"
+                            onClick={() => {
+                              setMobileMenuOpen(false);
+                              setServicesOpen(false);
+                            }}
+                          >
+                            Trajectory Planning
                           </Link>
                         </div>
                       )}

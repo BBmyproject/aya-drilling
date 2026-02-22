@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Link } from "next-view-transitions";
 
-export default function Services() {
+export default function Services({ hideHeader = false }: { hideHeader?: boolean }) {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
   const sectionRef = useRef<HTMLDivElement>(null);
   const imageRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -41,7 +41,8 @@ export default function Services() {
   const services = [
     {
       title: "DIRECTED DRILLING",
-      description: "AYA Drilling Services provides directional drilling services supporting oil, gas, and geothermal drilling operations across a wide range of well profiles and geological conditions.",
+      slug: "directed-drilling",
+      description: "Comprehensive directional drilling services designed to achieve accurate well trajectories while maintaining wellbore stability and operational efficiency throughout the drilling phase.",
       items: [
         "Directional drilling tools compatible with complex well profiles",
         "Review of well objectives, geological data, and offset information",
@@ -52,7 +53,8 @@ export default function Services() {
     },
     {
       title: "DOWNHOLE MOTOR",
-      description: "AYA Drilling Services provides downhole motor services as an integrated part of directional drilling and Bottom Hole Assembly (BHA) design.",
+      slug: "downhole-motor",
+      description: "Downhole drilling motors selected, configured, and maintained to match formation characteristics, drilling parameters, and project-specific objectives.",
       items: [
         "Required build, hold, or turn behavior",
         "Balancing steerability and stability",
@@ -63,7 +65,8 @@ export default function Services() {
     },
     {
       title: "MEASUREMENT WHILE DRILLING (MWD)",
-      description: "AYA Drilling Services provides Measurement While Drilling (MWD) services supporting directional drilling operations through reliable downhole data acquisition and real-time operational insight.",
+      slug: "measurement-while-drilling",
+      description: "MWD services providing reliable downhole measurements and real-time data to support precise well placement and informed decision-making at the rig site.",
       items: [
         "Accurate trajectory monitoring",
         "Continuous validation of downhole data quality",
@@ -73,8 +76,9 @@ export default function Services() {
       image: "/images/services-3.jpg",
     },
     {
-      title: "WELL PLANNING",
-      description: "AYA Drilling Services provides well planning services supporting directional drilling operations through structured engineering workflows and practical field insight.",
+      title: "BOTTOM HOLE ASSEMBLY (BHA) DESIGN",
+      slug: "bottom-hole-assembly",
+      description: "Engineering-driven BHA design services focusing on trajectory design, drilling risk assessment, and efficiency optimization from initial design to execution.",
       items: [
         "Evaluation of planned well geometry and drilling feasibility",
         "Reduce trajectory-related operational risks",
@@ -84,8 +88,9 @@ export default function Services() {
       image: "/images/services-4.jpg",
     },
     {
-      title: "ENGINEERING",
-      description: "AYA Drilling Services provides engineering support services designed to complement directional drilling operations through project-based technical solutions and integrated workflows.",
+      title: "TRAJECTORY PLANNING",
+      slug: "trajectory-planning",
+      description: "Project-based trajectory planning and technical support delivering integrated solutions across planning, operations, and post-run performance evaluation.",
       items: [
         "Directional drilling engineering support",
         "Technical preparation prior to operations",
@@ -100,6 +105,7 @@ export default function Services() {
     <section ref={sectionRef} className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1296px] mx-auto">
         {/* Header */}
+        {!hideHeader && (
         <div className="flex flex-col lg:flex-row items-start justify-between gap-6 md:gap-16 md:mb-16 mb-8">
           {/* Sol Taraf - Services Badge */}
           <div className="shrink-0">
@@ -143,6 +149,7 @@ export default function Services() {
             </h2>
           </div>
         </div>
+        )}
 
         {/* Services - Sticky Scroll (lg+) / Gallery (md-) */}
         <div className="relative">
@@ -192,7 +199,7 @@ export default function Services() {
 
                   {/* View Details Link */}
                   <Link
-                    href="#"
+                    href={`/services/${service.slug}`}
                     className="group intro-link inline-flex items-center gap-3 transition-all duration-300"
                     style={{
                       willChange: "transform",
@@ -266,7 +273,7 @@ export default function Services() {
 
                   {/* View Details Link */}
                   <Link
-                    href="#"
+                    href={`/services/${service.slug}`}
                     className="group intro-link inline-flex items-center gap-3 transition-all duration-300"
                     style={{
                       willChange: "transform",
