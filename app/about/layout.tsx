@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     url: `${baseUrl}/about`,
     images: [
       {
-        url: `${baseUrl}/images/services-2.jpg`,
+        url: `${baseUrl}/images/sub-banner.jpg`,
         width: 1200,
         height: 630,
         alt: "AYA Drilling Services - About",

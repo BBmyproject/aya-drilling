@@ -35,7 +35,7 @@ export default function QHSE() {
   const qhseSections = [
     {
       title: "Quality Management",
-      svgPath: "/images/qhse-quality.svg",
+      svgPath: "/images/qhse-hse.svg",
       content: [
         "AYA approaches quality management as an integrated system covering engineering, workshop activities, and field operations.",
         "Quality is built into the entire service lifecycle — from equipment preparation and inspection to operational execution and post-operation evaluation.",
@@ -53,7 +53,7 @@ export default function QHSE() {
     {
       title: "Health, Safety & Environment (HSE)",
       titleParts: ["Health, Safety &", "Environment (HSE)"],
-      svgPath: "/images/qhse-hse.svg",
+      svgPath: "/images/qhse-quality.svg",
       content: [
         "Health, safety, and environmental responsibility are fundamental to all AYA activities, including workshop operations and field services.",
         "AYA implements HSE practices across:",

@@ -1,11 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Link } from "next-view-transitions";
 
 export default function Footer() {
   const [isHovered, setIsHovered] = useState(false);
+  const router = useRouter();
+
+  const handleGetInTouch = () => {
+    router.push("/contact");
+  };
 
   return (
     <footer className="pb-4 md:pb-10 pt-16 md:pt-24 px-4 sm:px-6 lg:px-8">
@@ -56,6 +62,7 @@ export default function Footer() {
             className="md:w-[200px] md:h-[200px] w-[120px] h-[120px] cursor-pointer shrink-0"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            onClick={handleGetInTouch}
           >
             <div className="relative w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden">
               {/* Eğri Yazı SVG */}
@@ -190,24 +197,14 @@ export default function Footer() {
                 <h3 className="text-white font-bold mb-4 text-xl lg:text-2xl">Follow</h3>
                 <ul className="space-y-2">
                   <li>
-                    <Link href="#" className="text-white/60 hover:text-white transition-colors">
+                    <a 
+                      href="https://www.linkedin.com/company/aya-ds/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-white/60 hover:text-white transition-colors"
+                    >
                       LinkedIn
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="text-white/60 hover:text-white transition-colors">
-                      Twitter
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="text-white/60 hover:text-white transition-colors">
-                      Facebook
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="text-white/60 hover:text-white transition-colors">
-                      Instagram
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </div>

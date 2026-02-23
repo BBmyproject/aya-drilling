@@ -111,7 +111,7 @@ export default function Introduction() {
 
             {/* Link */}
             <Link
-              href="#"
+              href="/about"
               className="group intro-link inline-flex items-center gap-3 transition-all duration-300"
               style={{
                 willChange: "transform",

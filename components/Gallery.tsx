@@ -34,15 +34,6 @@ export default function Gallery() {
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
-    // Mobilde tüm görselleri hemen görünür yap (client-side'da)
-    const isMobile = window.innerWidth < 1024;
-    if (isMobile) {
-      // setTimeout ile setState'i async yap
-      setTimeout(() => {
-        setVisibleItems([0, 1, 2, 3, 4]);
-      }, 0);
-    }
-
     observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -51,17 +42,20 @@ export default function Gallery() {
               (ref) => ref === entry.target
             );
             if (index !== -1) {
-              setVisibleItems((prev) => {
-                if (!prev.includes(index)) {
-                  return [...prev, index];
-                }
-                return prev;
-              });
+              // Her görsel için sırayla delay ekle (her biri 150ms arayla)
+              setTimeout(() => {
+                setVisibleItems((prev) => {
+                  if (!prev.includes(index)) {
+                    return [...prev, index];
+                  }
+                  return prev;
+                });
+              }, index * 150);
             }
           }
         });
       },
-      { threshold: 0.1, rootMargin: "50px" }
+      { threshold: 0.1, rootMargin: "100px" }
     );
 
     const observer = observerRef.current;
@@ -72,16 +66,18 @@ export default function Gallery() {
         if (ref && observer) {
           try {
             observer.observe(ref);
-            // Eğer element zaten görünür durumdaysa, hemen visible yap
+            // Eğer element zaten görünür durumdaysa, sırayla visible yap
             const rect = ref.getBoundingClientRect();
             const isVisible = rect.top < window.innerHeight + 100 && rect.bottom > -100;
             if (isVisible) {
-              setVisibleItems((prev) => {
-                if (!prev.includes(index)) {
-                  return [...prev, index];
-                }
-                return prev;
-              });
+              setTimeout(() => {
+                setVisibleItems((prev) => {
+                  if (!prev.includes(index)) {
+                    return [...prev, index];
+                  }
+                  return prev;
+                });
+              }, index * 150);
             }
           } catch {
             // Already observed
@@ -121,12 +117,14 @@ export default function Gallery() {
           const rect = el.getBoundingClientRect();
           const isVisible = rect.top < window.innerHeight + 100 && rect.bottom > -100;
           if (isVisible) {
-            setVisibleItems((prev) => {
-              if (!prev.includes(index)) {
-                return [...prev, index];
-              }
-              return prev;
-            });
+            setTimeout(() => {
+              setVisibleItems((prev) => {
+                if (!prev.includes(index)) {
+                  return [...prev, index];
+                }
+                return prev;
+              });
+            }, index * 150);
           }
         }, 50);
       } catch {
@@ -176,7 +174,7 @@ export default function Gallery() {
           {/* Sağ Taraf - Başlık */}
           <div className="flex-1 max-w-[760px]">
             <h2 className="space-grotesk-bold text-white text-3xl md:text-4xl lg:text-5xl mb-4">
-              Test Gallery Title
+              AYA DRILLING SERVICES GALLERY
             </h2>
           </div>
         </div>
@@ -189,10 +187,10 @@ export default function Gallery() {
               <div
                 key={`mobile-${index}`}
                 ref={setImageRef(index)}
-                className={`transition-all duration-700 ease-out ${
+                className={`transition-all duration-1000 ease-out ${
                   visibleItems.includes(index)
                     ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-10"
+                    : "opacity-0 translate-y-20"
                 }`}
               >
                 <div 
@@ -204,6 +202,7 @@ export default function Gallery() {
                     alt={item.title}
                     fill
                     className="object-cover"
+                    unoptimized
                   />
                   {/* Overlay - md altında her zaman görünür */}
                   <div className="absolute inset-0 bg-black/50 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300" />
@@ -229,10 +228,10 @@ export default function Gallery() {
                   <div
                     key={originalIndex}
                     ref={setImageRef(originalIndex)}
-                    className={`transition-all duration-700 ease-out ${
+                    className={`transition-all duration-1000 ease-out ${
                       visibleItems.includes(originalIndex)
                         ? "opacity-100 translate-y-0"
-                        : "opacity-0 translate-y-10"
+                        : "opacity-0 translate-y-20"
                     }`}
                   >
                     <div 
@@ -244,6 +243,7 @@ export default function Gallery() {
                         alt={item.title}
                         fill
                         className="object-cover"
+                        unoptimized
                       />
                       {/* Eski Title - Sol Üst (hover'da kaybolur) */}
                       <div className="absolute top-0 left-0 p-6 opacity-100 group-hover:opacity-0 transition-opacity duration-700 ease-out">
@@ -275,10 +275,10 @@ export default function Gallery() {
                   <div
                     key={originalIndex}
                     ref={setImageRef(originalIndex)}
-                    className={`transition-all duration-700 ease-out ${
+                    className={`transition-all duration-1000 ease-out ${
                       visibleItems.includes(originalIndex)
                         ? "opacity-100 translate-y-0"
-                        : "opacity-0 translate-y-10"
+                        : "opacity-0 translate-y-20"
                     }`}
                   >
                     <div 
@@ -290,6 +290,7 @@ export default function Gallery() {
                         alt={item.title}
                         fill
                         className="object-cover"
+                        unoptimized
                       />
                       {/* Eski Title - Sol Üst (hover'da kaybolur) */}
                       <div className="absolute top-0 left-0 p-6 opacity-100 group-hover:opacity-0 transition-opacity duration-700 ease-out">

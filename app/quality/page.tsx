@@ -116,7 +116,7 @@ export default function QualityPage() {
         {/* Background Image */}
         <div className="relative w-full" style={{ height: "750px" }}>
           <Image
-            src="/images/services-2.jpg"
+            src="/images/sub-banner.jpg"
             alt="Quality"
             fill
             className="object-cover"

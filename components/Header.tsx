@@ -48,7 +48,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "About", href: "/about" },
+    { name: "ABOUT", href: "/about" },
     {
       name: "SERVICES",
       href: "/services",
@@ -132,16 +132,16 @@ export default function Header() {
                         Measurement While Drilling (MWD)
                       </Link>
                       <Link
-                        href="/services/bottom-hole-assembly"
+                        href="/services/well-planning"
                         className="block px-4 py-2 text-white hover:bg-[#2b2b2b] transition-colors"
                       >
-                        Bottom Hole Assembly (BHA) Design
+                        Well Planning
                       </Link>
                       <Link
-                        href="/services/trajectory-planning"
+                        href="/services/engineering"
                         className="block px-4 py-2 text-white hover:bg-[#2b2b2b] transition-colors"
                       >
-                        Trajectory Planning
+                        Engineering
                       </Link>
                     </div>
                     </div>
@@ -245,24 +245,24 @@ export default function Header() {
                             Measurement While Drilling (MWD)
                           </Link>
                           <Link
-                            href="/services/bottom-hole-assembly"
+                            href="/services/well-planning"
                             className="block py-2 text-white hover:text-gray-300 transition-colors"
                             onClick={() => {
                               setMobileMenuOpen(false);
                               setServicesOpen(false);
                             }}
                           >
-                            Bottom Hole Assembly (BHA) Design
+                            Well Planning
                           </Link>
                           <Link
-                            href="/services/trajectory-planning"
+                            href="/services/engineering"
                             className="block py-2 text-white hover:text-gray-300 transition-colors"
                             onClick={() => {
                               setMobileMenuOpen(false);
                               setServicesOpen(false);
                             }}
                           >
-                            Trajectory Planning
+                            Engineering
                           </Link>
                         </div>
                       )}

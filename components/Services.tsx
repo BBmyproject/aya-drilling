@@ -76,8 +76,8 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
       image: "/images/services-3.jpg",
     },
     {
-      title: "BOTTOM HOLE ASSEMBLY (BHA) DESIGN",
-      slug: "bottom-hole-assembly",
+      title: "Well Planning",
+      slug: "well-planning",
       description: "Engineering-driven BHA design services focusing on trajectory design, drilling risk assessment, and efficiency optimization from initial design to execution.",
       items: [
         "Evaluation of planned well geometry and drilling feasibility",
@@ -88,9 +88,9 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
       image: "/images/services-4.jpg",
     },
     {
-      title: "TRAJECTORY PLANNING",
-      slug: "trajectory-planning",
-      description: "Project-based trajectory planning and technical support delivering integrated solutions across planning, operations, and post-run performance evaluation.",
+      title: "Engineering",
+      slug: "engineering",
+      description: "Project-based engineering and technical support delivering integrated solutions across planning, operations, and post-run performance evaluation.",
       items: [
         "Directional drilling engineering support",
         "Technical preparation prior to operations",
@@ -171,6 +171,7 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
                     alt={service.title}
                     fill
                     className="object-cover"
+                    unoptimized
                   />
                 </div>
 
@@ -327,6 +328,7 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
                   alt={service.title}
                   fill
                   className="object-cover"
+                  unoptimized
                 />
               </div>
             </div>

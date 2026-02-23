@@ -3,7 +3,7 @@
 
 export default function ContactForm() {
   return (
-    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 fade-up">
+    <section id="contact-form" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 fade-up">
       <div className="max-w-[1296px] mx-auto">
         <div className="flex flex-col items-start justify-between gap-12 lg:gap-16">
           {/* Sol Taraf - Contact Badge ve Yazı */}

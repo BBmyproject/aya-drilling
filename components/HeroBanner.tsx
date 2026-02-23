@@ -1,29 +1,65 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
+import { useState, useEffect } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function HeroBanner() {
   const [isHovered, setIsHovered] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const heroImages = [
+    "/images/hero-image.jpg",
+    "/images/hero-image-2.jpg",
+    "/images/hero-image-3.jpeg",
+  ];
+
+  // Otomatik görsel değiştirme (3.5 saniyede bir)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
+
+  const handleGetInTouch = () => {
+    if (pathname === "/") {
+      // Anasayfadaysa form alanına scroll et
+      const contactForm = document.getElementById("contact-form");
+      if (contactForm) {
+        contactForm.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    } else {
+      // Başka bir sayfadaysa contact sayfasına git
+      router.push("/contact");
+    }
+  };
 
   return (
     <section className="relative w-full h-[540px] md:h-screen overflow-hidden">
-      {/* Background Image */}
+      {/* Background Images with Transition */}
       <div className="absolute inset-0 w-full h-full">
-        <Image
-          src="/images/hero-image.jpeg"
-          alt="Hero"
-          fill
-          className="object-cover"
-          priority
-        />
+        {heroImages.map((image, index) => (
+          <img
+            key={image}
+            src={image}
+            alt="Hero"
+            loading={index === 2 ? "lazy" : "eager"}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+              currentImageIndex === index ? "opacity-100" : "opacity-0"
+            }`}
+            style={{ objectFit: "cover" }}
+          />
+        ))}
       </div>
 
       {/* Overlay Gradient */}
       <div
         className="absolute inset-0 z-[1] pointer-events-none"
         style={{
-          background: "linear-gradient(#fff0 0%, #000 100%)",
+          background: "linear-gradient(#fff0 0%, #000 110%)",
         }}
       />
 
@@ -42,9 +78,10 @@ export default function HeroBanner() {
           {/* Sağ Alt Daire */}
           <div
             className="md:w-[200px] md:h-[200px] w-[120px] h-[120px] cursor-pointer flex-shrink-0"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            onClick={handleGetInTouch}
+          >
           <div className="relative w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden">
             {/* Eğri Yazı SVG */}
             <div
