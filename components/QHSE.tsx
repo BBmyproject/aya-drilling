@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 
 export default function QHSE() {
   const [isVisible, setIsVisible] = useState(false);
@@ -157,7 +156,7 @@ export default function QHSE() {
                   }`}
                   style={{ transitionDelay: `${1000 + index * 200}ms` }}
                 >
-                  <Image
+                  <img
                     src={section.svgPath}
                     alt="Decoration"
                     width={200}

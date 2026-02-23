@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import { Link } from "next-view-transitions";
 
 export default function Services({ hideHeader = false }: { hideHeader?: boolean }) {
@@ -165,13 +164,11 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
               {/* Mobile/Tablet - Gallery Style (md altında) */}
               <div className="lg:hidden bg-white space-y-6">
                 {/* Görsel */}
-                <div className="relative w-full h-[300px] md:h-[400px]">
-                  <Image
+                <div className="relative w-full h-[600px] md:h-[400px]">
+                  <img
                     src={service.image}
                     alt={service.title}
-                    fill
-                    className="object-cover"
-                    unoptimized
+                    className="absolute inset-0 w-full h-full object-cover"
                   />
                 </div>
 
@@ -323,12 +320,10 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
 
               {/* Sağ Taraf - %60 Görsel (sadece lg+) */}
               <div className="hidden lg:block w-[55%] relative">
-                <Image
+                <img
                   src={service.image}
                   alt={service.title}
-                  fill
-                  className="object-cover"
-                  unoptimized
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
             </div>

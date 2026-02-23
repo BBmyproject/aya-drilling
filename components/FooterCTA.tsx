@@ -1,18 +1,15 @@
 "use client";
 
-import Image from "next/image";
-
 export default function FooterCTA() {
   return (
     <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
       <div className="relative max-w-[1296px] mx-auto overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full">
-          <Image
+          <img
             src="/images/footer-cta-bg.png"
             alt="Background"
-            fill
-            className="object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
           />
         </div>
 
@@ -20,7 +17,7 @@ export default function FooterCTA() {
         <div className="relative z-20 flex flex-col items-center justify-center text-center space-y-8 py-16 md:py-24">
             {/* Logo */}
             <div className="mb-8">
-                <Image
+                <img
                 src="/logo.svg"
                 alt="Logo"
                 width={200}

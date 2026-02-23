@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { Link } from "next-view-transitions";
 import { useState } from "react";
 
@@ -66,12 +65,11 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="shrink-0">
-            <Image
+            <img
               src="/logo.svg"
               alt="Logo"
               width={150}
               height={40}
-              priority
               className="h-auto"
             />
           </Link>
@@ -171,12 +169,11 @@ export default function Header() {
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between h-20 px-4 border-b border-[#2b2b2b]">
             <Link href="/" onClick={() => setMobileMenuOpen(false)}>
-              <Image
+              <img
                 src="/logo.svg"
                 alt="Logo"
                 width={150}
                 height={40}
-                priority
                 className="h-auto"
               />
             </Link>

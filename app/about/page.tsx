@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { Link } from "next-view-transitions";
 import Footer from "@/components/Footer";
 import { useEffect, useRef, useState } from "react";
@@ -135,15 +134,13 @@ export default function About() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {/* Hero Section */}
-      <section className="relative w-full overflow-hidden" style={{ maxHeight: "750px" }}>
+      <section className="relative w-full overflow-hidden" style={{ maxHeight: "500px" }}>
         {/* Background Image */}
-        <div className="relative w-full" style={{ height: "750px" }}>
-          <Image
+        <div className="relative w-full" style={{ height: "500px" }}>
+          <img
             src="/images/sub-banner.jpg"
             alt="About"
-            fill
-            className="object-cover"
-            priority
+            className="absolute inset-0 w-full h-[500px] md:h-full object-cover"
           />
         </div>
 
@@ -240,11 +237,10 @@ export default function About() {
                 </div>
               </div>
               <div className="flex-1 max-w-[500px] relative h-[300px] lg:h-[400px]">
-                <Image
+                <img
                   src="/images/services-1.jpg"
                   alt="Company Overview"
-                  fill
-                  className="object-cover rounded-lg"
+                  className="absolute inset-0 w-full h-full object-cover rounded-lg"
                 />
               </div>
             </div>
@@ -367,11 +363,10 @@ export default function About() {
                 </div>
               </div>
               <div className="flex-1 max-w-[500px] relative h-[300px] lg:h-[400px]">
-                <Image
+                <img
                   src="/images/services-4.jpg"
                   alt="Mission & Vision"
-                  fill
-                  className="object-cover rounded-lg"
+                  className="absolute inset-0 w-full h-full object-cover rounded-lg"
                 />
               </div>
             </div>
@@ -487,11 +482,10 @@ export default function About() {
                 </div>
               </div>
               <div className="flex-1 max-w-[500px] relative h-[300px] lg:h-[400px]">
-                <Image
+                <img
                   src="/images/hero-image.jpeg"
                   alt="Operations Focus"
-                  fill
-                  className="object-cover rounded-lg"
+                  className="absolute inset-0 w-full h-full object-cover rounded-lg"
                 />
               </div>
             </div>

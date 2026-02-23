@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 import { Link } from "next-view-transitions";
 
 export default function Footer() {
@@ -144,7 +143,7 @@ export default function Footer() {
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
             {/* Sol Taraf - Logo */}
             <div className="w-full lg:w-1/2">
-              <Image
+              <img
                 src="/logo.svg"
                 alt="Logo"
                 width={200}

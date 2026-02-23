@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { Link } from "next-view-transitions";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
@@ -34,15 +33,13 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {/* Hero Section - Background Image ile */}
-      <section className="relative w-full overflow-hidden" style={{ maxHeight: "750px" }}>
+      <section className="relative w-full overflow-hidden" style={{ maxHeight: "500px" }}>
         {/* Background Image */}
-        <div className="relative w-full" style={{ height: "750px" }}>
-          <Image
+        <div className="relative w-full" style={{ height: "500px" }}>
+          <img
             src="/images/contact.webp"
             alt="Contact"
-            fill
-            className="object-cover"
-            priority
+            className="absolute inset-0 w-full h-[500px] md:h-full object-cover"
           />
         </div>
 

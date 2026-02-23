@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import { BsFillSuitDiamondFill } from "react-icons/bs";
-import Image from "next/image";
 
 export default function Gallery() {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
@@ -197,12 +196,10 @@ export default function Gallery() {
                   className="relative w-full aspect-[618/660] overflow-hidden group"
                   data-cursor-hover="true"
                 >
-                  <Image
+                  <img
                     src={item.image}
                     alt={item.title}
-                    fill
-                    className="object-cover"
-                    unoptimized
+                    className="absolute inset-0 w-full h-full object-cover"
                   />
                   {/* Overlay - md altında her zaman görünür */}
                   <div className="absolute inset-0 bg-black/50 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300" />
@@ -238,12 +235,10 @@ export default function Gallery() {
                       className="relative w-full aspect-[618/660] overflow-hidden group"
                       data-cursor-hover="true"
                     >
-                      <Image
+                      <img
                         src={item.image}
                         alt={item.title}
-                        fill
-                        className="object-cover"
-                        unoptimized
+                        className="absolute inset-0 w-full h-full object-cover"
                       />
                       {/* Eski Title - Sol Üst (hover'da kaybolur) */}
                       <div className="absolute top-0 left-0 p-6 opacity-100 group-hover:opacity-0 transition-opacity duration-700 ease-out">
@@ -285,12 +280,10 @@ export default function Gallery() {
                       className="relative w-full aspect-[618/660] overflow-hidden group"
                       data-cursor-hover="true"
                     >
-                      <Image
+                      <img
                         src={item.image}
                         alt={item.title}
-                        fill
-                        className="object-cover"
-                        unoptimized
+                        className="absolute inset-0 w-full h-full object-cover"
                       />
                       {/* Eski Title - Sol Üst (hover'da kaybolur) */}
                       <div className="absolute top-0 left-0 p-6 opacity-100 group-hover:opacity-0 transition-opacity duration-700 ease-out">

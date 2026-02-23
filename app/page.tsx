@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://aya-ds.com";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "AYA Drilling Services",
   description: "AYA Drilling Services - International oil and gas drilling company based in Ankara, Turkey. Specializing in directional drilling, downhole motors, MWD services, and advanced drilling technologies for the petroleum industry.",
   alternates: {
     canonical: `${baseUrl}/`,
