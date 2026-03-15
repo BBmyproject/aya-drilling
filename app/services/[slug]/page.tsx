@@ -20,74 +20,74 @@ const servicesContent: Record<
     }>;
   }
 > = {
-  "directed-drilling": {
-    title: "DIRECTED DRILLING",
-    slug: "directed-drilling",
+  "directional-drilling": {
+    title: "DIRECTIONAL DRILLING",
+    slug: "directional-drilling",
     image: "/images/services-1.jpg",
     sections: [
       {
-        badge: "SERVICE DESCRIPTION",
-        title: "Service Description",
+        badge: "DIRECTIONAL DRILLING",
+        title: "DIRECTIONAL DRILLING",
         description:
-          "AYA Drilling Services provides directional drilling services supporting oil, gas, and geothermal drilling operations across a wide range of well profiles and geological conditions. Our directional drilling services cover the full operational scope, including well planning support, downhole tool selection, real-time trajectory control, and continuous performance monitoring. The objective is to deliver accurate well placement while maintaining wellbore stability and operational efficiency throughout the drilling process.",
+          "AYA DRILLING SERVICES PROVIDES DIRECTIONAL DRILLING SOLUTIONS FOR OIL, GAS, AND GEOTHERMAL PROJECTS ACROSS A WIDE RANGE OF WELL PROFILES AND GEOLOGICAL CONDITIONS, DELIVERING WELL PLANNING SUPPORT, REAL-TIME TRAJECTORY CONTROL, AND PERFORMANCE MONITORING TO ENSURE ACCURATE WELL PLACEMENT AND OPERATIONAL EFFICIENCY.",
       },
       {
         badge: "TECHNOLOGY USED",
-        title: "Technology Used",
+        title: "TECHNOLOGY USED",
         description:
           "AYA utilizes field-proven directional drilling technologies selected based on project requirements, formation characteristics, and operational constraints. Our technology scope includes:",
         isList: true,
       },
       {
         badge: "OPERATIONAL WORKFLOW",
-        title: "Operational Workflow",
+        title: "OPERATIONAL WORKFLOW",
         description:
           "AYA's directional drilling operations follow a structured and engineering-driven workflow:",
         isList: true,
       },
       {
         badge: "ADVANTAGES",
-        title: "Advantages",
+        title: "ADVANTAGES",
         description: "AYA's directional drilling services provide operators with:",
         isList: true,
       },
     ],
   },
   "downhole-motor": {
-    title: "DOWNHOLE MOTOR",
+    title: "DOWNHOLE MOTORS",
     slug: "downhole-motor",
     image: "/images/services-2.jpg",
     sections: [
       {
-        badge: "SERVICE DESCRIPTION",
-        title: "Service Description",
+        badge: "DOWNHOLE MOTORS",
+        title: "DOWNHOLE MOTORS",
         description:
-          "AYA Drilling Services provides downhole motor services as an integrated part of directional drilling and Bottom Hole Assembly (BHA) design. Downhole motors are selected and configured within the overall BHA to support directional requirements, formation behavior, and planned drilling parameters. The objective is to achieve controlled directional response, stable drilling performance, and efficient power delivery to the bit.",
+          "AYA DRILLING SERVICES PROVIDES DOWNHOLE MOTOR SOLUTIONS AS AN INTEGRATED PART OF DIRECTIONAL DRILLING AND BHA DESIGN. MOTORS ARE SELECTED AND CONFIGURED TO MATCH WELL TRAJECTORY REQUIREMENTS, FORMATION CHARACTERISTICS, AND DRILLING PARAMETERS, ENSURING CONTROLLED DIRECTIONAL RESPONSE, STABLE PERFORMANCE, AND EFFICIENT POWER DELIVERY TO THE BIT.",
       },
       {
         badge: "TECHNICAL APPROACH",
-        title: "Technical Approach",
+        title: "TECHNICAL APPROACH",
         description:
           "AYA's approach to downhole motors is based on BHA-focused engineering rather than standalone tool selection. Key considerations include:",
         isList: true,
       },
       {
         badge: "BHA DESIGN & INTEGRATION",
-        title: "BHA Design & Integration",
+        title: "BHA DESIGN & INTEGRATION",
         description:
           "Downhole motors are designed and deployed as a critical component of the Bottom Hole Assembly. AYA's BHA design process focuses on:",
         isList: true,
       },
       {
         badge: "OPERATIONAL PERSPECTIVE",
-        title: "Operational Perspective",
+        title: "OPERATIONAL PERSPECTIVE",
         description:
           "During operations, downhole motor performance is monitored together with overall BHA behavior. Operational focus areas include:",
         isList: true,
       },
       {
         badge: "VALUE FOR THE OPERATOR",
-        title: "Value for the Operator",
+        title: "VALUE FOR THE OPERATOR",
         description:
           "AYA's downhole motor and BHA-focused approach provides operators with:",
         isList: true,
@@ -100,35 +100,35 @@ const servicesContent: Record<
     image: "/images/services-3.jpg",
     sections: [
       {
-        badge: "SERVICE DESCRIPTION",
-        title: "Service Description",
+        badge: "MEASUREMENT WHILE DRILLING (MWD)",
+        title: "MEASUREMENT WHILE DRILLING (MWD)",
         description:
-          "AYA Drilling Services provides Measurement While Drilling (MWD) services supporting directional drilling operations through reliable downhole data acquisition and real-time operational insight. MWD services are delivered as an integrated part of the Bottom Hole Assembly (BHA), supporting accurate well placement, informed directional decisions, and stable drilling performance throughout the operation.",
+          "AYA DRILLING SERVICES PROVIDES MEASUREMENT WHILE DRILLING (MWD) SERVICES TO SUPPORT DIRECTIONAL DRILLING OPERATIONS THROUGH RELIABLE DOWNHOLE DATA ACQUISITION. MWD SYSTEMS ENABLE ACCURATE WELL PLACEMENT, INFORMED DIRECTIONAL DECISIONS, AND STABLE DRILLING PERFORMANCE.",
       },
       {
         badge: "TECHNICAL APPROACH",
-        title: "Technical Approach",
+        title: "TECHNICAL APPROACH",
         description:
           "AYA's MWD approach focuses on data relevance, reliability, and operational usability rather than raw data volume. Key elements of our approach include:",
         isList: true,
       },
       {
-        badge: "BHA INTEGRATION & DIRECTIONAL SUPPORT",
-        title: "BHA Integration & Directional Support",
+        badge: "DIRECTIONAL SUPPORT",
+        title: "DIRECTIONAL SUPPORT",
         description:
           "MWD systems are deployed as a critical component of the BHA, working in coordination with downhole motors and directional tools. This integrated approach supports:",
         isList: true,
       },
       {
         badge: "OPERATIONAL PERSPECTIVE",
-        title: "Operational Perspective",
+        title: "OPERATIONAL PERSPECTIVE",
         description:
           "During drilling operations, MWD data is monitored continuously to support both directional control and overall drilling performance. Operational focus areas include:",
         isList: true,
       },
       {
         badge: "VALUE FOR THE OPERATOR",
-        title: "Value for the Operator",
+        title: "VALUE FOR THE OPERATOR",
         description: "AYA's MWD services provide operators with:",
         isList: true,
       },
@@ -140,35 +140,35 @@ const servicesContent: Record<
     image: "/images/services-4.jpg",
     sections: [
       {
-        badge: "SERVICE DESCRIPTION",
-        title: "Service Description",
+        badge: "WELL PLANNING",
+        title: "WELL PLANNING",
         description:
-          "AYA Drilling Services provides well planning services supporting directional drilling operations through structured engineering workflows and practical field insight. Well planning is approached as an integrated process linking geological understanding, drilling objectives, and operational execution. The goal is to develop well designs that are technically sound, operationally achievable, and aligned with overall project constraints.",
+          "AYA DRILLING SERVICES PROVIDES WELL PLANNING SERVICES SUPPORTING DIRECTIONAL DRILLING OPERATIONS THROUGH STRUCTURED ENGINEERING WORKFLOWS AND PRACTICAL FIELD INSIGHT. WELL DESIGNS ARE DEVELOPED BY INTEGRATING GEOLOGICAL UNDERSTANDING, DRILLING OBJECTIVES, AND OPERATIONAL CONSTRAINTS TO ENSURE TECHNICALLY SOUND AND OPERATIONALLY ACHIEVABLE PROJECT EXECUTION.",
       },
       {
         badge: "PLANNING APPROACH",
-        title: "Planning Approach",
+        title: "PLANNING APPROACH",
         description:
           "AYA's well planning approach combines engineering analysis with operational experience. Key elements include:",
         isList: true,
       },
       {
         badge: "ENGINEERING PROCESS",
-        title: "Engineering Process",
+        title: "ENGINEERING PROCESS",
         description:
           "Well planning is carried out through a structured engineering process focused on consistency and risk awareness. This process includes:",
         isList: true,
       },
       {
-        badge: "RISK & EFFICIENCY MANAGEMENT",
-        title: "Risk & Efficiency Management",
+        badge: "RISK MANAGEMENT",
+        title: "RISK MANAGEMENT",
         description:
           "Risk management and drilling efficiency are core considerations throughout the well planning stage. AYA's planning process aims to:",
         isList: true,
       },
       {
         badge: "VALUE FOR THE OPERATOR",
-        title: "Value for the Operator",
+        title: "VALUE FOR THE OPERATOR",
         description: "AYA's well planning services provide operators with:",
         isList: true,
       },
@@ -180,35 +180,35 @@ const servicesContent: Record<
     image: "/images/services-5.jpg",
     sections: [
       {
-        badge: "SERVICE DESCRIPTION",
-        title: "Service Description",
+        badge: "ENGINEERING",
+        title: "ENGINEERING",
         description:
-          "AYA Drilling Services provides engineering support services designed to complement directional drilling operations through project-based technical solutions and integrated workflows. Engineering services are focused on supporting planning, execution, and performance evaluation stages of drilling projects. The objective is to ensure technical consistency, operational alignment, and effective problem-solving throughout the project lifecycle.",
+          "AYA DRILLING SERVICES PROVIDES ENGINEERING SUPPORT SERVICES TO COMPLEMENT DIRECTIONAL DRILLING OPERATIONS THROUGH PROJECT-BASED TECHNICAL SOLUTIONS AND INTEGRATED WORKFLOWS. THESE SERVICES SUPPORT PLANNING, EXECUTION, AND PERFORMANCE EVALUATION, ENSURING TECHNICAL CONSISTENCY, OPERATIONAL ALIGNMENT, AND EFFECTIVE PROBLEM-SOLVING THROUGHOUT THE DRILLING PROJECT LIFECYCLE.",
       },
       {
         badge: "ENGINEERING SOLUTIONS",
-        title: "Engineering Solutions",
+        title: "ENGINEERING SOLUTIONS",
         description:
           "AYA's engineering services are structured to address project-specific technical requirements. These services may include:",
         isList: true,
       },
       {
         badge: "PROJECT-BASED TECHNICAL SUPPORT",
-        title: "Project-Based Technical Support",
+        title: "PROJECT-BASED TECHNICAL SUPPORT",
         description:
           "Engineering support is provided on a project basis and aligned closely with field operations. Key focus areas include:",
         isList: true,
       },
       {
         badge: "INTEGRATED SERVICE APPROACH",
-        title: "Integrated Service Approach",
+        title: "INTEGRATED SERVICE APPROACH",
         description:
           "AYA's engineering services are delivered as part of an integrated directional drilling solution. Engineering teams work in close coordination with:",
         isList: true,
       },
       {
         badge: "VALUE FOR THE OPERATOR",
-        title: "Value for the Operator",
+        title: "VALUE FOR THE OPERATOR",
         description: "AYA's engineering services provide operators with:",
         isList: true,
       },
@@ -216,9 +216,18 @@ const servicesContent: Record<
   },
 };
 
+// Service-specific intro headings
+const serviceIntroHeadings: Record<string, string> = {
+  "directional-drilling": "WE START BY ANALYZING WELL OBJECTIVES AND GEOLOGICAL CONDITIONS, THEN DESIGN AND EXECUTE DIRECTIONAL DRILLING SOLUTIONS.",
+  "downhole-motor": "WE START BY EVALUATING WELL TRAJECTORY REQUIREMENTS, FORMATION CONDITIONS, AND DRILLING PARAMETERS, THEN SELECT AND CONFIGURE DOWNHOLE MOTORS AS PART OF THE BHA TO DELIVER RELIABLE POWER TO THE BIT, SUPPORT DIRECTIONAL CONTROL, AND ENSURE STABLE AND EFFICIENT DRILLING PERFORMANCE.",
+  "measurement-while-drilling": "WE START BY INTEGRATING MWD SYSTEMS INTO THE BOTTOM HOLE ASSEMBLY TO COLLECT AND TRANSFER RELIABLE DOWNHOLE DATA.",
+  "well-planning": "WE START BY ANALYZING GEOLOGICAL DATA, WELL OBJECTIVES, AND PROJECT CONSTRAINTS, THEN DEVELOP WELL PLANS THAT INTEGRATE ENGINEERING DESIGN WITH PRACTICAL DRILLING STRATEGIES.",
+  "engineering": "WE START BY ANALYZING PROJECT OBJECTIVES, DRILLING PARAMETERS, AND OPERATIONAL CONSTRAINTS, THEN PROVIDE ENGINEERING SUPPORT THAT INTEGRATES PLANNING, EXECUTION, AND PERFORMANCE EVALUATION TO ENSURE TECHNICAL CONSISTENCY, AND EFFECTIVE PROBLEM-SOLVING THROUGHOUT THE PROJECT LIFECYCLE.",
+};
+
 // List items for each service
 const listItems: Record<string, Record<string, string[]>> = {
-  "directed-drilling": {
+  "directional-drilling": {
     "TECHNOLOGY USED": [
       "Directional drilling tools compatible with complex well profiles",
       "Downhole motors configured for build, hold, and turn requirements",
@@ -374,10 +383,14 @@ export default function ServiceDetailPage({
   const service = servicesContent[slug];
   const [visibleSections, setVisibleSections] = useState<Set<number>>(new Set());
   const [visibleContentItems, setVisibleContentItems] = useState<Set<string>>(new Set());
+  const [openAccordion, setOpenAccordion] = useState<string | null>(null);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
   const contentItemRefs = useRef<(HTMLElement | null)[]>([]);
   const observerRef = useRef<IntersectionObserver | null>(null);
   const contentObserverRef = useRef<IntersectionObserver | null>(null);
+  
+  const otherSections = service.sections.slice(1); // İlk section hariç diğerleri
+  const introHeading = serviceIntroHeadings[slug] || "";
 
   useEffect(() => {
     // Section observer
@@ -482,8 +495,10 @@ export default function ServiceDetailPage({
     }
   };
 
-  const getSectionClassName = (index: number) => {
-    const baseClasses = "flex flex-col gap-8 mb-40 transition-opacity duration-700";
+  const getSectionClassName = (index: number, isFirstSection?: boolean) => {
+    const baseClasses = isFirstSection 
+      ? "mb-40 transition-opacity duration-700" 
+      : "flex flex-col gap-8 mb-40 transition-opacity duration-700";
     const isVisible = visibleSections.has(index);
     return `${baseClasses} ${isVisible ? "animate-fade-up opacity-100" : "opacity-0"}`;
   };
@@ -598,55 +613,63 @@ export default function ServiceDetailPage({
       {/* Content Sections */}
       <section className="pt-16 md:pt-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-[1296px] mx-auto space-y-16">
-          {service.sections.map((section, index) => {
+          {/* İlk Section */}
+          {service.sections.slice(0, 1).map((section, index) => {
             const sectionListItems = listItems[slug]?.[section.badge] || [];
+            const isFirstSection = true;
+            
             return (
-              <div key={index} ref={setSectionRef(index)} className={getSectionClassName(index)}>
-                {/* Badge */}
-                <div className="shrink-0">
-                  <div
-                    style={{
-                      willChange: "transform",
-                      flexFlow: "row",
-                      flex: "none",
-                      placeContent: "center flex-start",
-                      alignItems: "center",
-                      gap: "12px",
-                      width: "min-content",
-                      height: "min-content",
-                      padding: "8px 16px 8px 16px",
-                      display: "flex",
-                      position: "relative",
-                      overflow: "hidden",
-                      borderBottomWidth: "1px",
-                      borderColor: "rgb(43, 43, 43)",
-                      borderLeftWidth: "1px",
-                      borderRightWidth: "1px",
-                      borderStyle: "solid",
-                      borderTopWidth: "1px",
-                      borderRadius: "100px",
-                      opacity: 1,
-                    }}
-                  >
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M11.2966 4.90088C11.5382 4.24792 12.4618 4.24792 12.7034 4.90088L14.3111 9.24575C14.3871 9.45104 14.549 9.6129 14.7542 9.68886L19.0991 11.2966C19.7521 11.5382 19.7521 12.4618 19.0991 12.7034L14.7542 14.3111C14.549 14.3871 14.3871 14.549 14.3111 14.7542L12.7034 19.0991C12.4618 19.7521 11.5382 19.7521 11.2966 19.0991L9.68886 14.7542C9.6129 14.549 9.45104 14.3871 9.24575 14.3111L4.90088 12.7034C4.24792 12.4618 4.24792 11.5382 4.90088 11.2966L9.24575 9.68886C9.45104 9.6129 9.6129 9.45104 9.68886 9.24575L11.2966 4.90088Z"
-                        fill="#E53720"
-                      />
-                    </svg>
-                    <span className="text-white/80 text-sm md:text-base font-medium whitespace-nowrap">
-                      {section.badge}
-                    </span>
-                  </div>
-                </div>
+              <div 
+                key={index} 
+                ref={setSectionRef(index)} 
+                className={getSectionClassName(index, isFirstSection)}
+              >
+                {isFirstSection ? (
+                  <>
+                    {/* Desktop: Flex Row Layout - Sol: Yazı, Sağ: Görsel */}
+                    <div className="hidden lg:flex flex-row items-start justify-between gap-12">
+                      {/* Sol Taraf - Yazılar */}
+                      <div className="flex-1 max-w-[760px]">
+                        {/* Badge */}
+                        <div className="shrink-0 mb-6">
+                          <div
+                            style={{
+                              willChange: "transform",
+                              flexFlow: "row",
+                              flex: "none",
+                              placeContent: "center flex-start",
+                              alignItems: "center",
+                              gap: "12px",
+                              width: "min-content",
+                              height: "min-content",
+                              padding: "8px 16px 8px 16px",
+                              display: "flex",
+                              position: "relative",
+                              overflow: "hidden",
+                              borderBottomWidth: "1px",
+                              borderColor: "rgb(43, 43, 43)",
+                              borderLeftWidth: "1px",
+                              borderRightWidth: "1px",
+                              borderStyle: "solid",
+                              borderTopWidth: "1px",
+                              borderRadius: "100px",
+                              opacity: 1,
+                            }}
+                          >
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path
+                                d="M11.2966 4.90088C11.5382 4.24792 12.4618 4.24792 12.7034 4.90088L14.3111 9.24575C14.3871 9.45104 14.549 9.6129 14.7542 9.68886L19.0991 11.2966C19.7521 11.5382 19.7521 12.4618 19.0991 12.7034L14.7542 14.3111C14.549 14.3871 14.3871 14.549 14.3111 14.7542L12.7034 19.0991C12.4618 19.7521 11.5382 19.7521 11.2966 19.0991L9.68886 14.7542C9.6129 14.549 9.45104 14.3871 9.24575 14.3111L4.90088 12.7034C4.24792 12.4618 4.24792 11.5382 4.90088 11.2966L9.24575 9.68886C9.45104 9.6129 9.6129 9.45104 9.68886 9.24575L11.2966 4.90088Z"
+                                fill="#E53720"
+                              />
+                            </svg>
+                            <span className="text-white/80 text-sm md:text-base font-medium whitespace-nowrap">
+                              {section.badge}
+                            </span>
+                          </div>
+                        </div>
 
-                {/* Title */}
-                <h2 className="space-grotesk-bold text-white text-3xl md:text-4xl lg:text-5xl">
-                  {section.title}
-                </h2>
-
-                {/* Content */}
-                <div className="text-white text-base md:text-lg leading-relaxed space-y-4">
+                        {/* Content */}
+                        <div className="text-white text-base md:text-lg leading-relaxed space-y-4">
                   {typeof section.description === "string" ? (
                     <p
                       ref={(el) => {
@@ -660,11 +683,12 @@ export default function ServiceDetailPage({
                         }
                       }}
                       data-content-id={`section-${index}-desc`}
-                      className={`transition-opacity duration-700 ${
+                      className={`transition-opacity text-xl md:text-2xl lg:text-3xl space-grotesk-bold duration-700 ${
                         visibleContentItems.has(`section-${index}-desc`)
                           ? "animate-fade-up opacity-100"
                           : "opacity-0"
                       }`}
+                      style={{ letterSpacing: "-0.02em", lineHeight: "1.4" }}
                     >
                       {section.description}
                     </p>
@@ -726,10 +750,388 @@ export default function ServiceDetailPage({
                       })}
                     </ul>
                   )}
-                </div>
+                        </div>
+                      </div>
+
+                      {/* Sağ Taraf - Görsel */}
+                      <div className="hidden lg:block w-[45%] relative h-[500px]">
+                        <img
+                          src={service.image}
+                          alt={service.title}
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Mobile: Normal Layout */}
+                    <div className="lg:hidden">
+                      {/* Badge */}
+                      <div className="shrink-0 mb-6">
+                        <div
+                          style={{
+                            willChange: "transform",
+                            flexFlow: "row",
+                            flex: "none",
+                            placeContent: "center flex-start",
+                            alignItems: "center",
+                            gap: "12px",
+                            width: "min-content",
+                            height: "min-content",
+                            padding: "8px 16px 8px 16px",
+                            display: "flex",
+                            position: "relative",
+                            overflow: "hidden",
+                            borderBottomWidth: "1px",
+                            borderColor: "rgb(43, 43, 43)",
+                            borderLeftWidth: "1px",
+                            borderRightWidth: "1px",
+                            borderStyle: "solid",
+                            borderTopWidth: "1px",
+                            borderRadius: "100px",
+                            opacity: 1,
+                          }}
+                        >
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                              d="M11.2966 4.90088C11.5382 4.24792 12.4618 4.24792 12.7034 4.90088L14.3111 9.24575C14.3871 9.45104 14.549 9.6129 14.7542 9.68886L19.0991 11.2966C19.7521 11.5382 19.7521 12.4618 19.0991 12.7034L14.7542 14.3111C14.549 14.3871 14.3871 14.549 14.3111 14.7542L12.7034 19.0991C12.4618 19.7521 11.5382 19.7521 11.2966 19.0991L9.68886 14.7542C9.6129 14.549 9.45104 14.3871 9.24575 14.3111L4.90088 12.7034C4.24792 12.4618 4.24792 11.5382 4.90088 11.2966L9.24575 9.68886C9.45104 9.6129 9.6129 9.45104 9.68886 9.24575L11.2966 4.90088Z"
+                              fill="#E53720"
+                            />
+                          </svg>
+                          <span className="text-white/80 text-sm md:text-base font-medium whitespace-nowrap">
+                            {section.badge}
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Title */}
+                      <h2 className="space-grotesk-bold text-white text-3xl md:text-4xl lg:text-5xl mb-6">
+                        {section.title}
+                      </h2>
+
+                      {/* Content */}
+                      <div className="text-white text-base md:text-lg leading-relaxed space-y-4">
+                        {typeof section.description === "string" ? (
+                          <p
+                            ref={(el) => {
+                              const itemId = `section-${index}-desc`;
+                              if (el && !contentItemRefs.current.find((ref) => ref === el)) {
+                                contentItemRefs.current.push(el);
+                                el.setAttribute("data-content-id", itemId);
+                                if (contentObserverRef.current) {
+                                  contentObserverRef.current.observe(el);
+                                }
+                              }
+                            }}
+                            data-content-id={`section-${index}-desc`}
+                            className={`transition-opacity duration-700 ${
+                              visibleContentItems.has(`section-${index}-desc`)
+                                ? "animate-fade-up opacity-100"
+                                : "opacity-0"
+                            }`}
+                          >
+                            {section.description}
+                          </p>
+                        ) : (
+                          section.description.map((para, i) => {
+                            const itemId = `section-${index}-para-${i}`;
+                            return (
+                              <p
+                                key={i}
+                                ref={(el) => {
+                                  if (el && !contentItemRefs.current.find((ref) => ref === el)) {
+                                    contentItemRefs.current.push(el);
+                                    el.setAttribute("data-content-id", itemId);
+                                    if (contentObserverRef.current) {
+                                      contentObserverRef.current.observe(el);
+                                    }
+                                  }
+                                }}
+                                data-content-id={itemId}
+                                className={`transition-opacity duration-700 ${
+                                  visibleContentItems.has(itemId)
+                                    ? "animate-fade-up opacity-100"
+                                    : "opacity-0"
+                                }`}
+                              >
+                                {para}
+                              </p>
+                            );
+                          })
+                        )}
+
+                        {/* List Items */}
+                        {section.isList && sectionListItems.length > 0 && (
+                          <ul className="space-y-3 mt-4">
+                            {sectionListItems.map((item, itemIndex) => {
+                              const itemId = `section-${index}-list-${itemIndex}`;
+                              return (
+                                <li
+                                  key={itemIndex}
+                                  ref={(el) => {
+                                    if (el && !contentItemRefs.current.find((ref) => ref === el)) {
+                                      contentItemRefs.current.push(el);
+                                      el.setAttribute("data-content-id", itemId);
+                                      if (contentObserverRef.current) {
+                                        contentObserverRef.current.observe(el);
+                                      }
+                                    }
+                                  }}
+                                  data-content-id={itemId}
+                                  className={`text-white text-base md:text-lg relative pl-3 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-1.5 before:h-1.5 before:bg-[#E53720] before:rounded-full transition-opacity duration-700 ${
+                                    visibleContentItems.has(itemId)
+                                      ? "animate-fade-up opacity-100"
+                                      : "opacity-0"
+                                  }`}
+                                >
+                                  {item}
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        )}
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    {/* Diğer Section'lar - Normal Layout */}
+                    {/* Badge */}
+                    <div className="shrink-0">
+                      <div
+                        style={{
+                          willChange: "transform",
+                          flexFlow: "row",
+                          flex: "none",
+                          placeContent: "center flex-start",
+                          alignItems: "center",
+                          gap: "12px",
+                          width: "min-content",
+                          height: "min-content",
+                          padding: "8px 16px 8px 16px",
+                          display: "flex",
+                          position: "relative",
+                          overflow: "hidden",
+                          borderBottomWidth: "1px",
+                          borderColor: "rgb(43, 43, 43)",
+                          borderLeftWidth: "1px",
+                          borderRightWidth: "1px",
+                          borderStyle: "solid",
+                          borderTopWidth: "1px",
+                          borderRadius: "100px",
+                          opacity: 1,
+                        }}
+                      >
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M11.2966 4.90088C11.5382 4.24792 12.4618 4.24792 12.7034 4.90088L14.3111 9.24575C14.3871 9.45104 14.549 9.6129 14.7542 9.68886L19.0991 11.2966C19.7521 11.5382 19.7521 12.4618 19.0991 12.7034L14.7542 14.3111C14.549 14.3871 14.3871 14.549 14.3111 14.7542L12.7034 19.0991C12.4618 19.7521 11.5382 19.7521 11.2966 19.0991L9.68886 14.7542C9.6129 14.549 9.45104 14.3871 9.24575 14.3111L4.90088 12.7034C4.24792 12.4618 4.24792 11.5382 4.90088 11.2966L9.24575 9.68886C9.45104 9.6129 9.6129 9.45104 9.68886 9.24575L11.2966 4.90088Z"
+                            fill="#E53720"
+                          />
+                        </svg>
+                        <span className="text-white/80 text-sm md:text-base font-medium whitespace-nowrap">
+                          {section.badge}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Title */}
+                    <h2 className="space-grotesk-bold text-white text-3xl md:text-4xl lg:text-5xl">
+                      {section.title}
+                    </h2>
+
+                    {/* Content */}
+                    <div className="text-white text-base md:text-lg leading-relaxed space-y-4">
+                      {typeof section.description === "string" ? (
+                        <p
+                          ref={(el) => {
+                            const itemId = `section-${index}-desc`;
+                            if (el && !contentItemRefs.current.find((ref) => ref === el)) {
+                              contentItemRefs.current.push(el);
+                              el.setAttribute("data-content-id", itemId);
+                              if (contentObserverRef.current) {
+                                contentObserverRef.current.observe(el);
+                              }
+                            }
+                          }}
+                          data-content-id={`section-${index}-desc`}
+                          className={`transition-opacity duration-700 ${
+                            visibleContentItems.has(`section-${index}-desc`)
+                              ? "animate-fade-up opacity-100"
+                              : "opacity-0"
+                          }`}
+                        >
+                          {section.description}
+                        </p>
+                      ) : (
+                        section.description.map((para, i) => {
+                          const itemId = `section-${index}-para-${i}`;
+                          return (
+                            <p
+                              key={i}
+                              ref={(el) => {
+                                if (el && !contentItemRefs.current.find((ref) => ref === el)) {
+                                  contentItemRefs.current.push(el);
+                                  el.setAttribute("data-content-id", itemId);
+                                  if (contentObserverRef.current) {
+                                    contentObserverRef.current.observe(el);
+                                  }
+                                }
+                              }}
+                              data-content-id={itemId}
+                              className={`transition-opacity duration-700 ${
+                                visibleContentItems.has(itemId)
+                                  ? "animate-fade-up opacity-100"
+                                  : "opacity-0"
+                              }`}
+                            >
+                              {para}
+                            </p>
+                          );
+                        })
+                      )}
+
+                      {/* List Items */}
+                      {section.isList && sectionListItems.length > 0 && (
+                        <ul className="space-y-3 mt-4">
+                          {sectionListItems.map((item, itemIndex) => {
+                            const itemId = `section-${index}-list-${itemIndex}`;
+                            return (
+                              <li
+                                key={itemIndex}
+                                ref={(el) => {
+                                  if (el && !contentItemRefs.current.find((ref) => ref === el)) {
+                                    contentItemRefs.current.push(el);
+                                    el.setAttribute("data-content-id", itemId);
+                                    if (contentObserverRef.current) {
+                                      contentObserverRef.current.observe(el);
+                                    }
+                                  }
+                                }}
+                                data-content-id={itemId}
+                                className={`text-white text-base md:text-lg relative pl-3 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-1.5 before:h-1.5 before:bg-[#E53720] before:rounded-full transition-opacity duration-700 ${
+                                  visibleContentItems.has(itemId)
+                                    ? "animate-fade-up opacity-100"
+                                    : "opacity-0"
+                                }`}
+                              >
+                                {item}
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      )}
+                    </div>
+                  </>
+                )}
               </div>
             );
           })}
+
+          {/* Accordion Section - Diğer Section'lar */}
+          {otherSections.length > 0 && (
+            <div className="flex flex-col lg:flex-row items-start justify-between gap-12">
+              {/* Sol Taraf - Görsel (Desktop) */}
+              <div className="hidden lg:block w-[45%] relative h-[600px]">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Sağ Taraf - Başlık ve Accordion */}
+              <div className="flex-1 max-w-[760px] w-full">
+                {/* Mobile Görsel */}
+                <div className="lg:hidden w-full relative h-[400px] mb-8">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                </div>
+                {/* Intro Heading */}
+                {introHeading && (
+                  <h2 className="space-grotesk-bold text-white text-xl md:text-2xl lg:text-3xl mb-12" style={{ letterSpacing: "-0.02em" }}>
+                    {introHeading}
+                  </h2>
+                )}
+
+                {/* Accordion */}
+                <div className="space-y-4">
+                  {otherSections.map((section, accordionIndex) => {
+                    const sectionListItems = listItems[slug]?.[section.badge] || [];
+                    const isOpen = openAccordion === section.badge;
+
+                    return (
+                      <div key={accordionIndex} className="border-b-2 border-[#2b2b2b]">
+                        {/* Accordion Header */}
+                        <button
+                          onClick={() => {
+                            setOpenAccordion(isOpen ? null : section.badge);
+                          }}
+                          className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors cursor-pointer"
+                        >
+                          <h3 className="space-grotesk-bold text-white text-xl md:text-2xl">
+                            {section.title}
+                          </h3>
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            className={`text-white transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                          >
+                            <path
+                              d="M7 10L12 15L17 10"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </button>
+
+                        {/* Accordion Content */}
+                        <div
+                          className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                            isOpen ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"
+                          }`}
+                        >
+                          <div className="px-6 pb-6">
+                            <div className="text-white text-base md:text-lg leading-relaxed space-y-4">
+                              {/* Description */}
+                              {typeof section.description === "string" ? (
+                                <p className="mb-4">{section.description}</p>
+                              ) : (
+                                section.description.map((para, i) => (
+                                  <p key={i} className="mb-4">
+                                    {para}
+                                  </p>
+                                ))
+                              )}
+
+                              {/* List Items */}
+                              {section.isList && sectionListItems.length > 0 && (
+                                <ul className="space-y-3 mt-4">
+                                  {sectionListItems.map((item, itemIndex) => (
+                                    <li
+                                      key={itemIndex}
+                                      className="text-white text-base md:text-lg relative pl-3 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-1.5 before:h-1.5 before:bg-[#E53720] before:rounded-full"
+                                    >
+                                      {item}
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 

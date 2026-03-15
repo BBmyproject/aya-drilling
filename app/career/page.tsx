@@ -5,29 +5,29 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 import { useState, useEffect, useRef } from "react";
 
-const openPositions = [
-  {
-    id: "1",
-    title: "Directional Drilling Engineer",
-    location: "Istanbul, Turkey",
-    type: "Full-time",
-    description: "We are seeking an experienced Directional Drilling Engineer to join our team.",
-  },
-  {
-    id: "2",
-    title: "MWD Field Technician",
-    location: "Istanbul, Turkey",
-    type: "Full-time",
-    description: "We are looking for a skilled MWD Field Technician with experience in directional drilling operations.",
-  },
-  {
-    id: "3",
-    title: "BHA Design Specialist",
-    location: "Istanbul, Turkey",
-    type: "Full-time",
-    description: "Join our engineering team as a BHA Design Specialist to optimize drilling performance.",
-  },
-];
+// const openPositions = [
+//   {
+//     id: "1",
+//     title: "Directional Drilling Engineer",
+//     location: "Istanbul, Turkey",
+//     type: "Full-time",
+//     description: "We are seeking an experienced Directional Drilling Engineer to join our team.",
+//   },
+//   {
+//     id: "2",
+//     title: "MWD Field Technician",
+//     location: "Istanbul, Turkey",
+//     type: "Full-time",
+//     description: "We are looking for a skilled MWD Field Technician with experience in directional drilling operations.",
+//   },
+//   {
+//     id: "3",
+//     title: "BHA Design Specialist",
+//     location: "Istanbul, Turkey",
+//     type: "Full-time",
+//     description: "Join our engineering team as a BHA Design Specialist to optimize drilling performance.",
+//   },
+// ];
 
 export default function CareerPage() {
   const [visibleSections, setVisibleSections] = useState<Set<number>>(new Set());
@@ -298,7 +298,7 @@ export default function CareerPage() {
             <h2 className="space-grotesk-bold text-white text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-8 mb-12">
               Available Opportunities
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {openPositions.map((position) => (
                 <div
                   key={position.id}
@@ -318,6 +318,11 @@ export default function CareerPage() {
                   </p>
                 </div>
               ))}
+            </div> */}
+            <div className="text-center py-12">
+              <p className="text-white/80 text-lg md:text-xl leading-relaxed">
+                We currently have no open positions. Please continue to follow us for new opportunities.
+              </p>
             </div>
           </div>
         </div>
@@ -416,7 +421,7 @@ export default function CareerPage() {
               </div>
 
               {/* Position */}
-              <div>
+              {/* <div>
                 <select
                   name="position"
                   value={selectedPosition}
@@ -433,6 +438,16 @@ export default function CareerPage() {
                     </option>
                   ))}
                 </select>
+              </div> */}
+              <div>
+                <input
+                  type="text"
+                  name="position"
+                  placeholder="POSITION (Optional)"
+                  value={selectedPosition}
+                  onChange={(e) => setSelectedPosition(e.target.value)}
+                  className="w-full font-semibold bg-[#2b2b2b] border-none text-[#e6e6e6] placeholder:text-[#e6e6e6] focus:outline-[#E53720] transition-colors py-3 px-6 text-base md:text-lg"
+                />
               </div>
 
               {/* CV Upload */}

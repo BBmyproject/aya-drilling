@@ -1,15 +1,25 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { Link } from "next-view-transitions";
 
 export default function Footer() {
   const [isHovered, setIsHovered] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
 
   const handleGetInTouch = () => {
-    router.push("/contact");
+    if (pathname === "/contact") {
+      // Contact sayfasındaysa forma scroll et
+      const contactForm = document.getElementById("contact-form");
+      if (contactForm) {
+        contactForm.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    } else {
+      // Başka bir sayfadaysa contact sayfasına git
+      router.push("/contact");
+    }
   };
 
   return (
@@ -218,7 +228,7 @@ export default function Footer() {
                     </a>
                   </li>
                   <li className="text-white/60">
-                    <p className="hover:text-white transition-colors">-</p>
+                    <a href="tel:+903125123737" className="hover:text-white transition-colors">+90 312 512 37 37</a>
                   </li>
                   <li className="text-white/60">
                     <p>Başkent Organize Sanayi Bölgesi 19. Cd. No:88<br />Malıköy Sincan Ankara</p>

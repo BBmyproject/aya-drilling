@@ -99,7 +99,10 @@ export default function About() {
   };
 
   const getSectionClassName = (index: number) => {
-    const baseClasses = index === 1 || index === 3 
+    // Section 0 ve 2 görsel içeriyor, mobilde de görünmeli
+    const baseClasses = index === 0 || index === 2
+      ? "flex flex-col gap-8 mb-40 transition-opacity duration-700"
+      : index === 1 || index === 4 
       ? "flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-16 mb-40 transition-opacity duration-700"
       : "flex flex-col gap-8 mb-40 transition-opacity duration-700";
     
@@ -138,9 +141,9 @@ export default function About() {
         {/* Background Image */}
         <div className="relative w-full" style={{ height: "500px" }}>
           <img
-            src="/images/sub-banner.jpg"
+            src="/images/about-4.png"
             alt="About"
-            className="absolute inset-0 w-full h-[500px] md:h-full object-cover"
+            className="w-full h-[500px] md:h-full object-cover"
           />
         </div>
 
@@ -236,22 +239,22 @@ export default function About() {
                   </p>
                 </div>
               </div>
-              <div className="flex-1 max-w-[500px] relative h-[300px] lg:h-[400px]">
+              <div className="flex-1 w-full lg:max-w-[500px] relative h-[250px] sm:h-[300px] lg:h-[400px]">
                 <img
-                  src="/images/services-1.jpg"
+                  src="/images/about-2.png"
                   alt="Company Overview"
-                  className="absolute inset-0 w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg"
                 />
               </div>
             </div>
           </div>
 
-          {/* History & Experience */}
+          {/* history & experience */}
           <div 
             ref={setSectionRef(1)}
             className={getSectionClassName(1)}
           >
-            {/* Sol - Badge */}
+            {/* Badge */}
             <div className="shrink-0">
               <div
                 style={{
@@ -285,23 +288,23 @@ export default function About() {
                 </span>
               </div>
             </div>
-            {/* Sağ - Content */}
+            {/* Content */}
             <div className="flex-1 max-w-[760px]">
-                <div className="space-y-4 text-white">
-                  <p className="text-base md:text-lg leading-relaxed">
-                    AYA was established to address the growing need for reliable, technically driven directional drilling services in the regional energy sector.
-                  </p>
-                  <p className="text-base md:text-lg leading-relaxed">
-                    Since its foundation, the company has successfully supported a wide range of drilling projects across oil, gas, and geothermal applications.
-                  </p>
-                  <p className="text-base md:text-lg leading-relaxed">
-                    This experience spans different well profiles, formation types, and operational environments, allowing AYA to adapt its services to varying project requirements.
-                  </p>
+              <div className="space-y-4 text-white">
+                <p className="text-base md:text-lg leading-relaxed">
+                  AYA was established to address the growing need for reliable, technically driven directional drilling services in the regional energy sector.
+                </p>
+                <p className="text-base md:text-lg leading-relaxed">
+                  Since its foundation, the company has successfully supported a wide range of drilling projects across oil, gas, and geothermal applications.
+                </p>
+                <p className="text-base md:text-lg leading-relaxed">
+                  This experience spans different well profiles, formation types, and operational environments, allowing AYA to adapt its services to varying project requirements.
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Mission & Vision */}
+          {/* management & technical team */}
           <div 
             ref={setSectionRef(2)}
             className={getSectionClassName(2)}
@@ -336,83 +339,13 @@ export default function About() {
                   <path d="M11.2966 4.90088C11.5382 4.24792 12.4618 4.24792 12.7034 4.90088L14.3111 9.24575C14.3871 9.45104 14.549 9.6129 14.7542 9.68886L19.0991 11.2966C19.7521 11.5382 19.7521 12.4618 19.0991 12.7034L14.7542 14.3111C14.549 14.3871 14.3871 14.549 14.3111 14.7542L12.7034 19.0991C12.4618 19.7521 11.5382 19.7521 11.2966 19.0991L9.68886 14.7542C9.6129 14.549 9.45104 14.3871 9.24575 14.3111L4.90088 12.7034C4.24792 12.4618 4.24792 11.5382 4.90088 11.2966L9.24575 9.68886C9.45104 9.6129 9.6129 9.45104 9.68886 9.24575L11.2966 4.90088Z" fill="#E53720"></path>
                 </svg>
                 <span className="text-white/80 text-sm md:text-base font-medium whitespace-nowrap">
-                  MISSION & VISION
+                  MANAGEMENT & TECHNICAL TEAM
                 </span>
               </div>
             </div>
             {/* Content ve Görsel */}
             <div className="flex flex-col lg:flex-row justify-between gap-8">
               <div className="flex-1 max-w-[500px]">
-                <div className="space-y-6 text-white">
-                  <div>
-                    <h3 className="space-grotesk-bold text-white text-xl md:text-2xl font-bold mb-3">
-                      Our Mission
-                    </h3>
-                    <p className="text-base md:text-lg leading-relaxed">
-                      To deliver directional drilling services that support safe, efficient, and technically sound drilling operations through engineering-driven decision making and field-proven execution.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="space-grotesk-bold text-white text-xl md:text-2xl font-bold mb-3">
-                      Our Vision
-                    </h3>
-                    <p className="text-base md:text-lg leading-relaxed">
-                      To be a trusted directional drilling service partner recognized for technical reliability, operational consistency, and a practical understanding of drilling challenges.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="flex-1 max-w-[500px] relative h-[300px] lg:h-[400px]">
-                <img
-                  src="/images/services-4.jpg"
-                  alt="Mission & Vision"
-                  className="absolute inset-0 w-full h-full object-cover rounded-lg"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Management & Technical Team */}
-          <div 
-            ref={setSectionRef(3)}
-            className={getSectionClassName(3)}
-          >
-            {/* Sol - Badge */}
-            <div className="shrink-0">
-              <div
-                style={{
-                  willChange: "transform",
-                  flexFlow: "row",
-                  flex: "none",
-                  placeContent: "center flex-start",
-                  alignItems: "center",
-                  gap: "12px",
-                  width: "min-content",
-                  height: "min-content",
-                  padding: "8px 16px 8px 16px",
-                  display: "flex",
-                  position: "relative",
-                  overflow: "hidden",
-                  borderBottomWidth: "1px",
-                  borderColor: "rgb(43, 43, 43)",
-                  borderLeftWidth: "1px",
-                  borderRightWidth: "1px",
-                  borderStyle: "solid",
-                  borderTopWidth: "1px",
-                  borderRadius: "100px",
-                  opacity: 1,
-                }}
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M11.2966 4.90088C11.5382 4.24792 12.4618 4.24792 12.7034 4.90088L14.3111 9.24575C14.3871 9.45104 14.549 9.6129 14.7542 9.68886L19.0991 11.2966C19.7521 11.5382 19.7521 12.4618 19.0991 12.7034L14.7542 14.3111C14.549 14.3871 14.3871 14.549 14.3111 14.7542L12.7034 19.0991C12.4618 19.7521 11.5382 19.7521 11.2966 19.0991L9.68886 14.7542C9.6129 14.549 9.45104 14.3871 9.24575 14.3111L4.90088 12.7034C4.24792 12.4618 4.24792 11.5382 4.90088 11.2966L9.24575 9.68886C9.45104 9.6129 9.6129 9.45104 9.68886 9.24575L11.2966 4.90088Z" fill="#E53720"></path>
-                </svg>
-                <span className="text-white/80 text-sm md:text-base font-medium whitespace-nowrap">
-                  MANAGEMENT & TECHNICAL TEAM
-                </span>
-              </div>
-            </div>
-            {/* Sağ - Content */}
-            <div className="flex-1 max-w-[760px]">
                 <div className="space-y-4 text-white">
                   <p className="text-base md:text-lg leading-relaxed">
                     AYA&apos;s team consists of experienced drilling engineers, directional drillers, and technical specialists with hands-on field backgrounds.
@@ -423,10 +356,17 @@ export default function About() {
                   <p className="text-base md:text-lg leading-relaxed">
                     This integrated team structure enables AYA to respond effectively to operational challenges and changing field conditions.
                   </p>
+                </div>
+              </div>
+              <div className="flex-1 w-full lg:max-w-[500px] relative h-[250px] sm:h-[300px] lg:h-[400px]">
+                <img
+                  src="/images/about-3.png"
+                  alt="Management & Technical Team"
+                  className="w-full h-full object-cover rounded-lg"
+                />
               </div>
             </div>
           </div>
-
           {/* Operations Focus */}
           <div 
             ref={setSectionRef(4)}
@@ -466,27 +406,18 @@ export default function About() {
                 </span>
               </div>
             </div>
-            {/* Content ve Görsel */}
-            <div className="flex flex-col lg:flex-row justify-between gap-8">
-              <div className="flex-1 max-w-[500px]">
-                <div className="space-y-4 text-white">
-                  <p className="text-base md:text-lg leading-relaxed">
-                    AYA operates with a strong focus on regional drilling environments and local operational conditions.
-                  </p>
-                  <p className="text-base md:text-lg leading-relaxed">
-                    Our teams are familiar with the geological, logistical, and regulatory aspects of the regions we operate in, allowing us to support projects efficiently and responsively.
-                  </p>
-                  <p className="text-base md:text-lg leading-relaxed">
-                    Operational flexibility and close coordination with client teams are key elements of our approach.
-                  </p>
-                </div>
-              </div>
-              <div className="flex-1 max-w-[500px] relative h-[300px] lg:h-[400px]">
-                <img
-                  src="/images/hero-image.jpeg"
-                  alt="Operations Focus"
-                  className="absolute inset-0 w-full h-full object-cover rounded-lg"
-                />
+            {/* Content */}
+            <div className="flex-1 max-w-[760px]">
+              <div className="space-y-4 text-white">
+                <p className="text-base md:text-lg leading-relaxed">
+                  AYA operates with a strong focus on regional drilling environments and local operational conditions.
+                </p>
+                <p className="text-base md:text-lg leading-relaxed">
+                  Our teams are familiar with the geological, logistical, and regulatory aspects of the regions we operate in, allowing us to support projects efficiently and responsively.
+                </p>
+                <p className="text-base md:text-lg leading-relaxed">
+                  Operational flexibility and close coordination with client teams are key elements of our approach.
+                </p>
               </div>
             </div>
           </div>

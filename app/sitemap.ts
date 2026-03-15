@@ -4,7 +4,7 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://aya-ds.com";
 
 // Service slugs
 const services = [
-  "directed-drilling",
+  "directional-drilling",
   "downhole-motor",
   "measurement-while-drilling",
   "bottom-hole-assembly",

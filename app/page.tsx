@@ -3,7 +3,8 @@ import HeroBanner from "@/components/HeroBanner";
 import Introduction from "@/components/Introduction";
 import Gallery from "@/components/Gallery";
 import Services from "@/components/Services";
-import QHSE from "@/components/QHSE";
+import CustomerLogos from "@/components/CustomerLogos";
+import BlogSection from "@/components/BlogSection";
 import ContactForm from "@/components/ContactForm";
 import FooterCTA from "@/components/FooterCTA";
 import Footer from "@/components/Footer";
@@ -55,7 +56,8 @@ export default function Home() {
       <Introduction />
       <Gallery />
       <Services />
-      <QHSE />
+      <CustomerLogos />
+      <BlogSection />
       <ContactForm />
       <FooterCTA />
       <Footer />

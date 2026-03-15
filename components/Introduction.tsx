@@ -5,7 +5,13 @@ import { Link } from "next-view-transitions";
 
 export default function Introduction() {
   const [isVisible, setIsVisible] = useState(false);
+  const [statsVisible, setStatsVisible] = useState(false);
+  const [wellsCount, setWellsCount] = useState(0);
+  const [metersCount, setMetersCount] = useState(0);
+  const [hoursCount, setHoursCount] = useState(0);
+  const [efficiencyCount, setEfficiencyCount] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const statsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -31,6 +37,69 @@ export default function Introduction() {
       observer.disconnect();
     };
   }, []);
+
+  // Stats animation
+  useEffect(() => {
+    const statsObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !statsVisible) {
+            setStatsVisible(true);
+            
+            // Animation duration (2 seconds)
+            const duration = 2000;
+            const startTime = Date.now();
+            
+            // Target values
+            const targets = {
+              wells: 70,
+              meters: 100000,
+              hours: 15000,
+              efficiency: 99.87
+            };
+            
+            const animate = () => {
+              const elapsed = Date.now() - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              
+              // Easing function (ease-out)
+              const easeOut = 1 - Math.pow(1 - progress, 3);
+              
+              setWellsCount(Math.floor(targets.wells * easeOut));
+              setMetersCount(Math.floor(targets.meters * easeOut));
+              setHoursCount(Math.floor(targets.hours * easeOut));
+              setEfficiencyCount(parseFloat((targets.efficiency * easeOut).toFixed(2)));
+              
+              if (progress < 1) {
+                requestAnimationFrame(animate);
+              } else {
+                // Ensure final values
+                setWellsCount(targets.wells);
+                setMetersCount(targets.meters);
+                setHoursCount(targets.hours);
+                setEfficiencyCount(targets.efficiency);
+              }
+            };
+            
+            requestAnimationFrame(animate);
+          }
+        });
+      },
+      { threshold: 0.2, rootMargin: "0px 0px -50px 0px" }
+    );
+
+    const currentStatsRef = statsRef.current;
+    if (currentStatsRef) {
+      statsObserver.observe(currentStatsRef);
+    }
+
+    return () => {
+      if (currentStatsRef) {
+        statsObserver.unobserve(currentStatsRef);
+      }
+      statsObserver.disconnect();
+    };
+  }, [statsVisible]);
 
   return (
     <section ref={sectionRef} className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
@@ -87,25 +156,8 @@ export default function Introduction() {
             }`}
           >
             <div className="space-y-6 text-white mb-8">
-              <p className="text-lg leading-relaxed">
-                AYA Drilling Services provides directional drilling solutions for
-                oil, gas, and geothermal projects, with a strong focus on
-                wellbore quality, operational efficiency, and risk control.
-              </p>
-              <p className="text-lg leading-relaxed">
-                Built on hands-on field experience and engineering discipline,
-                AYA supports drilling operations with integrated services
-                covering planning, execution, and real-time operational support.
-              </p>
-              <p className="text-lg leading-relaxed">
-                Our teams work closely with operators to deliver consistent,
-                reliable results under varying geological and operational
-                conditions.
-              </p>
-              <p className="text-lg leading-relaxed">
-                Founded with 100% local capital, AYA operates with a clear
-                understanding of regional drilling challenges and operator
-                expectations.
+              <p className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold space-grotesk-bold" style={{ letterSpacing: "-0.02em", lineHeight: "1.3" }}>
+                AYA DRILLING SERVICES DELIVERS DIRECTIONAL DRILLING SOLUTIONS FOR OIL, GAS, AND GEOTHERMAL PROJECTS, FOCUSING ON WELLBORE QUALITY, OPERATIONAL EFFICIENCY, AND RELIABILITY.
               </p>
             </div>
 
@@ -155,6 +207,51 @@ export default function Introduction() {
                 </svg>
               </div>
             </Link>
+          </div>
+        </div>
+
+        {/* Stats Section */}
+        <div ref={statsRef} className="mt-24 md:mt-32 py-16 md:py-24">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+            {/* Wells */}
+            <div className="text-center border border-[#2b2b2b] px-4 py-8">
+              <div className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl space-grotesk-bold text-white mb-2">
+                {wellsCount}+
+              </div>
+              <div className="text-white/80 text-sm md:text-base font-bold" style={{ letterSpacing: "-0.02em" }}>
+                Wells
+              </div>
+            </div>
+
+            {/* Meters Drilled */}
+            <div className="text-center border border-[#2b2b2b] px-4 py-8">
+              <div className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl space-grotesk-bold text-white mb-2">
+                {metersCount.toLocaleString()}+
+              </div>
+              <div className="text-white/80 text-sm md:text-base font-bold" style={{ letterSpacing: "-0.02em" }}>
+                Meters Drilled
+              </div>
+            </div>
+
+            {/* Drilling Hours */}
+            <div className="text-center border border-[#2b2b2b] px-4 py-8">
+              <div className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl space-grotesk-bold text-white mb-2">
+                {hoursCount.toLocaleString()}+
+              </div>
+              <div className="text-white/80 text-sm md:text-base font-bold" style={{ letterSpacing: "-0.02em" }}>
+                Drilling Hours
+              </div>
+            </div>
+
+            {/* Operational Efficiency */}
+            <div className="text-center border border-[#2b2b2b] px-4 py-8">
+              <div className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl space-grotesk-bold text-white mb-2">
+                {efficiencyCount.toFixed(2)}%
+              </div>
+              <div className="text-white/80 text-sm md:text-base font-bold" style={{ letterSpacing: "-0.02em" }}>
+                Operational Efficiency
+              </div>
+            </div>
           </div>
         </div>
       </div>

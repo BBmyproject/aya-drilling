@@ -9,8 +9,8 @@ const servicesContent: Record<
     description: string;
   }
 > = {
-  "directed-drilling": {
-    title: "Directed Drilling",
+  "directional-drilling": {
+    title: "Directional Drilling",
     description: "Professional directional drilling services for oil and gas operations. Expert well planning, trajectory control, and real-time monitoring for accurate well placement.",
   },
   "downhole-motor": {

@@ -40,7 +40,7 @@ export default function ContactForm() {
               </span>
             </div>
             <h2 className="space-grotesk-bold text-white text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-8">
-              TOGETHER, WE CAN CREAT SOMETHINGE<br></br> TRULY REMARKABLE!
+              TOGETHER, WE CAN CREATE SOMETHING<br></br> TRULY REMARKABLE!
             </h2>
           </div>
 

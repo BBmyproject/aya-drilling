@@ -272,3 +272,9 @@ span {
     animation-name: -ua-view-transition-fade-in, -ua-mix-blend-mode-plus-lighter;
   }
 }
+
+/* Google Maps Grayscale Filter */
+.gm-style > div {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}

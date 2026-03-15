@@ -28,7 +28,8 @@ export default function CursorDot() {
       mouse.current.y = e.clientY;
 
       const target = e.target as HTMLElement;
-      const isImage = target.closest('.group') !== null;
+      const isCustomerLogos = target.closest('.customer-logos-section') !== null;
+      const isImage = target.closest('.group') !== null && !isCustomerLogos;
       const isNavLink = target.closest('nav') !== null || target.closest('a[href]') !== null;
       setIsHoveringImage(isImage && !isNavLink);
     };

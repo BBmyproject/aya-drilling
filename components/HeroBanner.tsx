@@ -1,18 +1,17 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function HeroBanner() {
   const [isHovered, setIsHovered] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const pathname = usePathname();
   const router = useRouter();
 
   const heroImages = [
     "/images/hero-image.jpg",
-    "/images/hero-image-2.jpg",
-    "/images/hero-image-3.jpeg",
+    "/images/hero-image-2.png",
+    "/images/hero-image-3.jpg",
   ];
 
   // Otomatik görsel değiştirme (3.5 saniyede bir)
@@ -25,16 +24,8 @@ export default function HeroBanner() {
   }, [heroImages.length]);
 
   const handleGetInTouch = () => {
-    if (pathname === "/") {
-      // Anasayfadaysa form alanına scroll et
-      const contactForm = document.getElementById("contact-form");
-      if (contactForm) {
-        contactForm.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    } else {
-      // Başka bir sayfadaysa contact sayfasına git
-      router.push("/contact");
-    }
+    // Her zaman contact sayfasına git
+    router.push("/contact");
   };
 
   return (
@@ -73,6 +64,12 @@ export default function HeroBanner() {
             <h1 className="space-grotesk-bold text-white text-4xl md:text-5xl lg:text-6xl xl:text-8xl" style={{ letterSpacing: "-.02em" }}>
               AYA<br/>DRILLING<br/>SERVICES
             </h1>
+            <p className="text-white font-bold text-xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 md:mt-4" style={{ letterSpacing: "-0.02em" }}>
+              ENGINEERING THE DIRECTION OF ENERGY
+            </p>
+            <p className="text-white font-bold text-base md:text-lg lg:text-xl xl:text-2xl mt-1 md:mt-2" style={{ letterSpacing: "-0.02em" }}>
+              DIRECTIONAL DRILLING SERVICES FOR OIL, GAS & GEOTHERMAL WELLS
+            </p>
           </div>
 
           {/* Sağ Alt Daire */}

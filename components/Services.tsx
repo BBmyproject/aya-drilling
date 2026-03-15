@@ -39,8 +39,8 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
 
   const services = [
     {
-      title: "DIRECTED DRILLING",
-      slug: "directed-drilling",
+      title: "DIRECTIONAL DRILLING",
+      slug: "directional-drilling",
       description: "Comprehensive directional drilling services designed to achieve accurate well trajectories while maintaining wellbore stability and operational efficiency throughout the drilling phase.",
       items: [
         "Directional drilling tools compatible with complex well profiles",

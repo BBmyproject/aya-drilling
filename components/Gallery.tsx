@@ -8,23 +8,23 @@ export default function Gallery() {
   
   const galleryItems = [
     {
-      title: "TEST TITLE 1",
+      title: "Gallery 1",
       image: "/images/services-1.jpg",
     },
     {
-      title: "TEST TITLE 2",
-      image: "/images/services-2.jpg",
+      title: "Gallery 2",
+      image: "/images/gallery-2.png",
     },
     {
-      title: "TEST TITLE 3",
-      image: "/images/services-3.jpg",
+      title: "Gallery 3",
+      image: "/images/gallery-3.png",
     },
     {
-      title: "TEST TITLE 4",
-      image: "/images/services-4.jpg",
+      title: "Gallery 4",
+      image: "/images/gallery-4.png",
     },
     {
-      title: "TEST TITLE 5",
+      title: "Gallery 5",
       image: "/images/services-5.jpg",
     },
   ];
@@ -193,7 +193,7 @@ export default function Gallery() {
                 }`}
               >
                 <div 
-                  className="relative w-full aspect-[618/660] overflow-hidden group"
+                  className="relative w-full aspect-[618/660] overflow-hidden"
                   data-cursor-hover="true"
                 >
                   <img
@@ -201,14 +201,6 @@ export default function Gallery() {
                     alt={item.title}
                     className="absolute inset-0 w-full h-full object-cover"
                   />
-                  {/* Overlay - md altında her zaman görünür */}
-                  <div className="absolute inset-0 bg-black/50 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300" />
-                  {/* Title - Tam Ortada, md altında her zaman görünür */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-700 ease-out">
-                    <h3 className="text-white text-xl md:text-2xl font-bold uppercase">
-                      {item.title}
-                    </h3>
-                  </div>
                 </div>
               </div>
             ))}
@@ -232,7 +224,7 @@ export default function Gallery() {
                     }`}
                   >
                     <div 
-                      className="relative w-full aspect-[618/660] overflow-hidden group"
+                      className="relative w-full aspect-[618/660] overflow-hidden"
                       data-cursor-hover="true"
                     >
                       <img
@@ -240,20 +232,6 @@ export default function Gallery() {
                         alt={item.title}
                         className="absolute inset-0 w-full h-full object-cover"
                       />
-                      {/* Eski Title - Sol Üst (hover'da kaybolur) */}
-                      <div className="absolute top-0 left-0 p-6 opacity-100 group-hover:opacity-0 transition-opacity duration-700 ease-out">
-                        <h3 className="px-3 py-2 bg-white text-black text-xs font-bold rounded-3xl uppercase">
-                          {item.title}
-                        </h3>
-                      </div>
-                      {/* Overlay */}
-                      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      {/* Yeni Title - Tam Ortada (hover'da gelir) */}
-                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out">
-                        <h3 className="text-white text-xl md:text-2xl font-bold uppercase">
-                          {item.title}
-                        </h3>
-                      </div>
                     </div>
                   </div>
                 );
@@ -277,7 +255,7 @@ export default function Gallery() {
                     }`}
                   >
                     <div 
-                      className="relative w-full aspect-[618/660] overflow-hidden group"
+                      className="relative w-full aspect-[618/660] overflow-hidden"
                       data-cursor-hover="true"
                     >
                       <img
@@ -285,20 +263,6 @@ export default function Gallery() {
                         alt={item.title}
                         className="absolute inset-0 w-full h-full object-cover"
                       />
-                      {/* Eski Title - Sol Üst (hover'da kaybolur) */}
-                      <div className="absolute top-0 left-0 p-6 opacity-100 group-hover:opacity-0 transition-opacity duration-700 ease-out">
-                        <h3 className="px-3 py-2 bg-white text-black text-xs font-bold rounded-3xl uppercase">
-                          {item.title}
-                        </h3>
-                      </div>
-                      {/* Overlay */}
-                      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      {/* Yeni Title - Tam Ortada (hover'da gelir) */}
-                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out">
-                        <h3 className="text-white text-xl md:text-2xl font-bold uppercase">
-                          {item.title}
-                        </h3>
-                      </div>
                     </div>
                   </div>
                 );

@@ -33,7 +33,7 @@ export default function FooterCTA() {
 
             {/* Ready To Build Your Dream Project? */}
             <h2 className="space-grotesk-bold text-white text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight">
-                MAKE YOUR DREAM &apos;LET&apos;S <br></br>BRING VISIONS TO LIFE
+                MAKE YOUR DREAM LET&apos;S <br></br>BRING VISIONS TO LIFE
             </h2>
 
           {/* GET IN TOUCH Link */}

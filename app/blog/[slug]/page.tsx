@@ -18,79 +18,90 @@ const blogPosts: Record<
     contentImage: string;
   }
 > = {
-  "objective-expertise-seo-corporate-visibility": {
-    title: "Objective: Expertise + SEO + corporate visibility",
-    slug: "objective-expertise-seo-corporate-visibility",
-    category: "Company News",
-    image: "/images/blog-1.jpg",
+  "turkiye-advances-global-energy-strategy-with-landmark-energy-agreements": {
+    title: "Turkey Advances Global Energy Strategy with Landmark Agreements",
+    slug: "turkiye-advances-global-energy-strategy-with-landmark-energy-agreements",
+    category: "News",
+    image: "/images/blog-1.png",
     date: "2026-02-22",
-    contentImage: "/images/blog-1-content.jpg",
+    contentImage: "/images/blog-1-content.png",
     content: [
-      "AYA Drilling Services is committed to establishing itself as a leading expert in directional drilling through comprehensive expertise development, strategic SEO optimization, and enhanced corporate visibility. Our objective encompasses three critical pillars that drive our growth and market presence: technical expertise, search engine optimization, and corporate brand visibility.",
-      "Technical expertise forms the foundation of our service delivery. Our team of experienced directional drilling engineers and field personnel brings deep knowledge of downhole tools, BHA design, trajectory planning, and real-time operational decision-making. We continuously invest in training, technology adoption, and knowledge sharing to maintain our position at the forefront of directional drilling innovation. This expertise enables us to deliver superior results for our clients across diverse drilling applications.",
-      "Search engine optimization (SEO) is essential for ensuring that potential clients can discover our services when searching for directional drilling solutions. We optimize our digital presence through strategic content creation, keyword optimization, and technical SEO best practices. Our blog articles, technical resources, and case studies are designed to provide value to industry professionals while improving our search engine rankings and online visibility.",
-      "Corporate visibility encompasses our brand presence across multiple channels, including industry publications, trade shows, professional networks, and digital platforms. We actively participate in industry events, contribute to technical discussions, and maintain a strong online presence that reflects our expertise and commitment to excellence. This visibility helps establish AYA as a trusted partner in directional drilling services.",
-      "Together, these three objectives create a comprehensive strategy for growth and market leadership. By combining technical expertise with strategic SEO and corporate visibility, AYA Drilling Services positions itself to serve clients effectively while building a strong reputation in the directional drilling industry. Our commitment to these objectives drives continuous improvement and ensures that we remain a preferred choice for directional drilling services.",
+      "Türkiye is accelerating a multi-layered energy strategy aimed at strengthening supply security, increasing domestic production and expanding its global upstream presence. Anchored in offshore exploration, international partnerships and enhanced technical capacity, the strategy reflects Türkiye's broader ambition to position itself as a more influential player in regional and global energy markets.",
+      "Within this framework, Turkish Petroleum (TPAO) has signed three memoranda of understanding with major international energy companies — ExxonMobil, Chevron and BP — alongside a partnership agreement with Shell. The announcements coincide with the first overseas deployment of Türkiye's newest seventh-generation ultra-deep sea drilling vessel, marking a tangible step in the country's expanding offshore capabilities.",
+      "A memorandum of understanding with ESSO Exploration International Limited, a subsidiary of ExxonMobil, covers joint oil and natural gas exploration in the Black Sea and the Mediterranean, as well as in additional international areas to be determined. The agreement is designed to expand offshore activity while aligning domestic resource development with selective global growth. Cooperation with Chevron establishes a framework for joint oil and gas exploration and production in both Türkiye and international fields. The partnership enables the two companies to assess and develop offshore and overseas assets together — a move Energy and Natural Resources Minister Alparslan Bayraktar described as part of a new phase for TPAO, with the long-term objective of transforming it into a one-million-barrel company, referring to daily production capacity.",
+      "Meanwhile, a MoU with BP focuses on field development, exploration assessment and collaboration on oil export capacity and natural gas transportation infrastructure. The agreement also aims to expand existing cooperation into new geographic areas. In a separate development, TPAO signed a partnership agreement with Shell for exploration activities in Bulgaria's Block 1-26 Khan Tervel field, located within the country's Exclusive Economic Zone in the Black Sea. Situated near Türkiye's Sakarya Gas Field, the agreement grants a five-year exploration license and foresees initial seismic surveys followed by potential drilling operations.",
+      "Complementing these agreements, Türkiye's seventh-generation ultra-deep sea drilling vessel Çağrı Bey has departed for Somalia to conduct the country's first deep-sea exploration drilling operation abroad. Following a 45-day voyage, the vessel is expected to begin drilling at the Curad-1 well in April, underscoring Türkiye's growing operational reach in offshore energy. Taken together, the agreements signed by TPAO with major global energy companies, alongside the overseas deployment of Çağrı Bey, illustrate a coordinated strategy that blends international partnerships with strengthened national capabilities. The moves signal Türkiye's intention not only to enhance domestic supply security but also to expand its strategic footprint in the evolving global energy landscape.​"
     ],
   },
-  "industry-insights": {
-    title: "Industry Insights",
-    slug: "industry-insights",
-    category: "Industry Insights",
-    image: "/images/blog-2-content.jpg",
+  "geothermal-investments-expected-to-regain-momentum-in-turkiye": {
+    title: "Geothermal Investments Expected to Regain Momentum in Türkiye",
+    slug: "geothermal-investments-expected-to-regain-momentum-in-turkiye",
+    category: "News",
+    image: "/images/blog-2-content.png",
     date: "2024-01-15",
-    contentImage: "/images/blog-2.jpg",
+    contentImage: "/images/blog-2.png",
     content: [
-      "The directional drilling industry continues to evolve with new technologies, changing market conditions, and evolving operational requirements. Understanding these trends is essential for operators seeking to optimize drilling performance and manage operational risks effectively. Industry insights provide valuable perspectives on market dynamics, technological developments, and strategic opportunities in directional drilling.",
-      "The industry is seeing increased adoption of automated drilling systems, real-time data analytics, and integrated BHA solutions that improve trajectory accuracy and reduce non-productive time. These advanced technologies enable more precise well placement, better downhole tool performance, and enhanced operational decision-making at the rig site. Companies that invest in these technologies gain competitive advantages in efficiency and reliability.",
-      "Geothermal energy development is creating new opportunities for directional drilling services. As governments and energy companies seek sustainable alternatives to fossil fuels, geothermal projects require specialized directional drilling expertise. High-temperature environments, complex well profiles, and unique operational requirements create demand for service providers with specialized capabilities in geothermal drilling applications.",
-      "Market analysis reveals significant growth potential in renewable energy sectors, particularly geothermal development. The global transition toward renewable energy sources is driving increased demand for directional drilling services adapted to geothermal applications. Service providers who can adapt their capabilities to these requirements are well-positioned to capitalize on this growing market segment.",
-      "The future of directional drilling will be shaped by continued technological innovation, market expansion into renewable energy sectors, and the integration of advanced automation and data analytics. Companies that stay at the forefront of these developments will be best positioned to serve evolving market needs and deliver value to operators across diverse energy sectors.",
+      "2025 marked a year of renewed investment in geothermal energy in Türkiye, which accounts for 1758 MW of the country’s installed electricity capacity. According to data from the Turkish Electricity Transmission Corporation (TE?A?), 67 MW of geothermal power plants operating as base load were commissioned this year, while investor companies have a project portfolio of around 300 MW currently under development. Evaluating the sector’s development trajectory in 2025, Ali Kindap, Chairman of the Geothermal Energy Association (Jeotermal Enerji Dernegi / JED) Board of Directors, stated that Türkiye has the potential to become a world leader in all areas of geothermal energy use. The December 31, 2030 deadline should be extended to 2040.",
+      "Kindap pointed out that investments in areas such as energy production, geothermal greenhouses, residential heating, thermal tourism, drying facilities, fishing, and mining provide long-term benefits to Türkiye in terms of environmental and economic sustainability, and said, “Even though we use only a very low percentage, 11 percent, of our discovered geothermal potential, we are the 4th country in the world and the leading country in Europe .“ Reminding that investments that will enable Türkiye to reach its target of 3000 MW of geothermal power generation capacity in 2030 must be commissioned by December 31, 2030, in order to be included in the Renewable Energy Support Mechanism, Kindap stated that as a sector, they are requesting that this period be extended until 2040. Kindap stated,  “Investors who want to invest in geothermal energy can complete the stages of licensing, permits, authorization, land acquisition, environmental impact assessment, drilling, determination of resource efficiency, construction of the power plant, and commissioning in at least five years. We know that many investor companies want to invest in geothermal energy today. However, the possibility of not being able to commission their investments by December 30, 2030, is a concern for investors. According to current legislation, it will not be technically possible for many investors who decide to invest in geothermal energy today to be included in the Renewable Energy Support Mechanism (YEKDEM). ",
+      "The world’s newest and most environmentally friendly power plants are in Türkiye Noting that geothermal energy is the most important alternative for Türkiye’s energy independence as well as its need for domestic, clean and sustainable energy in a base load position, Kindap made the following assessment: “In energy-focused policy recommendations from institutions such as the International Energy Agency (IEA) and the Council of Europe, geothermal energy is given a very important role. Many European countries are focusing on geothermal energy as a key investment option, particularly to reduce their dependence on Russian natural gas for residential heating.” Replacing natural gas with geothermal energy for heating and cooling is essential for our country’s ‘Net Zero’ climate target by 2053. Our sector is potentially ready for this. However, we want this major energy transformation to be included in the government’s strategic plans. International energy agencies predict that the installed geothermal power capacity worldwide, currently approaching 20,000 MW, will increase fivefold to 100,000 MW by 2050. Given all this data, it is impossible for Türkiye, a geothermal paradise with over 1,500 natural outlets, to turn its back on this resource. Our geothermal power plants, equipped with the world’s newest and most advanced technologies, will continue to create value for our country with their environmentally friendly production processes. We are carefully monitoring the environmentally focused criticisms directed at our sector, many of which are based on a lack of information. We are working to ensure that all our citizens are aware that geothermal energy is an environmentally friendly and nature-friendly energy source.”",
+      "Strategically important for food supply security Kindap, reminding that geothermal energy has strategic importance for agricultural production and food supply security as well as energy production, underlined that they support the Ministry of Agriculture and Forestry’s efforts to integrate Organized Agricultural Zones (OIZs) with geothermal resources.Providing information that 15 of the 61 OIZs projected in 42 provinces to date have been integrated with geothermal energy, Kindap emphasized that the OIZ to be established in Gönen will be the world’s largest project in this field.",
+      "Thermal tourism potential is far below expectations Kindap stated that Türkiye is far behind its potential in the field of thermal tourism, saying, “With the 18 thermal hotels preparing to open in 2026 and beyond, the number of thermal beds in our country will reach 8,738. However, we should never consider this level sufficient. While it is clear that Japan, the 10th largest producer of geothermal energy in the world and with significantly fewer resources than Türkiye, generates over $20 billion in revenue from thermal health tourism, we should also set a target of at least $20 billion in revenue.”",
     ],
   },
-  "technical-articles": {
-    title: "Technical Articles",
-    slug: "technical-articles",
-    category: "Technical Articles",
-    image: "/images/blog-3.jpg",
+  "turkey-develop-its-shale-fields-with-us-producer-continental-resources": {
+    title: "Turkey to Develop Shale Fields with U.S. Producer Continental Resources",
+    slug: "turkey-develop-its-shale-fields-with-us-producer-continental-resources",
+    category: "News",
+    image: "/images/blog-3.avif",
     date: "2024-02-10",
-    contentImage: "/images/blog-3-content.jpg",
+    contentImage: "/images/blog-3-content.avif",
     content: [
-      "Technical expertise in directional drilling requires deep understanding of downhole tools, BHA design, trajectory planning, and real-time operational decision-making. Technical articles provide essential knowledge for engineers, field personnel, and operators seeking to optimize directional drilling performance and achieve operational objectives.",
-      "BHA design optimization is fundamental to successful directional drilling operations. Understanding the relationship between downhole motor selection, MWD tool placement, and directional response is crucial for achieving desired well trajectories. Effective BHA design balances steerability, stability, and drilling efficiency while minimizing operational risks.",
-      "MWD data interpretation is critical for maintaining well path accuracy and making informed operational decisions. Real-time data validation, toolface control, and integration of MWD measurements with other operational information enhance directional drilling performance. Best practices in data interpretation support accurate trajectory predictions and timely identification of drilling issues.",
-      "Trajectory planning involves comprehensive analysis of geological data, offset well information, and drilling objectives. Engineering approaches to well trajectory optimization, dogleg severity management, and formation-specific drilling strategies reduce operational risks and improve drilling performance. Effective trajectory design balances directional requirements with drilling efficiency and wellbore quality.",
-      "Downhole motor selection and real-time trajectory control are essential technical skills for directional drilling operations. Understanding motor specifications, formation response, and trajectory control methods enables engineers to develop optimal drilling strategies. Technical knowledge in these areas supports successful project execution and improved drilling performance across diverse operational conditions.",
+      "HOUSTON, March 12 (Reuters) - Turkish national oil company TPAO has signed a joint venture agreement with U.S. oil producer Continental Resources to develop shale fields in the country’s Diyarbakir Basin, Turkish Energy Minister Alparslan Bayraktar said on social media platform X on Wednesday.",
+      "This cooperation will greatly contribute to our goal of bringing Turkiye’s oil and gas resources to our economy. I hope this agreement, which opens a new era in exploration in Turkiye, will be beneficial for all parties, he said in the post.",
+      "Turkey is not a major oil and gas producer. With 57 years of exploration experience, we recognize significant opportunities for further development both in the U.S. and internationally, Continental Resources CEO Doug Lawler said in an emailed statement.",
+      "We see immense potential in Turkey's untapped resources and are excited to collaborate with TransAtlantic and Turkey Petroleum to explore and develop unconventional solutions that can unlock their full energy potential.",
+      "TransAtlantic Petroleum, which holds oil and gas interests in Turkey and Bulgaria, is executing a horizontal drilling program in eastern Turkey and redeveloping the country's Selmo Field. Speaking at the CERAWeek conference in Houston, Texas, on Wednesday, Continental Resources founder Harold Hamm warned that U.S. oil production is beginning to plateau.",
     ],
   },
-  "company-news": {
-    title: "Company News",
-    slug: "company-news",
-    category: "Company News",
-    image: "/images/blog-4.jpg",
+  "turkey-reaches-55-domestic-production-rate-in-geothermal-equipment": {
+    title: "Turkey Reaches 55% Domestic Production Rate in Geothermal Equipment",
+    slug: "turkey-reaches-55-domestic-production-rate-in-geothermal-equipment",
+    category: "News",
+    image: "/images/blog-4.png",
     date: "2024-03-05",
-    contentImage: "/images/blog-4-content.jpg",
+    contentImage: "/images/blog-4-content.png",
     content: [
-      "AYA Drilling Services continues to expand its capabilities, strengthen its team, and enhance its service offerings to support operators in achieving their drilling objectives. Our commitment to operational excellence, technical innovation, and client service drives continuous improvement and strategic growth initiatives.",
-      "Recent company developments include expansion into geothermal drilling operations, bringing specialized expertise in high-temperature environments and complex well profiles. This expansion enables AYA to serve a broader range of energy projects, from conventional oil and gas operations to renewable geothermal energy applications. Our team has been trained in geothermal-specific drilling challenges and operational requirements.",
-      "Major investments in workshop facilities enhance tool maintenance capabilities, quality control processes, and operational readiness. Improved inspection equipment, expanded maintenance capabilities, and enhanced quality control procedures support our commitment to delivering reliable directional drilling tools and maintaining high standards of equipment preparation and performance.",
-      "Strategic team expansion includes additional engineering and field operations personnel with diverse experience in directional drilling applications. Comprehensive training programs ensure all team members are fully integrated into AYA's operational procedures and quality standards. This expansion supports increased operational capacity and enables AYA to serve more clients simultaneously.",
-      "AYA's commitment to quality management and operational excellence is reinforced through international quality certification. This achievement recognizes our adherence to international quality standards and demonstrates our dedication to maintaining the highest levels of service quality, operational reliability, and client satisfaction across all directional drilling operations.",
+      "Turkey, which is fourth in the world in geothermal power capacity, increased its localization rate to 55%. Domestic companies manufacture generators, power electronics, turbines and other main components. In addition to being a top-tier market in hydropower, wind and photovoltaics, Turkey hosts geothermal power capacity equivalent to the European Union and Iceland combined. It reached 1.73 GW, which was 1.5% of the country’s 116 GW last year, according to Deputy Minister of Energy and Natural Resources Abdullah Tancan.",
+      "Geothermal power plants accounted for 3.2% of electricity output in Turkey last year, providing 11.2 TWh out of 350 TWh, he added at the opening of the two-day Turkey Geothermal Congress. The event was organized by the Geothermal Power Plant Investors Association (JESDER). Turkey is committed to the security of energy supply, reducing external dependency in the sector and reaching its net zero emissions target in 2053, the deputy minister pointed out. The national energy and mining policy relies on the localization of resources and technology alongside market predictability, he explained.",
+      "Government support enabled the establishment of 50 component makers and 350 subsuppliers in the geothermal power segment in Turkey, Tancan said. They employ 50,000 people altogether, he added. The localization rate has reached approximately 55%, the top official revealed. Parts such as generators, power electronics, turbines, exhaust lubrication and speed control systems and steam injectors are now produced domestically, he stressed.",
+      "Tancan noted that Turkey expects electricity demand to grow 3.5% per year until 2035, reaching 510 TWh. On a global scale, the country trails only the United States, Indonesia and the Philippines. Nevertheless, after several years of rapid growth, it only added 120 MW in geothermal power capacity since 2020. Chairman of JESDER Ufuk Şentürk said the potential is 5 GW. There is much more available for geothermal-heated greenhouses and other uses.",
+      "Geothermal power projects benefit from the Renewable Energy Resources Support Mechanism (YEKDEM). Turkish investors in the segment are also active abroad. The International Energy Agency has estimated that geothermal power could meet up to 15% of global electricity demand growth until 2050.",
     ],
   },
-  "project-updates": {
-    title: "Project Updates",
-    slug: "project-updates",
-    category: "Project Updates",
-    image: "/images/blog-5.jpg",
+  "turkey-targets-120-gw-renewable-energy-capacity-by-2035": {
+    title: "Turkey Targets 120 GW Renewable Energy Capacity by 2035",
+    slug: "turkey-targets-120-gw-renewable-energy-capacity-by-2035",
+    category: "News",
+    image: "/images/blog-5.png",
     date: "2024-04-01",
-    contentImage: "/images/blog-5-content.jpg",
+    contentImage: "/images/blog-5-content.webp",
     content: [
-      "AYA Drilling Services successfully delivers directional drilling services across diverse projects, from conventional oil and gas wells to geothermal energy applications. Project updates highlight our capabilities, achievements, and commitment to delivering value to clients through technical excellence and operational reliability.",
-      "Recent project successes include complex well trajectory operations with multiple build, hold, and turn sections. These projects required careful well planning, optimized BHA designs, and real-time trajectory control to navigate complex geological formations. Post-run analysis confirmed that all trajectory objectives were met with improved drilling performance compared to offset wells.",
-      "Geothermal drilling projects demonstrate AYA's capability to adapt directional drilling services to high-temperature environments. Specialized tool selection, modified operational procedures, and close coordination between engineering and field teams enabled successful completion of challenging geothermal drilling operations. These projects validate our expanded capabilities in renewable energy applications.",
-      "Extended reach drilling projects showcase AYA's expertise in maintaining precise trajectory control over extended horizontal sections. Advanced trajectory planning, optimized BHA configurations, and real-time monitoring enabled successful completion of projects with record horizontal displacement while maintaining drilling efficiency and wellbore quality.",
-      "Multi-lateral well projects highlight AYA's advanced directional drilling capabilities in complex well geometries. Successful execution of multiple laterals with precise trajectory control demonstrates our technical expertise and operational excellence. These projects serve as models for future operations requiring sophisticated directional drilling capabilities.",
+      "Turkey is intensifying its efforts to enhance renewable energy capacity, targeting 120 GW by 2035. This initiative aligns with its updated Nationally Determined Contribution (NDC) under the Paris Agreement, which commits to achieving net zero emissions by 2053.",
+      "Turkey Renewable Energy Targets",
+      "Turkey is aiming to increase its renewable energy capacity to 120 GW by 2035, with a specific goal of reaching 55 GW of solar energy capacity by 2033. This significant expansion in renewable energy is part of Turkey's revised Nationally Determined Contribution (NDC) under the Paris Agreement, which commits to achieving net zero emissions by 2053. The on-grid solar market in Turkey is set to expand significantly, with current installed capacity expected to rise to 53 GW by 2035.",
+      "Turkey's updated NDC outlines an ambitious plan to reduce greenhouse gas emissions by 41% from the business-as-usual (BAU) scenario by 2030. This target represents a substantial increase from the previous goal of a 21% reduction from the BAU scenario in 2015. The updated NDC reflects Turkey's commitment to aligning its energy policies with global climate goals and transitioning towards a low-carbon economy.",
+      "The updated NDC was officially submitted to the United Nations Framework Convention on Climate Change (UNFCCC) in April 2023. This submission is a critical step in Turkey's journey toward meeting its international climate obligations and demonstrates its dedication to addressing climate change through enhanced renewable energy deployment.",
+      "Progress and Policies in Turkey Renewable Energy",
+      "Turkey's renewable energy capacity has already seen significant growth, reaching 68.5 GW by the end of 2022. This capacity includes substantial contributions from hydroelectric, wind, and solar power. Hydroelectric power leads with a capacity of 31.5 GW, followed by wind power at 11.1 GW and solar power at 9.3 GW. The country also has notable capacities in geothermal and biomass energy, contributing to the overall renewable energy mix.",
+      "The Turkish government has implemented various policies and incentives to support the growth of renewable energy. These measures include feed-in tariffs, tax exemptions, and a Renewable Energy Resources Support Mechanism (YEKDEM) designed to promote investment in renewable energy projects. Additionally, Turkey has established a Renewable Energy Resource Area (YEKA) program to facilitate the development of large-scale renewable energy projects, particularly in the wind and solar sectors. Further insights into Turkey's solar panel manufacturing and market analysis can be found in this report.",
+      "Challenges and Opportunities for Turkey Renewable Energy",
+      "Despite the positive momentum, Turkey faces several challenges in achieving its renewable energy targets. Infrastructure development, grid integration, and financing remain key hurdles that must be addressed to ensure the successful implementation of renewable energy projects. The expansion of renewable energy also requires significant investments in energy storage and grid modernization to accommodate the increasing share of intermittent renewable sources.",
+      "However, Turkey's renewable energy sector presents numerous opportunities for economic growth and job creation. The expansion of renewable energy capacity is expected to attract domestic and foreign investments, stimulate innovation, and enhance energy security by reducing reliance on imported fossil fuels. Moreover, the transition to renewable energy aligns with global trends and positions Turkey as a leader in the regional energy market.",
+      "International Cooperation in Turkey Renewable Energy",
+      "Turkey's commitment to renewable energy is further strengthened by its active participation in international climate agreements and collaborations. The updated NDC aligns with the goals of the Paris Agreement and reflects Turkey's dedication to contributing to global efforts to combat climate change.",
+      "International support and cooperation play a crucial role in advancing Turkey's renewable energy agenda. Partnerships with international organizations, financial institutions, and technology providers can facilitate knowledge transfer, capacity building, and access to financing for large-scale renewable energy projects.",
+      "Turkey's updated NDC and ambitious renewable energy targets underscore its commitment to a sustainable energy future. By aiming to achieve 120 GW of renewable energy capacity by 2035, Turkey is positioning itself as a key player in the global energy transition. The successful implementation of these targets will require continued policy support, investment in infrastructure, and international cooperation.",
+      "As Turkey progresses towards its renewable energy goals, it sets an example for other countries in the region and beyond. The journey towards a low-carbon economy is challenging, but Turkey's proactive approach ensures a more sustainable and resilient energy system for future generations.",
     ],
   },
 };
@@ -99,42 +110,42 @@ const blogPosts: Record<
 const allBlogPosts = [
   {
     id: "1",
-    slug: "objective-expertise-seo-corporate-visibility",
-    title: "Objective: Expertise + SEO + corporate visibility",
-    excerpt: "We are a team of experts in the field of directional drilling. We are dedicated to providing the best possible service to our clients.",
-    image: "/images/blog-1.jpg",
+    slug: "turkiye-advances-global-energy-strategy-with-landmark-energy-agreements",
+    title: "Turkey Advances Global Energy Strategy with Landmark Agreements",
+    excerpt: "Türkiye is strengthening its global energy strategy through new international agreements aimed at expanding oil and natural gas exploration and production activities.",
+    image: "/images/blog-1.png",
     date: "2026-02-22",
   },
   {
     id: "2",
-    slug: "industry-insights",
-    title: "Industry Insights",
-    excerpt: "Exploring emerging technologies and trends shaping the future of directional drilling operations worldwide.",
-    image: "/images/blog-2.jpg",
+    slug: "geothermal-investments-expected-to-regain-momentum-in-turkiye",
+    title: "Geothermal Investments Expected to Regain Momentum in Türkiye",
+    excerpt: "Industry leaders expect geothermal investments in Türkiye to accelerate again as the country continues expanding its position among the world’s leading geothermal energy producers.",
+    image: "/images/blog-2.png",
     date: "2024-01-15",
   },
   {
     id: "3",
-    slug: "technical-articles",
-    title: "Technical Articles",
-    excerpt: "Advanced methods for optimizing Bottom Hole Assembly design to achieve superior directional control and drilling efficiency.",
-    image: "/images/blog-3.jpg",
+    slug: "turkey-develop-its-shale-fields-with-us-producer-continental-resources",
+    title: "Turkey to Develop Shale Fields with U.S. Producer Continental Resources",
+    excerpt: "Turkey is moving forward with the development of its shale oil and gas resources in the Diyarbakır Basin through a partnership between TPAO and U.S.-based Continental Resources.",
+    image: "/images/blog-3.avif",
     date: "2024-02-10",
   },
   {
     id: "4",
-    slug: "company-news",
-    title: "Company News",
-    excerpt: "AYA Drilling Services announces expansion into geothermal drilling operations with specialized high-temperature expertise.",
-    image: "/images/blog-4.jpg",
+    slug: "turkey-reaches-55-domestic-production-rate-in-geothermal-equipment",
+    title: "Turkey Reaches 55% Domestic Production Rate in Geothermal Equipment",
+    excerpt: "Türkiye has increased the domestic production rate of geothermal power plant equipment to 55%, strengthening the local supply chain in the renewable energy sector.",
+    image: "/images/blog-4.png",
     date: "2024-03-05",
   },
   {
     id: "5",
-    slug: "project-updates",
-    title: "Project Updates",
-    excerpt: "Successful completion of challenging directional drilling project with multiple build, hold, and turn sections.",
-    image: "/images/blog-5.jpg",
+    slug: "turkey-targets-120-gw-renewable-energy-capacity-by-2035",
+    title: "Turkey Targets 120 GW Renewable Energy Capacity by 2035",
+    excerpt: "Türkiye has announced an ambitious plan to reach 120 GW of renewable energy capacity by 2035 as part of its long-term energy transition strategy.",
+    image: "/images/blog-5.png",
     date: "2024-04-01",
   },
 ];
@@ -310,6 +321,15 @@ export default function BlogDetailPage({
               {post.content.map((paragraph, index) => {
                 const middleIndex = Math.floor((post.content.length - 1) / 2);
                 const isVisible = visibleElements.includes(index);
+                // Check if this is a title - specific titles for this blog post
+                const titlePatterns = [
+                  "Turkey Renewable Energy Targets",
+                  "Progress and Policies in Turkey Renewable Energy",
+                  "Challenges and Opportunities for Turkey Renewable Energy",
+                  "International Cooperation in Turkey Renewable Energy"
+                ];
+                const isTitle = titlePatterns.includes(paragraph);
+                
                 return (
                   <div
                     key={index}
@@ -322,20 +342,27 @@ export default function BlogDetailPage({
                         : "opacity-0 translate-y-10"
                     }`}
                   >
-                    <p className="mb-6">{paragraph}</p>
-                    {index === middleIndex && (
+                    {isTitle ? (
+                      <h2 className="space-grotesk-bold text-white text-2xl md:text-3xl lg:text-4xl mb-6 mt-8" style={{ letterSpacing: "-0.02em" }}>
+                        {paragraph}
+                      </h2>
+                    ) : (
+                      <p className="mb-6">{paragraph}</p>
+                    )}
+                    {index === middleIndex && !isTitle && (
                       <div
-                        className={`relative w-full h-[400px] md:h-[500px] my-8 rounded-lg overflow-hidden transition-all duration-1000 ease-out ${
+                        className={`relative w-full h-[400px] md:h-[500px] my-8 rounded-lg overflow-hidden transition-all duration-1000 ease-out flex items-center justify-center ${
                           isVisible
                             ? "opacity-100 translate-y-0"
                             : "opacity-0 translate-y-10"
                         }`}
                       >
-                        <Image
+                        <img
                           src={post.contentImage}
                           alt={`${post.title} - Content`}
-                          fill
-                          className="object-cover"
+                          width={1000}
+                          height={1000}
+                          className="object-contain"
                         />
                       </div>
                     )}

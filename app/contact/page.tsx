@@ -3,8 +3,30 @@
 import { Link } from "next-view-transitions";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import { useEffect, useRef } from "react";
 
 export default function ContactPage() {
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  useEffect(() => {
+    const iframe = iframeRef.current;
+    if (iframe) {
+      const applyGrayscale = () => {
+        iframe.style.filter = "grayscale(100%)";
+        iframe.style.webkitFilter = "grayscale(100%)";
+      };
+
+      // Iframe yüklendiğinde uygula
+      iframe.addEventListener("load", applyGrayscale);
+      
+      // Hemen de uygula (eğer zaten yüklenmişse)
+      applyGrayscale();
+
+      return () => {
+        iframe.removeEventListener("load", applyGrayscale);
+      };
+    }
+  }, []);
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://aya-ds.com";
 
   const breadcrumbSchema = {
@@ -98,8 +120,8 @@ export default function ContactPage() {
             <div>
               <h3 className="space-grotesk-bold text-white text-xl md:text-2xl mb-4">Phone</h3>
               <p className="text-white/80 text-base leading-relaxed">
-                <a href="tel:" className="hover:text-[#E53720] transition-colors">
-                  -
+                <a href="tel:+903125123737" className="hover:text-[#E53720] transition-colors">
+                  +90 312 512 37 37
                 </a>
               </p>
             </div>
@@ -121,9 +143,10 @@ export default function ContactPage() {
       <ContactForm />
 
       {/* Google Maps Section */}
-      <section className="w-full">
+      <section className="w-full container mx-auto">
         <div className="w-full h-[450px] md:h-[600px]">
           <iframe
+            ref={iframeRef}
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3064.673901994528!2d32.38933161206767!3d39.8143059919652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d31ddbdc84ade9%3A0x9380bbb3435a236e!2sAYA%20drilling%20services!5e0!3m2!1str!2str!4v1771758874978!5m2!1str!2str"
             width="100%"
             height="100%"

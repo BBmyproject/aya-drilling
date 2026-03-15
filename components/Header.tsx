@@ -112,10 +112,10 @@ export default function Header() {
                     <div className="bg-[#151515] border border-[#2b2b2b] rounded-lg shadow-lg">
                     <div className="py-2">
                       <Link
-                        href="/services/directed-drilling"
+                        href="/services/directional-drilling"
                         className="block px-4 py-2 text-white hover:bg-[#2b2b2b] transition-colors"
                       >
-                        Directed Drilling
+                        Directional Drilling
                       </Link>
                       <Link
                         href="/services/downhole-motor"
@@ -212,14 +212,14 @@ export default function Header() {
                             SERVICES
                           </Link>
                           <Link
-                            href="/services/directed-drilling"
+                            href="/services/directional-drilling"
                             className="block py-2 text-white hover:text-gray-300 transition-colors"
                             onClick={() => {
                               setMobileMenuOpen(false);
                               setServicesOpen(false);
                             }}
                           >
-                            Directed Drilling
+                            Directional Drilling
                           </Link>
                           <Link
                             href="/services/downhole-motor"

@@ -16,43 +16,43 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: "1",
-    slug: "objective-expertise-seo-corporate-visibility",
-    title: "Objective: Expertise + SEO + corporate visibility",
-    excerpt: "We are a team of experts in the field of directional drilling. We are dedicated to providing the best possible service to our clients.",
-    image: "/images/blog-1.jpg",
+    slug: "turkiye-advances-global-energy-strategy-with-landmark-energy-agreements",
+    title: "Turkey Advances Global Energy Strategy with Landmark Agreements",
+    excerpt: "Türkiye is strengthening its global energy strategy through new international agreements aimed at expanding oil and natural gas exploration and production activities.",
+    image: "/images/blog-1.png",
     date: "2026-02-22",
   },
   {
     id: "2",
-    slug: "industry-insights",
-    title: "Industry Insights",
-    excerpt: "Exploring emerging technologies and trends shaping the future of directional drilling operations worldwide.",
-    image: "/images/blog-2.jpg",
-    date: "2024-01-15",
+    slug: "geothermal-investments-expected-to-regain-momentum-in-turkiye",
+    title: "Geothermal Investments Expected to Regain Momentum in Türkiye",
+    excerpt: "Industry leaders expect geothermal investments in Türkiye to accelerate again as the country continues expanding its position among the world’s leading geothermal energy producers.",
+    image: "/images/blog-2.png",
+    date: "2026-01-06",
   },
   {
     id: "3",
-    slug: "technical-articles",
-    title: "Technical Articles",
-    excerpt: "Advanced methods for optimizing Bottom Hole Assembly design to achieve superior directional control and drilling efficiency.",
-    image: "/images/blog-3.jpg",
-    date: "2024-02-10",
+    slug: "turkey-develop-its-shale-fields-with-us-producer-continental-resources",
+    title: "Turkey to Develop Shale Fields with U.S. Producer Continental Resources",
+    excerpt: "Turkey is moving forward with the development of its shale oil and gas resources in the Diyarbakır Basin through a partnership between TPAO and U.S.-based Continental Resources.",
+    image: "/images/blog-3.avif",
+    date: "2025-13-03",
   },
   {
     id: "4",
-    slug: "company-news",
-    title: "Company News",
-    excerpt: "AYA Drilling Services announces expansion into geothermal drilling operations with specialized high-temperature expertise.",
-    image: "/images/blog-4.jpg",
-    date: "2024-03-05",
+    slug: "turkey-reaches-55-domestic-production-rate-in-geothermal-equipment",
+    title: "Turkey Reaches 55% Domestic Production Rate in Geothermal Equipment",
+    excerpt: "Türkiye has increased the domestic production rate of geothermal power plant equipment to 55%, strengthening the local supply chain in the renewable energy sector.",
+    image: "/images/blog-4.png",
+    date: "2025-02-19",
   },
   {
     id: "5",
-    slug: "project-updates",
-    title: "Project Updates",
-    excerpt: "Successful completion of challenging directional drilling project with multiple build, hold, and turn sections.",
-    image: "/images/blog-5.jpg",
-    date: "2024-04-01",
+    slug: "turkey-targets-120-gw-renewable-energy-capacity-by-2035",
+    title: "Turkey Targets 120 GW Renewable Energy Capacity by 2035",
+    excerpt: "Türkiye has announced an ambitious plan to reach 120 GW of renewable energy capacity by 2035 as part of its long-term energy transition strategy.",
+    image: "/images/blog-5.png",
+    date: "2025-09-25",
   },
 ];
 
@@ -117,7 +117,7 @@ export default function BlogPage() {
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-[1296px] mx-auto">
           {/* Blog Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 md:gap-8">
             {blogPosts.map((post) => (
               <Link
                 key={post.id}
