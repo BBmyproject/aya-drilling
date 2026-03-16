@@ -38,7 +38,7 @@ const blogPosts: Record<
     slug: "geothermal-investments-expected-to-regain-momentum-in-turkiye",
     category: "News",
     image: "/images/blog-2-content.png",
-    date: "2024-01-15",
+    date: "2026-01-06",
     contentImage: "/images/blog-2.png",
     content: [
       "2025 marked a year of renewed investment in geothermal energy in Türkiye, which accounts for 1758 MW of the country’s installed electricity capacity. According to data from the Turkish Electricity Transmission Corporation (TE?A?), 67 MW of geothermal power plants operating as base load were commissioned this year, while investor companies have a project portfolio of around 300 MW currently under development. Evaluating the sector’s development trajectory in 2025, Ali Kindap, Chairman of the Geothermal Energy Association (Jeotermal Enerji Dernegi / JED) Board of Directors, stated that Türkiye has the potential to become a world leader in all areas of geothermal energy use. The December 31, 2030 deadline should be extended to 2040.",
@@ -53,7 +53,7 @@ const blogPosts: Record<
     slug: "turkey-develop-its-shale-fields-with-us-producer-continental-resources",
     category: "News",
     image: "/images/blog-3.avif",
-    date: "2024-02-10",
+    date: "2025-03-13",
     contentImage: "/images/blog-3-content.avif",
     content: [
       "HOUSTON, March 12 (Reuters) - Turkish national oil company TPAO has signed a joint venture agreement with U.S. oil producer Continental Resources to develop shale fields in the country’s Diyarbakir Basin, Turkish Energy Minister Alparslan Bayraktar said on social media platform X on Wednesday.",
@@ -68,7 +68,7 @@ const blogPosts: Record<
     slug: "turkey-reaches-55-domestic-production-rate-in-geothermal-equipment",
     category: "News",
     image: "/images/blog-4.png",
-    date: "2024-03-05",
+    date: "2025-02-19",
     contentImage: "/images/blog-4-content.png",
     content: [
       "Turkey, which is fourth in the world in geothermal power capacity, increased its localization rate to 55%. Domestic companies manufacture generators, power electronics, turbines and other main components. In addition to being a top-tier market in hydropower, wind and photovoltaics, Turkey hosts geothermal power capacity equivalent to the European Union and Iceland combined. It reached 1.73 GW, which was 1.5% of the country’s 116 GW last year, according to Deputy Minister of Energy and Natural Resources Abdullah Tancan.",
@@ -83,7 +83,7 @@ const blogPosts: Record<
     slug: "turkey-targets-120-gw-renewable-energy-capacity-by-2035",
     category: "News",
     image: "/images/blog-5.png",
-    date: "2024-04-01",
+    date: "2025-09-25",
     contentImage: "/images/blog-5-content.webp",
     content: [
       "Turkey is intensifying its efforts to enhance renewable energy capacity, targeting 120 GW by 2035. This initiative aligns with its updated Nationally Determined Contribution (NDC) under the Paris Agreement, which commits to achieving net zero emissions by 2053.",
@@ -122,7 +122,7 @@ const allBlogPosts = [
     title: "Geothermal Investments Expected to Regain Momentum in Türkiye",
     excerpt: "Industry leaders expect geothermal investments in Türkiye to accelerate again as the country continues expanding its position among the world’s leading geothermal energy producers.",
     image: "/images/blog-2.png",
-    date: "2024-01-15",
+    date: "2026-01-06",
   },
   {
     id: "3",
@@ -130,7 +130,7 @@ const allBlogPosts = [
     title: "Turkey to Develop Shale Fields with U.S. Producer Continental Resources",
     excerpt: "Turkey is moving forward with the development of its shale oil and gas resources in the Diyarbakır Basin through a partnership between TPAO and U.S.-based Continental Resources.",
     image: "/images/blog-3.avif",
-    date: "2024-02-10",
+    date: "2025-03-13",
   },
   {
     id: "4",
@@ -138,7 +138,7 @@ const allBlogPosts = [
     title: "Turkey Reaches 55% Domestic Production Rate in Geothermal Equipment",
     excerpt: "Türkiye has increased the domestic production rate of geothermal power plant equipment to 55%, strengthening the local supply chain in the renewable energy sector.",
     image: "/images/blog-4.png",
-    date: "2024-03-05",
+    date: "2025-02-19",
   },
   {
     id: "5",
@@ -146,7 +146,7 @@ const allBlogPosts = [
     title: "Turkey Targets 120 GW Renewable Energy Capacity by 2035",
     excerpt: "Türkiye has announced an ambitious plan to reach 120 GW of renewable energy capacity by 2035 as part of its long-term energy transition strategy.",
     image: "/images/blog-5.png",
-    date: "2024-04-01",
+    date: "2025-09-25",
   },
 ];
 

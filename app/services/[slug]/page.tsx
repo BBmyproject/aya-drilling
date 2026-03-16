@@ -509,8 +509,8 @@ export default function ServiceDetailPage({
 
   const getSectionClassName = (index: number, isFirstSection?: boolean) => {
     const baseClasses = isFirstSection 
-      ? "mb-40 transition-opacity duration-700" 
-      : "flex flex-col gap-8 mb-40 transition-opacity duration-700";
+      ? "mb-15 md:mb-40 transition-opacity duration-700" 
+      : "flex flex-col gap-8 mb-15 md:mb-40 transition-opacity duration-700";
     const isVisible = visibleSections.has(index);
     return `${baseClasses} ${isVisible ? "animate-fade-up opacity-100" : "opacity-0"}`;
   };
@@ -902,6 +902,15 @@ export default function ServiceDetailPage({
                           </ul>
                         )}
                       </div>
+
+                      {/* Mobile Görsel - detailImage */}
+                      <div className="w-full relative h-[400px] mt-8">
+                        <img
+                          src={service.detailImage}
+                          alt={service.title}
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                      </div>
                     </div>
                   </>
                 ) : (
@@ -1052,14 +1061,6 @@ export default function ServiceDetailPage({
 
               {/* Sağ Taraf - Başlık ve Accordion */}
               <div className="flex-1 max-w-[760px] w-full">
-                {/* Mobile Görsel */}
-                <div className="lg:hidden w-full relative h-[400px] mb-8">
-                  <img
-                    src={service.accordionImage}
-                    alt={service.title}
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                </div>
                 {/* Intro Heading */}
                 {introHeading && (
                   <h2 className="space-grotesk-bold text-white text-xl md:text-2xl lg:text-3xl mb-12" style={{ letterSpacing: "-0.02em" }}>
@@ -1140,6 +1141,15 @@ export default function ServiceDetailPage({
                       </div>
                     );
                   })}
+                </div>
+
+                {/* Mobile Görsel - Accordion'ların Altında */}
+                <div className="lg:hidden w-full relative h-[400px] mt-8">
+                  <img
+                    src={service.accordionImage}
+                    alt={service.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>

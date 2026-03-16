@@ -36,7 +36,7 @@ const blogPosts: BlogPost[] = [
     title: "Turkey to Develop Shale Fields with U.S. Producer Continental Resources",
     excerpt: "Turkey is moving forward with the development of its shale oil and gas resources in the Diyarbakır Basin through a partnership between TPAO and U.S.-based Continental Resources.",
     image: "/images/blog-3.avif",
-    date: "2025-13-03",
+    date: "2025-03-13",
   },
   {
     id: "4",
