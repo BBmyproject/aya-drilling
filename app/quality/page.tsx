@@ -501,7 +501,9 @@ export default function QualityPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
               {/* PDF Item 1 */}
               <a
-                href="#"
+                href="/images/certificate-1.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group flex items-center gap-4 p-4 bg-[#2b2b2b] border border-[#3b3b3b] rounded-lg hover:border-[#E53720] transition-colors"
               >
                 <div className="text-[#E53720] text-2xl">
@@ -509,7 +511,7 @@ export default function QualityPage() {
                 </div>
                 <div className="flex-1">
                   <p className="text-white font-medium group-hover:text-[#E53720] transition-colors">
-                    Certificate 1
+                    Certificate
                   </p>
                   <p className="text-white/60 text-sm">PDF Document</p>
                 </div>
@@ -517,7 +519,9 @@ export default function QualityPage() {
 
               {/* PDF Item 2 */}
               <a
-                href="#"
+                href="/images/certificate-2.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group flex items-center gap-4 p-4 bg-[#2b2b2b] border border-[#3b3b3b] rounded-lg hover:border-[#E53720] transition-colors"
               >
                 <div className="text-[#E53720] text-2xl">
@@ -525,7 +529,7 @@ export default function QualityPage() {
                 </div>
                 <div className="flex-1">
                   <p className="text-white font-medium group-hover:text-[#E53720] transition-colors">
-                    Certificate 2
+                    Certificate
                   </p>
                   <p className="text-white/60 text-sm">PDF Document</p>
                 </div>
@@ -533,7 +537,9 @@ export default function QualityPage() {
 
               {/* PDF Item 3 */}
               <a
-                href="#"
+                href="/images/certificate-3.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group flex items-center gap-4 p-4 bg-[#2b2b2b] border border-[#3b3b3b] rounded-lg hover:border-[#E53720] transition-colors"
               >
                 <div className="text-[#E53720] text-2xl">
@@ -541,7 +547,7 @@ export default function QualityPage() {
                 </div>
                 <div className="flex-1">
                   <p className="text-white font-medium group-hover:text-[#E53720] transition-colors">
-                    Certificate 3
+                    Certificate
                   </p>
                   <p className="text-white/60 text-sm">PDF Document</p>
                 </div>
