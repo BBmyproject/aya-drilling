@@ -1,27 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function HeroBanner() {
   const [isHovered, setIsHovered] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const router = useRouter();
-
-  const heroImages = [
-    "/images/hero-image-2.png",
-    "/images/services-2.png",
-    "/images/hero-image-3.jpg",
-  ];
-
-  // Otomatik görsel değiştirme (3.5 saniyede bir)
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [heroImages.length]);
 
   const handleGetInTouch = () => {
     // Her zaman contact sayfasına git
@@ -30,20 +14,16 @@ export default function HeroBanner() {
 
   return (
     <section className="relative w-full h-[540px] md:h-screen overflow-hidden">
-      {/* Background Images with Transition */}
+      {/* Background Video */}
       <div className="absolute inset-0 w-full h-full">
-        {heroImages.map((image, index) => (
-          <img
-            key={image}
-            src={image}
-            alt="Hero"
-            loading={index === 2 ? "lazy" : "eager"}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
-              currentImageIndex === index ? "opacity-100" : "opacity-0"
-            }`}
-            style={{ objectFit: "cover" }}
-          />
-        ))}
+        <video
+          className="w-full h-full object-cover"
+          src="/images/hero.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
       </div>
 
       {/* Overlay Gradient */}
