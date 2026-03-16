@@ -59,7 +59,7 @@ export default function ContactPage() {
         {/* Background Image */}
         <div className="relative w-full" style={{ height: "500px" }}>
           <img
-            src="/images/contact.webp"
+            src="/images/services-2.png"
             alt="Contact"
             className="absolute inset-0 w-full h-[500px] md:h-full object-cover"
           />

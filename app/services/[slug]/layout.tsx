@@ -54,7 +54,7 @@ export async function generateMetadata({
       url: `${baseUrl}/services/${slug}`,
       images: [
         {
-          url: `${baseUrl}/images/services-1.jpg`,
+          url: `${baseUrl}/images/services-1.png`,
           width: 1200,
           height: 630,
           alt: `${service.title} - AYA Drilling Services`,

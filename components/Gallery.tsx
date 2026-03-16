@@ -9,7 +9,7 @@ export default function Gallery() {
   const galleryItems = [
     {
       title: "Gallery 1",
-      image: "/images/services-1.jpg",
+      image: "/images/services-1-1.png",
     },
     {
       title: "Gallery 2",
@@ -25,7 +25,7 @@ export default function Gallery() {
     },
     {
       title: "Gallery 5",
-      image: "/images/services-5.jpg",
+      image: "/images/services-5.png",
     },
   ];
   const sectionRef = useRef<HTMLDivElement>(null);

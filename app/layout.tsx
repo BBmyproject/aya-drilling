@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     description: "International drilling company in Ankara, Turkey, specializing in oil and gas extraction and directional drilling services.",
     images: [
       {
-        url: `${baseUrl}/images/services-1.jpg`,
+        url: `${baseUrl}/images/services-1.png`,
         width: 1200,
         height: 630,
         alt: "AYA Drilling Services",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AYA Drilling Services | International Oil & Gas Drilling Company",
     description: "International drilling company in Ankara, Turkey, specializing in oil and gas extraction and directional drilling services.",
-    images: [`${baseUrl}/images/services-1.jpg`],
+    images: [`${baseUrl}/images/services-1.png`],
   },
   robots: {
     index: true,

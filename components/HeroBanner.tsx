@@ -9,8 +9,8 @@ export default function HeroBanner() {
   const router = useRouter();
 
   const heroImages = [
-    "/images/hero-image.jpg",
     "/images/hero-image-2.png",
+    "/images/services-2.png",
     "/images/hero-image-3.jpg",
   ];
 

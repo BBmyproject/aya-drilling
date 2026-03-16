@@ -48,7 +48,7 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
         "Tool selection and configuration based on planned well profile",
         "Accurate well trajectory control"
       ],
-      image: "/images/services-1.jpg",
+      image: "/images/services-1.png",
     },
     {
       title: "DOWNHOLE MOTOR",
@@ -60,7 +60,7 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
         "Managing vibration and tool stress",
         "Directional response consistency"
       ],
-      image: "/images/services-2.jpg",
+      image: "/images/services-2.png",
     },
     {
       title: "MEASUREMENT WHILE DRILLING (MWD)",
@@ -72,7 +72,7 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
         "Timely directional corrections",
         "Integrated BHA-based operational support"
       ],
-      image: "/images/services-3.jpg",
+      image: "/images/services-3.png",
     },
     {
       title: "Well Planning",
@@ -84,7 +84,7 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
         "Technically sound and practical well designs",
         "Reduced directional and operational risk"
       ],
-      image: "/images/services-4.jpg",
+      image: "/images/services-4.png",
     },
     {
       title: "Engineering",
@@ -96,7 +96,7 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
         "Directional drilling operations",
         "Practical, field-oriented engineering support"
       ],
-      image: "/images/services-5.jpg",
+      image: "/images/services-5.png",
     },
   ];
 

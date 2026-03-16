@@ -275,7 +275,7 @@ export default function QualityPage() {
               {/* Sağ Taraf - Görsel */}
               <div className="hidden lg:block w-[45%] relative h-[500px]">
                 <img
-                  src="/images/services-1.jpg"
+                  src="/images/services-4-2.png"
                   alt="QHSE"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -336,7 +336,7 @@ export default function QualityPage() {
             {/* Sol Taraf - Görsel (Desktop) */}
             <div className="hidden lg:block w-[45%] relative h-[600px]">
               <img
-                src="/images/services-1.jpg"
+                src="/images/about-2.png"
                 alt="QHSE"
                 className="absolute inset-0 w-full h-full object-cover"
               />
@@ -347,7 +347,7 @@ export default function QualityPage() {
               {/* Mobile Görsel */}
               <div className="lg:hidden w-full relative h-[400px] mb-8">
                 <img
-                  src="/images/services-1.jpg"
+                  src="/images/services-4-2.png"
                   alt="QHSE"
                   className="absolute inset-0 w-full h-full object-cover"
                 />

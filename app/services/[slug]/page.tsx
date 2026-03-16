@@ -11,7 +11,9 @@ const servicesContent: Record<
   {
     title: string;
     slug: string;
-    image: string;
+    image: string; // Ana hero görseli
+    detailImage: string; // İçerik alanındaki büyük görsel
+    accordionImage: string; // Accordion alanındaki görsel
     sections: Array<{
       badge: string;
       title: string;
@@ -23,7 +25,9 @@ const servicesContent: Record<
   "directional-drilling": {
     title: "DIRECTIONAL DRILLING",
     slug: "directional-drilling",
-    image: "/images/services-1.jpg",
+    image: "/images/services-1.png",
+    detailImage: "/images/services-1-1.png",
+    accordionImage: "/images/services-1-2.png",
     sections: [
       {
         badge: "DIRECTIONAL DRILLING",
@@ -56,7 +60,9 @@ const servicesContent: Record<
   "downhole-motor": {
     title: "DOWNHOLE MOTORS",
     slug: "downhole-motor",
-    image: "/images/services-2.jpg",
+    image: "/images/services-2.png",
+    detailImage: "/images/services-2-1.png",
+    accordionImage: "/images/services-2-2.png",
     sections: [
       {
         badge: "DOWNHOLE MOTORS",
@@ -97,7 +103,9 @@ const servicesContent: Record<
   "measurement-while-drilling": {
     title: "MEASUREMENT WHILE DRILLING (MWD)",
     slug: "measurement-while-drilling",
-    image: "/images/services-3.jpg",
+    image: "/images/services-3.png",
+    detailImage: "/images/services-3-1.png",
+    accordionImage: "/images/services-3-2.png",
     sections: [
       {
         badge: "MEASUREMENT WHILE DRILLING (MWD)",
@@ -137,7 +145,9 @@ const servicesContent: Record<
   "well-planning": {
     title: "WELL PLANNING",
     slug: "well-planning",
-    image: "/images/services-4.jpg",
+    image: "/images/services-4.png",
+    detailImage: "/images/services-4-1.png",
+    accordionImage: "/images/services-4-2.png",
     sections: [
       {
         badge: "WELL PLANNING",
@@ -177,7 +187,9 @@ const servicesContent: Record<
   engineering: {
     title: "ENGINEERING",
     slug: "engineering",
-    image: "/images/services-5.jpg",
+    image: "/images/services-5.png",
+    detailImage: "/images/services-5-1.png",
+    accordionImage: "/images/services-5-2.png",
     sections: [
       {
         badge: "ENGINEERING",
@@ -753,10 +765,10 @@ export default function ServiceDetailPage({
                         </div>
                       </div>
 
-                      {/* Sağ Taraf - Görsel */}
+                      {/* Sağ Taraf - Görsel (Detay İçerik Görseli) */}
                       <div className="hidden lg:block w-[45%] relative h-[500px]">
                         <img
-                          src={service.image}
+                          src={service.detailImage}
                           alt={service.title}
                           className="absolute inset-0 w-full h-full object-cover"
                         />
@@ -1029,10 +1041,10 @@ export default function ServiceDetailPage({
           {/* Accordion Section - Diğer Section'lar */}
           {otherSections.length > 0 && (
             <div className="flex flex-col lg:flex-row items-start justify-between gap-12">
-              {/* Sol Taraf - Görsel (Desktop) */}
+              {/* Sol Taraf - Görsel (Desktop - Accordion Görseli) */}
               <div className="hidden lg:block w-[45%] relative h-[600px]">
                 <img
-                  src={service.image}
+                  src={service.accordionImage}
                   alt={service.title}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -1043,7 +1055,7 @@ export default function ServiceDetailPage({
                 {/* Mobile Görsel */}
                 <div className="lg:hidden w-full relative h-[400px] mb-8">
                   <img
-                    src={service.image}
+                    src={service.accordionImage}
                     alt={service.title}
                     className="absolute inset-0 w-full h-full object-cover"
                   />
