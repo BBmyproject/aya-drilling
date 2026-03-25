@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     url: `${baseUrl}/`,
     images: [
       {
-        url: `${baseUrl}/images/services-1.png`,
+        url: `${baseUrl}/images/services-1.jpg`,
         width: 1200,
         height: 630,
         alt: "AYA Drilling Services",

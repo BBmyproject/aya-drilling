@@ -9,11 +9,11 @@ export default function Gallery() {
   const galleryItems = [
     {
       title: "Gallery 1",
-      image: "/images/services-1-1.png",
+      image: "/images/gallery-1.jpg",
     },
     {
       title: "Gallery 2",
-      image: "/images/gallery-2.png",
+      image: "/images/gallery-2.jpeg",
     },
     {
       title: "Gallery 3",
@@ -25,7 +25,7 @@ export default function Gallery() {
     },
     {
       title: "Gallery 5",
-      image: "/images/services-5.png",
+      image: "/images/gallery-5.jpg",
     },
   ];
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -170,12 +170,6 @@ export default function Gallery() {
             </div>
           </div>
 
-          {/* Sağ Taraf - Başlık */}
-          <div className="flex-1 max-w-[760px]">
-            <h2 className="space-grotesk-bold text-white text-3xl md:text-4xl lg:text-5xl mb-4">
-              AYA DRILLING SERVICES GALLERY
-            </h2>
-          </div>
         </div>
 
         {/* Görseller Grid - Tek Kolon (md-) / İki Kolon (lg+) */}

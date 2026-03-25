@@ -121,7 +121,7 @@ export default function Header() {
                         href="/services/downhole-motor"
                         className="block px-4 py-2 text-white hover:bg-[#2b2b2b] transition-colors"
                       >
-                        Downhole Motor
+                        Downhole Motors
                       </Link>
                       <Link
                         href="/services/measurement-while-drilling"
@@ -229,7 +229,7 @@ export default function Header() {
                               setServicesOpen(false);
                             }}
                           >
-                            Downhole Motor
+                            Downhole Motors
                           </Link>
                           <Link
                             href="/services/measurement-while-drilling"

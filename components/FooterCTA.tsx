@@ -28,12 +28,12 @@ export default function FooterCTA() {
 
             {/* Make your dream Let's Bring Visions to Life */}
             <p className="text-white text-base mb-2">
-                Ready To Build Your Dream Project?
+              Directional Drilling & Engineering Solutions
             </p>
 
             {/* Ready To Build Your Dream Project? */}
             <h2 className="space-grotesk-bold text-white text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight">
-                MAKE YOUR DREAM LET&apos;S <br></br>BRING VISIONS TO LIFE
+              DRIVEN BY ENGINEERING,<br></br> PROVEN IN THE FIELD
             </h2>
 
           {/* GET IN TOUCH Link */}

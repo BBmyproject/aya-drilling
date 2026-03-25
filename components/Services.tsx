@@ -48,10 +48,10 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
         "Tool selection and configuration based on planned well profile",
         "Accurate well trajectory control"
       ],
-      image: "/images/services-1.png",
+      image: "/images/services-1.jpg",
     },
     {
-      title: "DOWNHOLE MOTOR",
+      title: "DOWNHOLE MOTORS",
       slug: "downhole-motor",
       description: "Downhole drilling motors selected, configured, and maintained to match formation characteristics, drilling parameters, and project-specific objectives.",
       items: [
@@ -60,7 +60,7 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
         "Managing vibration and tool stress",
         "Directional response consistency"
       ],
-      image: "/images/services-2.png",
+      image: "/images/services-2.jpg",
     },
     {
       title: "MEASUREMENT WHILE DRILLING (MWD)",
@@ -72,10 +72,10 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
         "Timely directional corrections",
         "Integrated BHA-based operational support"
       ],
-      image: "/images/services-3.png",
+      image: "/images/services-3.jpeg",
     },
     {
-      title: "Well Planning",
+      title: "WELL PLANNING",
       slug: "well-planning",
       description: "Engineering-driven BHA design services focusing on trajectory design, drilling risk assessment, and efficiency optimization from initial design to execution.",
       items: [
@@ -84,10 +84,10 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
         "Technically sound and practical well designs",
         "Reduced directional and operational risk"
       ],
-      image: "/images/services-4.png",
+      image: "/images/services-4.jpg",
     },
     {
-      title: "Engineering",
+      title: "ENGINEERING",
       slug: "engineering",
       description: "Project-based engineering and technical support delivering integrated solutions across planning, operations, and post-run performance evaluation.",
       items: [

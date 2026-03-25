@@ -251,7 +251,7 @@ export default function CareerPage() {
       </section>
 
       {/* Open Positions Section */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0a0a]">
+      {/* <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0a0a]">
         <div className="max-w-[1296px] mx-auto">
           <div
             ref={setSectionRef(1)}
@@ -298,7 +298,7 @@ export default function CareerPage() {
             <h2 className="space-grotesk-bold text-white text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-8 mb-12">
               Available Opportunities
             </h2>
-            {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {openPositions.map((position) => (
                 <div
                   key={position.id}
@@ -318,7 +318,7 @@ export default function CareerPage() {
                   </p>
                 </div>
               ))}
-            </div> */}
+            </div>
             <div className="text-center py-12">
               <p className="text-white/80 text-lg md:text-xl leading-relaxed">
                 We currently have no open positions. Please continue to follow us for new opportunities.
@@ -326,7 +326,7 @@ export default function CareerPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Application Form Section */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">

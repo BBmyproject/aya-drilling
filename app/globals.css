@@ -278,3 +278,20 @@ span {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 }
+
+/* 4. logo */
+.customer-logos-section .customer-logo-ref--4 {
+  background-color: #fff;
+  padding: 20px;
+}
+
+/* 13. logo */
+.customer-logos-section .customer-logo-ref--13 img {
+  
+}
+
+/* Alternatif: data attribute */
+.customer-logos-section [data-reference-index="4"] img {
+}
+.customer-logos-section [data-reference-index="13"] img {
+}

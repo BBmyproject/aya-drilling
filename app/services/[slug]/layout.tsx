@@ -2,34 +2,103 @@ import type { Metadata } from "next";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://aya-ds.com";
 
-const servicesContent: Record<
+/** SEO-only copy for service detail routes (must match real `[slug]` keys in `page.tsx`) */
+const serviceSeo: Record<
   string,
   {
     title: string;
     description: string;
+    image: string;
   }
 > = {
   "directional-drilling": {
     title: "Directional Drilling",
-    description: "Professional directional drilling services for oil and gas operations. Expert well planning, trajectory control, and real-time monitoring for accurate well placement.",
+    description:
+      "Professional directional drilling for oil, gas, and geothermal wells: trajectory control, planning support, and performance monitoring for accurate well placement.",
+    image: "/images/services-1.jpg",
   },
   "downhole-motor": {
-    title: "Downhole Motor",
-    description: "Advanced downhole motor services integrated with BHA design for optimal directional drilling performance and efficient power delivery.",
+    title: "Downhole Motors",
+    description:
+      "Downhole motors integrated with BHA design—selection and configuration for trajectory, formations, and drilling parameters with stable directional response.",
+    image: "/images/services-2.jpg",
   },
   "measurement-while-drilling": {
     title: "Measurement While Drilling (MWD)",
-    description: "Real-time MWD data acquisition and interpretation services for accurate well trajectory monitoring and operational decision-making.",
+    description:
+      "MWD services for directional operations: reliable downhole acquisition, trajectory decisions, and integrated BHA-based support.",
+    image: "/images/services-3.jpeg",
   },
-  "bottom-hole-assembly": {
-    title: "Bottom Hole Assembly (BHA) Design",
-    description: "Expert BHA design and optimization services for directional drilling operations, ensuring optimal performance and trajectory control.",
+  "well-planning": {
+    title: "Well Planning",
+    description:
+      "Well planning with structured engineering workflows and field insight—geology, objectives, and constraints for achievable execution.",
+    image: "/images/services-4.jpg",
   },
-  "trajectory-planning": {
-    title: "Trajectory Planning",
-    description: "Comprehensive well trajectory planning services including geological analysis, dogleg severity management, and formation-specific drilling strategies.",
+  engineering: {
+    title: "Engineering",
+    description:
+      "Engineering support for directional drilling: project-based technical solutions, BHA integration, planning, execution, and performance evaluation.",
+    image: "/images/services-5.png",
   },
 };
+
+const defaultSeo = {
+  title: "Service",
+  description: "Professional drilling services from AYA Drilling Services.",
+  image: "/images/services-1.jpg",
+};
+
+function serviceJsonLd(slug: string) {
+  const service = serviceSeo[slug] ?? defaultSeo;
+  const pageUrl = `${baseUrl}/services/${slug}`;
+  const imageUrl = service.image.startsWith("http")
+    ? service.image
+    : `${baseUrl}${service.image}`;
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${baseUrl}/#website`,
+        url: baseUrl,
+        name: "AYA Drilling Services",
+        publisher: { "@id": `${baseUrl}/#organization` },
+      },
+      {
+        "@type": "Organization",
+        "@id": `${baseUrl}/#organization`,
+        name: "AYA Drilling Services",
+        url: baseUrl,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Ankara",
+          addressCountry: "TR",
+        },
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: `${service.title} | AYA Drilling Services`,
+        description: service.description,
+        isPartOf: { "@id": `${baseUrl}/#website` },
+        about: { "@id": `${pageUrl}#service` },
+        primaryImageOfPage: { "@type": "ImageObject", url: imageUrl },
+      },
+      {
+        "@type": "Service",
+        "@id": `${pageUrl}#service`,
+        name: service.title,
+        description: service.description,
+        provider: { "@id": `${baseUrl}/#organization` },
+        image: imageUrl,
+        url: pageUrl,
+      },
+    ],
+  };
+}
 
 export async function generateMetadata({
   params,
@@ -37,37 +106,60 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const service = servicesContent[slug] || {
-    title: "Service",
-    description: "Professional drilling service from AYA Drilling Services.",
-  };
+  const service = serviceSeo[slug] ?? defaultSeo;
+  const pageUrl = `/services/${slug}`;
+  const imageUrl = service.image.startsWith("http")
+    ? service.image
+    : `${baseUrl}${service.image}`;
+
+  const documentTitle = `${service.title} | AYA Drilling Services`;
 
   return {
-    title: service.title,
+    title: { absolute: documentTitle },
     description: service.description,
     alternates: {
-      canonical: `${baseUrl}/services/${slug}`,
+      canonical: `${baseUrl}${pageUrl}`,
     },
     openGraph: {
       title: `${service.title} | AYA Drilling Services`,
       description: service.description,
-      url: `${baseUrl}/services/${slug}`,
+      url: `${baseUrl}${pageUrl}`,
+      type: "website",
       images: [
         {
-          url: `${baseUrl}/images/services-1.png`,
+          url: imageUrl,
           width: 1200,
           height: 630,
-          alt: `${service.title} - AYA Drilling Services`,
+          alt: `${service.title} — AYA Drilling Services`,
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${service.title} | AYA Drilling Services`,
+      description: service.description,
+      images: [imageUrl],
     },
   };
 }
 
-export default function ServiceDetailLayout({
+export default async function ServiceDetailLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ slug: string }>;
 }) {
-  return children;
+  const { slug } = await params;
+  const jsonLd = serviceJsonLd(slug);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {children}
+    </>
+  );
 }

@@ -492,11 +492,6 @@ export default function QualityPage() {
               </div>
             </div>
 
-            {/* Title */}
-            <h2 className="space-grotesk-bold text-white text-3xl md:text-4xl lg:text-5xl">
-              Documents
-            </h2>
-
             {/* PDF Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
               {/* PDF Item 1 */}
@@ -511,7 +506,7 @@ export default function QualityPage() {
                 </div>
                 <div className="flex-1">
                   <p className="text-white font-medium group-hover:text-[#E53720] transition-colors">
-                    Certificate
+                    ISO 45001:2018
                   </p>
                   <p className="text-white/60 text-sm">PDF Document</p>
                 </div>
@@ -529,7 +524,7 @@ export default function QualityPage() {
                 </div>
                 <div className="flex-1">
                   <p className="text-white font-medium group-hover:text-[#E53720] transition-colors">
-                    Certificate
+                    ISO 14001:2015
                   </p>
                   <p className="text-white/60 text-sm">PDF Document</p>
                 </div>
@@ -547,7 +542,7 @@ export default function QualityPage() {
                 </div>
                 <div className="flex-1">
                   <p className="text-white font-medium group-hover:text-[#E53720] transition-colors">
-                    Certificate
+                    ISO 9001:2015
                   </p>
                   <p className="text-white/60 text-sm">PDF Document</p>
                 </div>

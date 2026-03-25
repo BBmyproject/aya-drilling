@@ -25,7 +25,7 @@ const servicesContent: Record<
   "directional-drilling": {
     title: "DIRECTIONAL DRILLING",
     slug: "directional-drilling",
-    image: "/images/services-1.png",
+    image: "/images/services-1.jpg",
     detailImage: "/images/services-1-1.png",
     accordionImage: "/images/services-1-2.png",
     sections: [
@@ -60,15 +60,15 @@ const servicesContent: Record<
   "downhole-motor": {
     title: "DOWNHOLE MOTORS",
     slug: "downhole-motor",
-    image: "/images/services-2.png",
-    detailImage: "/images/services-2-1.png",
-    accordionImage: "/images/services-2-2.png",
+    image: "/images/services-2.jpg",
+    detailImage: "/images/services-2-1.jpg",
+    accordionImage: "/images/services-2-2.jpg",
     sections: [
       {
         badge: "DOWNHOLE MOTORS",
         title: "DOWNHOLE MOTORS",
         description:
-          "AYA DRILLING SERVICES PROVIDES DOWNHOLE MOTOR SOLUTIONS AS AN INTEGRATED PART OF DIRECTIONAL DRILLING AND BHA DESIGN. MOTORS ARE SELECTED AND CONFIGURED TO MATCH WELL TRAJECTORY REQUIREMENTS, FORMATION CHARACTERISTICS, AND DRILLING PARAMETERS, ENSURING CONTROLLED DIRECTIONAL RESPONSE, STABLE PERFORMANCE, AND EFFICIENT POWER DELIVERY TO THE BIT.",
+          "AYA DRILLING SERVICES PROVIDES DOWNHOLE MOTORS SOLUTIONS AS AN INTEGRATED PART OF DIRECTIONAL DRILLING AND BHA DESIGN. MOTORS ARE SELECTED AND CONFIGURED TO MATCH WELL TRAJECTORY REQUIREMENTS, FORMATION CHARACTERISTICS, AND DRILLING PARAMETERS, ENSURING CONTROLLED DIRECTIONAL RESPONSE, STABLE PERFORMANCE, AND EFFICIENT POWER DELIVERY TO THE BIT.",
       },
       {
         badge: "TECHNICAL APPROACH",
@@ -88,14 +88,14 @@ const servicesContent: Record<
         badge: "OPERATIONAL PERSPECTIVE",
         title: "OPERATIONAL PERSPECTIVE",
         description:
-          "During operations, downhole motor performance is monitored together with overall BHA behavior. Operational focus areas include:",
+          "During operations, downhole motors performance is monitored together with overall BHA behavior. Operational focus areas include:",
         isList: true,
       },
       {
         badge: "VALUE FOR THE OPERATOR",
         title: "VALUE FOR THE OPERATOR",
         description:
-          "AYA's downhole motor and BHA-focused approach provides operators with:",
+          "AYA's downhole motors and BHA-focused approach provides operators with:",
         isList: true,
       },
     ],
@@ -103,9 +103,9 @@ const servicesContent: Record<
   "measurement-while-drilling": {
     title: "MEASUREMENT WHILE DRILLING (MWD)",
     slug: "measurement-while-drilling",
-    image: "/images/services-3.png",
-    detailImage: "/images/services-3-1.png",
-    accordionImage: "/images/services-3-2.png",
+    image: "/images/services-3.jpeg",
+    detailImage: "/images/services-3-1.jpg",
+    accordionImage: "/images/services-3-2.jpeg",
     sections: [
       {
         badge: "MEASUREMENT WHILE DRILLING (MWD)",
@@ -145,7 +145,7 @@ const servicesContent: Record<
   "well-planning": {
     title: "WELL PLANNING",
     slug: "well-planning",
-    image: "/images/services-4.png",
+    image: "/images/services-4.jpg",
     detailImage: "/images/services-4-1.png",
     accordionImage: "/images/services-4-2.png",
     sections: [
@@ -170,8 +170,8 @@ const servicesContent: Record<
         isList: true,
       },
       {
-        badge: "RISK MANAGEMENT",
-        title: "RISK MANAGEMENT",
+        badge: "RISK & EFFICIENCY MANAGEMENT",
+        title: "RISK & EFFICIENCY MANAGEMENT",
         description:
           "Risk management and drilling efficiency are core considerations throughout the well planning stage. AYA's planning process aims to:",
         isList: true,
@@ -189,7 +189,7 @@ const servicesContent: Record<
     slug: "engineering",
     image: "/images/services-5.png",
     detailImage: "/images/services-5-1.png",
-    accordionImage: "/images/services-5-2.png",
+    accordionImage: "/images/services-5-2.jpeg",
     sections: [
       {
         badge: "ENGINEERING",
@@ -304,7 +304,7 @@ const listItems: Record<string, Record<string, string[]>> = {
       "Continuous validation of downhole data quality",
       "MWD data is evaluated in close coordination with directional and drilling parameters to support effective operational decision-making.",
     ],
-    "BHA INTEGRATION & DIRECTIONAL SUPPORT": [
+    "DIRECTIONAL SUPPORT": [
       "Accurate trajectory monitoring",
       "Timely directional corrections",
       "Improved understanding of downhole conditions",
@@ -372,7 +372,7 @@ const listItems: Record<string, Record<string, string[]>> = {
     ],
     "INTEGRATED SERVICE APPROACH": [
       "Directional drilling operations",
-      "Downhole motor and BHA design",
+      "Downhole motors and BHA design",
       "MWD and data interpretation",
       "Rig and client technical teams",
       "This integrated approach supports consistency between planning assumptions, field execution, and post-run evaluation.",
@@ -766,11 +766,13 @@ export default function ServiceDetailPage({
                       </div>
 
                       {/* Sağ Taraf - Görsel (Detay İçerik Görseli) */}
-                      <div className="hidden lg:block w-[45%] relative h-[500px]">
+                      <div
+                        className={'hidden lg:block w-[45%] relative h-[500px]'}
+                      >
                         <img
                           src={service.detailImage}
                           alt={service.title}
-                          className="absolute inset-0 w-full h-full object-cover"
+                          className={'absolute inset-0 w-full h-full object-cover'}
                         />
                       </div>
                     </div>

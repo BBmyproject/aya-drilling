@@ -2,13 +2,13 @@ import { MetadataRoute } from "next";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://aya-ds.com";
 
-// Service slugs
+// Service slugs (must match `app/services/[slug]/page.tsx`)
 const services = [
   "directional-drilling",
   "downhole-motor",
   "measurement-while-drilling",
-  "bottom-hole-assembly",
-  "trajectory-planning",
+  "well-planning",
+  "engineering",
 ];
 
 // Blog post slugs

@@ -53,8 +53,8 @@ export default function Introduction() {
             // Target values
             const targets = {
               wells: 70,
-              meters: 100000,
-              hours: 15000,
+              meters: 110000,
+              hours: 15600,
               efficiency: 99.87
             };
             

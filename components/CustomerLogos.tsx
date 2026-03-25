@@ -11,23 +11,32 @@ export default function CustomerLogos() {
       <div className="max-w-[1296px] mx-auto">
         {/* Başlık */}
         <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold text-center space-grotesk-bold mb-12 md:mb-16" style={{ letterSpacing: "-0.02em" }}>
-          CUSTOMER LOGOS
+          REFERENCES
         </h2>
-        
-        <div className="grid grid-cols-3 md:grid-cols-5 gap-4 md:gap-6 lg:gap-8">
-          {logos.map((logo, index) => (
+
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 lg:gap-8">
+          {logos.map((logo, index) => {
+            const refIndex = index + 1;
+            return (
             <div
               key={logo}
-              className="customer-logo-item relative overflow-hidden py-8 border border-[#2b2b2b] group"
+              data-reference-index={refIndex}
+              className={[
+                "customer-logo-item relative overflow-hidden md:py-8 p-4 p border bg-white border-[#2b2b2b] group",
+                refIndex === 4 ? "customer-logo-ref--4" : "",
+                refIndex === 13 ? "customer-logo-ref--13" : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
             >
               <img
                 src={`/images/${logo}.png`}
                 alt={`Customer ${index + 1}`}
-                className="w-full h-full object-contain opacity-50 group-hover:opacity-100 transition-opacity duration-300"
-                style={{ aspectRatio: "4.15517" }}
+                className="w-full h-full object-contain transition-opacity duration-300 aspect-[2.15517] md:aspect-[4.15517]"
               />
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -59,7 +59,7 @@ export default function ContactPage() {
         {/* Background Image */}
         <div className="relative w-full" style={{ height: "500px" }}>
           <img
-            src="/images/services-2.png"
+            src="/images/services-2.jpg"
             alt="Contact"
             className="absolute inset-0 w-full h-[500px] md:h-full object-cover"
           />
@@ -111,7 +111,7 @@ export default function ContactPage() {
             <div>
               <h3 className="space-grotesk-bold text-white text-xl md:text-2xl mb-4">Address</h3>
               <p className="text-white/80 text-base leading-relaxed">
-                Başkent Organize Sanayi Bölgesi 19. Cd. No:88<br />
+                Başkent Organize Sanayi<br /> Bölgesi 19. Cd. No:88<br />
                 Malıköy Sincan Ankara
               </p>
             </div>
