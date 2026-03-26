@@ -13,7 +13,7 @@ export default function Gallery() {
     },
     {
       title: "Gallery 2",
-      image: "/images/gallery-2.jpeg",
+      image: "/images/services-3.jpg",
     },
     {
       title: "Gallery 3",

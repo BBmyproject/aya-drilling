@@ -27,7 +27,7 @@ const serviceSeo: Record<
     title: "Measurement While Drilling (MWD)",
     description:
       "MWD services for directional operations: reliable downhole acquisition, trajectory decisions, and integrated BHA-based support.",
-    image: "/images/services-3.jpeg",
+    image: "/images/services-3.jpg",
   },
   "well-planning": {
     title: "Well Planning",

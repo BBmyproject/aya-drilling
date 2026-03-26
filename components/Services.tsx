@@ -72,7 +72,7 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
         "Timely directional corrections",
         "Integrated BHA-based operational support"
       ],
-      image: "/images/services-3.jpeg",
+      image: "/images/services-3.jpg",
     },
     {
       title: "WELL PLANNING",

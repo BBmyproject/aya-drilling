@@ -103,7 +103,7 @@ const servicesContent: Record<
   "measurement-while-drilling": {
     title: "MEASUREMENT WHILE DRILLING (MWD)",
     slug: "measurement-while-drilling",
-    image: "/images/services-3.jpeg",
+    image: "/images/services-3.jpg",
     detailImage: "/images/services-3-1.JPG",
     accordionImage: "/images/services-3-2.jpeg",
     sections: [
