@@ -122,8 +122,8 @@ export default function HeroBanner() {
         </Swiper>
       </div>
 
-      {/* Prev / next — mobilde sol alt yan yana; md+ kenarlarda ortalanmış */}
-      <div className="pointer-events-none absolute z-10 bottom-4 left-4 flex flex-row items-center gap-2 md:bottom-auto md:left-0 md:right-0 md:inset-y-0 md:justify-between md:gap-0 md:px-2 lg:px-4">
+      {/* Prev / next — mobil: sol alt yan yana; md+: sol/sağ, top 50% + translate ile dikey ortalama */}
+      <div className="pointer-events-none absolute z-10 bottom-4 left-4 flex flex-row items-center gap-2 md:bottom-auto md:left-0 md:right-0 md:top-1/2 md:-translate-y-1/2 md:justify-between md:gap-0 md:px-2 lg:px-4">
         <button
           type="button"
           onClick={goPrev}
