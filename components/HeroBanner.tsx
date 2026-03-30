@@ -4,7 +4,7 @@ import { useCallback, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
-import { EffectFade, Navigation } from "swiper/modules";
+import { EffectFade } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -23,9 +23,10 @@ const VIDEO_COUNT = HERO_VIDEOS.length;
 function pauseAllPlayActive(swiper: SwiperType) {
   if (!swiper || swiper.destroyed) return;
   const slides = swiper.slides;
-  if (!slides?.length) return;
+  if (!slides) return;
 
-  for (let i = 0; i < slides.length; i++) {
+  const len = slides.length;
+  for (let i = 0; i < len; i++) {
     const slide = slides[i];
     if (!slide) continue;
     const video = slide.querySelector<HTMLVideoElement>("video");
@@ -42,8 +43,7 @@ function pauseAllPlayActive(swiper: SwiperType) {
 export default function HeroBanner() {
   const [isHovered, setIsHovered] = useState(false);
   const [loadedIndices, setLoadedIndices] = useState(() => new Set<number>([0]));
-  const prevNavRef = useRef<HTMLButtonElement>(null);
-  const nextNavRef = useRef<HTMLButtonElement>(null);
+  const swiperRef = useRef<SwiperType | null>(null);
   const router = useRouter();
 
   const expandLoadedNeighbors = useCallback((realIndex: number) => {
@@ -57,32 +57,13 @@ export default function HeroBanner() {
     });
   }, []);
 
-  const handleInit = useCallback(
+  const handleSwiper = useCallback(
     (swiper: SwiperType) => {
-      const nav = swiper.params.navigation;
-      if (
-        nav &&
-        typeof nav !== "boolean" &&
-        prevNavRef.current &&
-        nextNavRef.current
-      ) {
-        nav.prevEl = prevNavRef.current;
-        nav.nextEl = nextNavRef.current;
-        swiper.navigation.init();
-        swiper.navigation.update();
-      }
+      swiperRef.current = swiper;
       expandLoadedNeighbors(swiper.realIndex);
-      const schedulePauseWhenSlidesReady = (attemptsLeft: number) => {
-        requestAnimationFrame(() => {
-          if (swiper.destroyed) return;
-          if (swiper.slides?.length) {
-            pauseAllPlayActive(swiper);
-            return;
-          }
-          if (attemptsLeft > 0) schedulePauseWhenSlidesReady(attemptsLeft - 1);
-        });
-      };
-      schedulePauseWhenSlidesReady(12);
+      requestAnimationFrame(() => {
+        if (!swiper.destroyed) pauseAllPlayActive(swiper);
+      });
     },
     [expandLoadedNeighbors]
   );
@@ -96,6 +77,16 @@ export default function HeroBanner() {
     [expandLoadedNeighbors]
   );
 
+  const goPrev = useCallback(() => {
+    const s = swiperRef.current;
+    if (s && !s.destroyed) s.slidePrev();
+  }, []);
+
+  const goNext = useCallback(() => {
+    const s = swiperRef.current;
+    if (s && !s.destroyed) s.slideNext();
+  }, []);
+
   const handleGetInTouch = () => {
     router.push("/contact");
   };
@@ -105,7 +96,7 @@ export default function HeroBanner() {
       {/* Background videos (Swiper) */}
       <div className="absolute inset-0 w-full h-full [&_.swiper]:h-full [&_.swiper-wrapper]:h-full">
         <Swiper
-          modules={[EffectFade, Navigation]}
+          modules={[EffectFade]}
           effect="fade"
           speed={900}
           fadeEffect={{ crossFade: true }}
@@ -113,8 +104,7 @@ export default function HeroBanner() {
           allowTouchMove
           simulateTouch
           className="h-full w-full"
-          navigation={{}}
-          onInit={handleInit}
+          onSwiper={handleSwiper}
           onSlideChangeTransitionEnd={handleSlideChangeTransitionEnd}
         >
           {HERO_VIDEOS.map((src, i) => (
@@ -132,15 +122,15 @@ export default function HeroBanner() {
         </Swiper>
       </div>
 
-      {/* Prev / next — sadece kaydırma veya tıklama ile geçiş */}
-      <div className="absolute inset-y-0 left-0 right-0 z-10 flex items-center justify-between px-2 sm:px-4 pointer-events-none">
+      {/* Prev / next — mobilde sol alt yan yana; md+ kenarlarda ortalanmış */}
+      <div className="pointer-events-none absolute z-10 bottom-4 left-4 flex flex-row items-center gap-2 md:bottom-auto md:left-0 md:right-0 md:inset-y-0 md:justify-between md:gap-0 md:px-2 lg:px-4">
         <button
           type="button"
-          ref={prevNavRef}
-          className="pointer-events-auto cursor-pointer flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full border border-white/25 bg-black/35 text-white backdrop-blur-sm transition hover:bg-black/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+          onClick={goPrev}
+          className="pointer-events-auto cursor-pointer flex h-10 w-10 sm:h-11 sm:w-11 md:h-12 md:w-12 items-center justify-center rounded-full border border-white/25 bg-black/35 text-white backdrop-blur-sm transition hover:bg-black/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
           aria-label="Önceki slayt"
         >
-          <svg className="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 24 24" fill="none" aria-hidden>
+          <svg className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" viewBox="0 0 24 24" fill="none" aria-hidden>
             <path
               d="M15 6L9 12L15 18"
               stroke="currentColor"
@@ -152,11 +142,11 @@ export default function HeroBanner() {
         </button>
         <button
           type="button"
-          ref={nextNavRef}
-          className="pointer-events-auto cursor-pointer flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full border border-white/25 bg-black/35 text-white backdrop-blur-sm transition hover:bg-black/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+          onClick={goNext}
+          className="pointer-events-auto cursor-pointer flex h-10 w-10 sm:h-11 sm:w-11 md:h-12 md:w-12 items-center justify-center rounded-full border border-white/25 bg-black/35 text-white backdrop-blur-sm transition hover:bg-black/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
           aria-label="Sonraki slayt"
         >
-          <svg className="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 24 24" fill="none" aria-hidden>
+          <svg className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" viewBox="0 0 24 24" fill="none" aria-hidden>
             <path
               d="M9 6L15 12L9 18"
               stroke="currentColor"
@@ -176,11 +166,11 @@ export default function HeroBanner() {
         }}
       />
 
-      {/* Container */}
-      <div className="relative z-[2] px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-end pb-8">
+      {/* Container — pointer-events: metin alanı dışındaki sürüklemeler videoya gider */}
+      <div className="relative z-[2] pointer-events-none px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-end pb-8">
         <div className="max-w-[1296px] mx-auto w-full">
           {/* Alt Bölüm - Yazı ve Daire */}
-          <div className="flex flex-col md:flex-row items-end md:items-center justify-between w-full gap-8 mb-8 animate-fade-up">
+          <div className="pointer-events-auto flex flex-col md:flex-row items-end md:items-center justify-between w-full gap-8 mb-8 animate-fade-up">
             {/* Sol Alt Yazı */}
             <div className="w-full md:w-auto">
               <h1
