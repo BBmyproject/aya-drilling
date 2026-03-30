@@ -9,23 +9,23 @@ export default function Gallery() {
   const galleryItems = [
     {
       title: "Gallery 1",
-      image: "/images/gallery-1.jpg",
+      image: "/images/galleryy-1.webp",
     },
     {
       title: "Gallery 2",
-      image: "/images/services-3.jpg",
+      image: "/images/galleryy-2.jpg",
     },
     {
       title: "Gallery 3",
-      image: "/images/gallery-3.png",
+      image: "/images/galleryy-3.jpg",
     },
     {
       title: "Gallery 4",
-      image: "/images/gallery-4.png",
+      image: "/images/galleryy-4.jpg",
     },
     {
       title: "Gallery 5",
-      image: "/images/gallery-5.jpg",
+      image: "/images/galleryy-5.jpg",
     },
   ];
   const sectionRef = useRef<HTMLDivElement>(null);

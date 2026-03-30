@@ -59,7 +59,7 @@ export default function ContactPage() {
         {/* Background Image */}
         <div className="relative w-full" style={{ height: "500px" }}>
           <img
-            src="/images/services-2.jpg"
+            src="/images/contact.jpg"
             alt="Contact"
             className="absolute inset-0 w-full h-[500px] md:h-full object-cover"
           />

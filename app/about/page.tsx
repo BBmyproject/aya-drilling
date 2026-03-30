@@ -141,7 +141,7 @@ export default function About() {
         {/* Background Image */}
         <div className="relative w-full" style={{ height: "500px" }}>
           <img
-            src="/images/about-4.png"
+            src="/images/galleryy-1.webp"
             alt="About"
             className="w-full h-[500px] md:h-full object-cover"
           />

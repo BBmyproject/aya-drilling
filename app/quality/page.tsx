@@ -173,7 +173,7 @@ export default function QualityPage() {
         {/* Background Image */}
         <div className="relative w-full" style={{ height: "500px" }}>
           <img
-            src="/images/sub-banner.jpg"
+            src="/images/qhse.jpg"
             alt="Quality"
             className="absolute inset-0 w-full h-[500px] md:h-full object-cover"
           />
