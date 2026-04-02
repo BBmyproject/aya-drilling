@@ -1,91 +1,14 @@
 "use client";
 
-import { useCallback, useRef, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Swiper, SwiperSlide } from "swiper/react";
-import type { Swiper as SwiperType } from "swiper";
-import { EffectFade } from "swiper/modules";
 
-import "swiper/css";
-import "swiper/css/effect-fade";
-
-/** Sırayla gösterilecek 5 video — dosyaları `public/images/` altına ekleyin */
-const HERO_VIDEOS = [
-  "/images/hero.mp4",
-  "/images/hero-2.mp4",
-  "/images/hero-3.mp4",
-  "/images/hero-4.mp4",
-  "/images/hero-5.mp4",
-] as const;
-
-const VIDEO_COUNT = HERO_VIDEOS.length;
-
-function pauseAllPlayActive(swiper: SwiperType) {
-  if (!swiper || swiper.destroyed) return;
-  const slides = swiper.slides;
-  if (!slides) return;
-
-  const len = slides.length;
-  for (let i = 0; i < len; i++) {
-    const slide = slides[i];
-    if (!slide) continue;
-    const video = slide.querySelector<HTMLVideoElement>("video");
-    if (!video) continue;
-    if (slide.classList.contains("swiper-slide-active")) {
-      video.muted = true;
-      void video.play().catch(() => {});
-    } else {
-      video.pause();
-    }
-  }
-}
+/** Hero arka plan videosu — dosyayı `public/images/` altına ekleyin */
+const HERO_VIDEO_SRC = "/images/hero.mp4";
 
 export default function HeroBanner() {
   const [isHovered, setIsHovered] = useState(false);
-  const [loadedIndices, setLoadedIndices] = useState(() => new Set<number>([0]));
-  const swiperRef = useRef<SwiperType | null>(null);
   const router = useRouter();
-
-  const expandLoadedNeighbors = useCallback((realIndex: number) => {
-    setLoadedIndices((prev) => {
-      const next = new Set(prev);
-      for (let d = -1; d <= 1; d++) {
-        const idx = (realIndex + d + VIDEO_COUNT * 10) % VIDEO_COUNT;
-        next.add(idx);
-      }
-      return next;
-    });
-  }, []);
-
-  const handleSwiper = useCallback(
-    (swiper: SwiperType) => {
-      swiperRef.current = swiper;
-      expandLoadedNeighbors(swiper.realIndex);
-      requestAnimationFrame(() => {
-        if (!swiper.destroyed) pauseAllPlayActive(swiper);
-      });
-    },
-    [expandLoadedNeighbors]
-  );
-
-  const handleSlideChangeTransitionEnd = useCallback(
-    (swiper: SwiperType) => {
-      if (swiper.destroyed) return;
-      expandLoadedNeighbors(swiper.realIndex);
-      pauseAllPlayActive(swiper);
-    },
-    [expandLoadedNeighbors]
-  );
-
-  const goPrev = useCallback(() => {
-    const s = swiperRef.current;
-    if (s && !s.destroyed) s.slidePrev();
-  }, []);
-
-  const goNext = useCallback(() => {
-    const s = swiperRef.current;
-    if (s && !s.destroyed) s.slideNext();
-  }, []);
 
   const handleGetInTouch = () => {
     router.push("/contact");
@@ -93,69 +16,16 @@ export default function HeroBanner() {
 
   return (
     <section className="relative w-full h-[540px] md:h-screen overflow-hidden">
-      {/* Background videos (Swiper) */}
-      <div className="absolute inset-0 w-full h-full [&_.swiper]:h-full [&_.swiper-wrapper]:h-full">
-        <Swiper
-          modules={[EffectFade]}
-          effect="fade"
-          speed={900}
-          fadeEffect={{ crossFade: true }}
+      <div className="absolute inset-0 w-full h-full">
+        <video
+          className="absolute inset-0 w-full h-full object-cover bg-black"
+          src={HERO_VIDEO_SRC}
+          muted
           loop
-          allowTouchMove
-          simulateTouch
-          className="h-full w-full"
-          onSwiper={handleSwiper}
-          onSlideChangeTransitionEnd={handleSlideChangeTransitionEnd}
-        >
-          {HERO_VIDEOS.map((src, i) => (
-            <SwiperSlide key={i} className="!h-full relative">
-              <video
-                className="absolute inset-0 w-full h-full object-cover bg-black"
-                src={loadedIndices.has(i) ? src : undefined}
-                muted
-                loop
-                playsInline
-                preload={loadedIndices.has(i) ? "metadata" : "none"}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-
-      {/* Prev / next — mobil: sol alt yan yana; md+: sol/sağ, top 50% + translate ile dikey ortalama */}
-      <div className="pointer-events-none absolute z-10 bottom-4 left-4 flex flex-row items-center gap-2 md:bottom-auto md:left-0 md:right-0 md:top-1/2 md:-translate-y-1/2 md:justify-between md:gap-0 md:px-2 lg:px-4">
-        <button
-          type="button"
-          onClick={goPrev}
-          className="pointer-events-auto cursor-pointer flex h-10 w-10 sm:h-11 sm:w-11 md:h-12 md:w-12 items-center justify-center rounded-full border border-white/25 bg-black/35 text-white backdrop-blur-sm transition hover:bg-black/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
-          aria-label="Önceki slayt"
-        >
-          <svg className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" viewBox="0 0 24 24" fill="none" aria-hidden>
-            <path
-              d="M15 6L9 12L15 18"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-        <button
-          type="button"
-          onClick={goNext}
-          className="pointer-events-auto cursor-pointer flex h-10 w-10 sm:h-11 sm:w-11 md:h-12 md:w-12 items-center justify-center rounded-full border border-white/25 bg-black/35 text-white backdrop-blur-sm transition hover:bg-black/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
-          aria-label="Sonraki slayt"
-        >
-          <svg className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" viewBox="0 0 24 24" fill="none" aria-hidden>
-            <path
-              d="M9 6L15 12L9 18"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
+          playsInline
+          autoPlay
+          preload="metadata"
+        />
       </div>
 
       {/* Overlay Gradient */}
@@ -166,7 +36,7 @@ export default function HeroBanner() {
         }}
       />
 
-      {/* Container — pointer-events: metin alanı dışındaki sürüklemeler videoya gider */}
+      {/* Container — pointer-events: metin alanı dışındaki tıklamalar videoya gider */}
       <div className="relative z-[2] pointer-events-none px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-end pb-8">
         <div className="max-w-[1296px] mx-auto w-full">
           {/* Alt Bölüm - Yazı ve Daire */}

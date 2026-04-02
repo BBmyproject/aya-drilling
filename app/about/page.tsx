@@ -141,7 +141,7 @@ export default function About() {
         {/* Background Image */}
         <div className="relative w-full" style={{ height: "500px" }}>
           <img
-            src="/images/galleryy-1.webp"
+            src="/images/galleryy-2.jpg"
             alt="About"
             className="w-full h-[500px] md:h-full object-cover"
           />
@@ -241,7 +241,7 @@ export default function About() {
               </div>
               <div className="flex-1 w-full lg:max-w-[500px] relative h-[250px] sm:h-[300px] lg:h-[400px]">
                 <img
-                  src="/images/about-2.png"
+                  src="/images/galleryy-5.jpg"
                   alt="Company Overview"
                   className="w-full h-full object-cover rounded-lg"
                 />
