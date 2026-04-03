@@ -3,7 +3,11 @@
 import { Link } from "next-view-transitions";
 import Image from "next/image";
 import Footer from "@/components/Footer";
+import RecaptchaNotice from "@/components/RecaptchaNotice";
+import { executeRecaptcha } from "@/lib/recaptcha-client";
 import { useState, useEffect, useRef } from "react";
+
+const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? "";
 
 // const openPositions = [
 //   {
@@ -97,12 +101,26 @@ export default function CareerPage() {
     setSubmitStatus(null);
 
     try {
+      if (!siteKey) {
+        setSubmitStatus("error");
+        return;
+      }
+
+      let recaptchaToken: string;
+      try {
+        recaptchaToken = await executeRecaptcha(siteKey, "career");
+      } catch {
+        setSubmitStatus("error");
+        return;
+      }
+
       const formDataToSend = new FormData();
       formDataToSend.append("fullName", formData.fullName);
       formDataToSend.append("email", formData.email);
       formDataToSend.append("phone", formData.phone);
       formDataToSend.append("position", selectedPosition);
       formDataToSend.append("message", formData.message);
+      formDataToSend.append("recaptchaToken", recaptchaToken);
       if (cvFile) {
         formDataToSend.append("cv", cvFile);
       }
@@ -416,7 +434,7 @@ export default function CareerPage() {
                   value={formData.phone}
                   onChange={handleInputChange}
                   required
-                  className="w-full font-s emibold bg-[#2b2b2b] border-none text-[#e6e6e6] placeholder:text-[#e6e6e6] focus:outline-[#E53720] transition-colors py-3 px-6 text-base md:text-lg"
+                  className="w-full font-semibold bg-[#2b2b2b] border-none text-[#e6e6e6] placeholder:text-[#e6e6e6] focus:outline-[#E53720] transition-colors py-3 px-6 text-base md:text-lg"
                 />
               </div>
 
@@ -477,11 +495,15 @@ export default function CareerPage() {
                 />
               </div>
 
+              <div className="pt-2">
+                <RecaptchaNotice />
+              </div>
+
               {/* Submit Button */}
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="group inline-flex items-center gap-3 transition-all duration-300 bg-transparent hover:bg-[#E53720] border border-[#E53720] rounded-[100px] px-6 py-2 mt-8 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="group inline-flex items-center gap-3 transition-all duration-300 bg-transparent hover:bg-[#E53720] border border-[#E53720] rounded-[100px] px-6 py-2 mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
                 style={{
                   willChange: "transform",
                   flexFlow: "row",

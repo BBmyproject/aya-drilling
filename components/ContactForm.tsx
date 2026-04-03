@@ -1,12 +1,80 @@
 "use client";
 
+import { useState } from "react";
+import RecaptchaNotice from "@/components/RecaptchaNotice";
+import { executeRecaptcha } from "@/lib/recaptcha-client";
+
+const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? "";
 
 export default function ContactForm() {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      if (!siteKey) {
+        setSubmitStatus("error");
+        return;
+      }
+
+      let recaptchaToken: string;
+      try {
+        recaptchaToken = await executeRecaptcha(siteKey, "contact");
+      } catch {
+        setSubmitStatus("error");
+        return;
+      }
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          recaptchaToken,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact-form" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 fade-up">
       <div className="max-w-[1296px] mx-auto">
         <div className="flex flex-col items-start justify-between gap-12 lg:gap-16">
-          {/* Sol Taraf - Contact Badge ve Yazı */}
           <div className="flex-shrink-0">
             <div
               style={{
@@ -44,61 +112,79 @@ export default function ContactForm() {
             </h2>
           </div>
 
-          {/* Sağ Taraf - Form */}
           <div className="w-full md:w-[590px] ml-auto">
             <h3 className="space-grotesk-bold text-white text-xl md:text-2xl mb-8">
               PLEASE SUBMIT YOUR INFO
             </h3>
-            <form className="space-y-4">
-              {/* Full Name */}
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <input
                   type="text"
+                  name="fullName"
                   placeholder="FULL NAME"
+                  value={formData.fullName}
+                  onChange={handleInputChange}
+                  required
                   className="w-full font-semibold bg-[#2b2b2b] border-none text-[#e6e6e6] placeholder:text-[#e6e6e6] focus:outline-[#E53720] transition-colors py-3 px-6 text-base md:text-lg"
                 />
               </div>
 
-              {/* Email Address */}
               <div>
                 <input
                   type="email"
+                  name="email"
                   placeholder="EMAIL ADDRESS"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
                   className="w-full font-semibold bg-[#2b2b2b] border-none text-[#e6e6e6] placeholder:text-[#e6e6e6] focus:outline-[#E53720] transition-colors py-3 px-6 text-base md:text-lg"
                 />
               </div>
 
-              {/* Phone */}
               <div>
                 <input
                   type="tel"
+                  name="phone"
                   placeholder="PHONE"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  required
                   className="w-full font-semibold bg-[#2b2b2b] border-none text-[#e6e6e6] placeholder:text-[#e6e6e6] focus:outline-[#E53720] transition-colors py-3 px-6 text-base md:text-lg"
                 />
               </div>
 
-              {/* Subject */}
               <div>
                 <input
                   type="text"
+                  name="subject"
                   placeholder="SUBJECT"
+                  value={formData.subject}
+                  onChange={handleInputChange}
+                  required
                   className="w-full font-semibold bg-[#2b2b2b] border-none text-[#e6e6e6] placeholder:text-[#e6e6e6] focus:outline-[#E53720] transition-colors py-3 px-6 text-base md:text-lg"
                 />
               </div>
 
-              {/* Message */}
               <div>
                 <textarea
+                  name="message"
                   placeholder="MESSAGE"
                   rows={6}
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
                   className="w-full font-semibold bg-[#2b2b2b] border-none text-[#e6e6e6] placeholder:text-[#e6e6e6] focus:outline-[#E53720] transition-colors py-3 px-6 resize-none text-base md:text-lg"
                 />
               </div>
 
-              {/* Submit Button */}
+              <div className="pt-2">
+                <RecaptchaNotice />
+              </div>
+
               <button
                 type="submit"
-                className="group inline-flex items-center gap-3 transition-all duration-300 bg-transparent hover:bg-[#E53720] border border-[#E53720] rounded-[100px] px-6 py-2 mt-8"
+                disabled={isSubmitting}
+                className="group inline-flex items-center gap-3 transition-all duration-300 bg-transparent hover:bg-[#E53720] border border-[#E53720] rounded-[100px] px-6 py-2 mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
                 style={{
                   willChange: "transform",
                   flexFlow: "row",
@@ -123,7 +209,7 @@ export default function ContactForm() {
                 }}
               >
                 <span className="text-white text-sm md:text-base font-medium whitespace-nowrap">
-                  SUBMIT NOW
+                  {isSubmitting ? "SENDING..." : "SUBMIT NOW"}
                 </span>
                 <div
                   className="w-7 h-7 rounded-full bg-[#E53720] flex items-center justify-center transition-all duration-300 group-hover:bg-white"
@@ -141,6 +227,21 @@ export default function ContactForm() {
                   </svg>
                 </div>
               </button>
+
+              {submitStatus === "success" && (
+                <div className="mt-4 p-4 bg-green-500/20 border border-green-500 rounded-lg">
+                  <p className="text-green-400 text-sm">
+                    Thank you — your message was sent. We will get back to you soon.
+                  </p>
+                </div>
+              )}
+              {submitStatus === "error" && (
+                <div className="mt-4 p-4 bg-red-500/20 border border-red-500 rounded-lg">
+                  <p className="text-red-400 text-sm">
+                    Something went wrong. Please try again later.
+                  </p>
+                </div>
+              )}
             </form>
           </div>
         </div>

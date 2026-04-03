@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inria_Sans, Space_Grotesk } from "next/font/google";
+import Script from "next/script";
 import { ViewTransitions } from "next-view-transitions";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -19,6 +20,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://aya-ds.com";
+const gaMeasurementId = "G-VZ0MYKG76G";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -74,7 +76,7 @@ export const metadata: Metadata = {
     ],
   },
   verification: {
-    // Add Google Search Console verification if needed
+    google: "dbpHhGsCaFaeCoN6M9wib8YOdUKx_gnUXaOI2GrR6b4",
   },
 };
 
@@ -116,6 +118,18 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inriaSans.variable} ${spaceGrotesk.variable} antialiased`}>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${gaMeasurementId}');
+          `}
+        </Script>
         <ViewTransitions>
           <CustomCursor />
           <Header />
